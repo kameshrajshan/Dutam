@@ -18,30 +18,34 @@
   </head>
   <body>
     <header class="nav">
-      <a class="brand" href="#top">Dutam</a>
-      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
-        Menu
-      </button>
-      <nav id="site-nav" class="nav-links">
-        <a href="#top">Home</a>
-        <a href="#about">About</a>
-        <a href="#services">Services</a>
-        <a href="#careers">Careers</a>
-        <a href="#contact">Contact us</a>
-      </nav>
-      <div class="nav-utils">
-        <div class="language">
-          <button class="language-btn" type="button" aria-expanded="false" aria-controls="language-menu">
-            <img src="assets/icon-globe.svg" alt="" width="20" height="20" />
-            <span data-language-label>Language</span>
-            <img src="assets/icon-chevron.svg" alt="" width="20" height="20" />
-          </button>
-          <ul id="language-menu" class="language-menu" hidden>
-            <li><button type="button" data-lang="en">English</button></li>
-            <li><button type="button" data-lang="nl">Nederlands</button></li>
-          </ul>
+      <div class="nav-bar">
+        <a class="brand" href="#top">Dutam</a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+          Menu
+        </button>
+        <nav id="site-nav" class="nav-links">
+          <a href="#top">Home</a>
+          <a href="#about">About</a>
+          <a href="#services">Services</a>
+          <a href="#careers">Careers</a>
+          <a href="#contact">Contact us</a>
+        </nav>
+        <div class="nav-utils">
+          <div class="language">
+            <button class="language-btn" type="button" aria-expanded="false" aria-controls="language-menu">
+              <img src="assets/icon-globe.svg" alt="" width="20" height="20" />
+              <span data-language-label>English</span>
+              <img src="assets/icon-chevron.svg" alt="" width="20" height="20" />
+            </button>
+            <ul id="language-menu" class="language-menu" hidden>
+              <li><button type="button" data-lang="en">English</button></li>
+              <li><button type="button" data-lang="nl">Dutch</button></li>
+              <li><button type="button" data-lang="de">German</button></li>
+              <li><button type="button" data-lang="fr">French</button></li>
+            </ul>
+          </div>
+          <a class="btn btn-login" href="#login">Login</a>
         </div>
-        <a class="btn btn-login" href="#login">Login</a>
       </div>
     </header>
 
@@ -290,10 +294,12 @@
           </div>
           <label class="sr-only" for="comments">Comments</label>
           <textarea id="comments" name="comments" placeholder="Comments" rows="5"></textarea>
-          <label class="check">
-            <input type="checkbox" name="privacy" required />
-            <span>I have read and understood the privacy policy</span>
-          </label>
+          <div class="check">
+            <input id="privacy" type="checkbox" name="privacy" required />
+            <p>
+              <label for="privacy">I have read and understood the </label><a href="#privacy">privacy policy</a>
+            </p>
+          </div>
           <button class="btn btn-primary" type="submit">Submit</button>
           <p class="form-status" role="status" hidden></p>
         </form>

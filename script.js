@@ -80,7 +80,8 @@ languageBtn.addEventListener("click", () => {
 languageMenu.addEventListener("click", (event) => {
   const choice = event.target.closest("[data-lang]");
   if (!choice) return;
-  languageLabel.textContent = choice.dataset.lang === "nl" ? "Nederlands" : "English";
+  languageLabel.textContent = choice.textContent;
+  document.documentElement.lang = choice.dataset.lang;
   languageMenu.hidden = true;
   languageBtn.setAttribute("aria-expanded", "false");
 });
