@@ -1,3 +1,28 @@
+const serviceItems = [...document.querySelectorAll("[data-service]")];
+const serviceImages = [...document.querySelectorAll("[data-service-image]")];
+
+function openService(index) {
+  serviceItems.forEach((item, i) => {
+    const open = i === index;
+    item.classList.toggle("is-open", open);
+    item.querySelector("button").setAttribute("aria-expanded", String(open));
+  });
+  serviceImages.forEach((image, i) => {
+    const active = i === index;
+    image.classList.toggle("is-active", active);
+    image.toggleAttribute("aria-hidden", !active);
+  });
+}
+
+openService(0);
+
+serviceItems.forEach((item, index) => {
+  item.querySelector("button").addEventListener("click", () => {
+    if (item.classList.contains("is-open")) return;
+    openService(index);
+  });
+});
+
 const quotes = [...document.querySelectorAll("[data-quote]")];
 const dots = document.querySelector(".dots");
 let quoteIndex = 0;

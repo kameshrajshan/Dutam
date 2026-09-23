@@ -104,32 +104,117 @@
           <h2>Services</h2>
           <p>Dutam Engineering offers six core services that cover the full range of CAD and engineering design work.</p>
         </div>
-        <ul class="service-grid">
-          <li>
-            <img src="assets/service-3d.png" alt="Engineers reviewing a 3D CAD model on screen" />
-            <span>3D Modeling and Drafting</span>
-          </li>
-          <li>
-            <img src="assets/service-cad.png" alt="Hands reviewing technical drawings on a desk" />
-            <span>CAD Customization</span>
-          </li>
-          <li>
-            <img src="assets/service-steel.png" alt="Steel framework of an industrial structure" />
-            <span>Steel Detailing</span>
-          </li>
-          <li>
-            <img src="assets/service-bim.png" alt="Engineer working at a dual-monitor workstation" />
-            <span>BIM Consulting</span>
-          </li>
-          <li>
-            <img src="assets/service-docs.png" alt="Rows of organized project binders" />
-            <span>Documentation</span>
-          </li>
-          <li>
-            <img src="assets/service-plant.png" alt="Industrial plant piping and vessels" />
-            <span>Plant Design</span>
-          </li>
-        </ul>
+        <div class="service-panel">
+          <div class="service-visual">
+            <img class="is-active" src="assets/service-3d.png" alt="Engineers reviewing a 3D CAD model on screen" data-service-image />
+            <img src="assets/service-cad.png" alt="Hands reviewing technical drawings on a desk" data-service-image />
+            <img src="assets/service-steel.png" alt="Steel framework of an industrial structure" data-service-image />
+            <img src="assets/service-bim.png" alt="Engineer working at a dual-monitor workstation" data-service-image />
+            <img src="assets/service-docs.png" alt="Rows of organized project binders" data-service-image />
+            <img src="assets/service-plant.png" alt="Industrial plant piping and vessels" data-service-image />
+          </div>
+          <div class="service-list">
+            <article class="service-item is-open" data-service>
+              <h3>
+                <button type="button" aria-expanded="true" aria-controls="service-copy-0" id="service-btn-0">
+                  3D Modeling and Drafting
+                  <span class="service-mark" aria-hidden="true"></span>
+                </button>
+              </h3>
+              <div class="service-copy" id="service-copy-0" role="region" aria-labelledby="service-btn-0">
+                <div>
+                <p>
+                  Dutam builds accurate 3D models and production drawings for equipment, structures, and plant
+                  components. Visualize early, detail precisely, and issue drawing sets that fabrication and
+                  assembly can follow without guesswork.
+                </p>
+                </div>
+              </div>
+            </article>
+            <article class="service-item" data-service>
+              <h3>
+                <button type="button" aria-expanded="false" aria-controls="service-copy-1" id="service-btn-1">
+                  CAD Customization
+                  <span class="service-mark" aria-hidden="true"></span>
+                </button>
+              </h3>
+              <div class="service-copy" id="service-copy-1" role="region" aria-labelledby="service-btn-1">
+                <div>
+                <p>
+                  Dutam builds custom tools, scripts, and interfaces so engineers spend time on decisions, not
+                  repeated clicks. Automation covers common CAD platforms and connects design work to the systems
+                  your team already uses.
+                </p>
+                </div>
+              </div>
+            </article>
+            <article class="service-item" data-service>
+              <h3>
+                <button type="button" aria-expanded="false" aria-controls="service-copy-2" id="service-btn-2">
+                  Steel Detailing
+                  <span class="service-mark" aria-hidden="true"></span>
+                </button>
+              </h3>
+              <div class="service-copy" id="service-copy-2" role="region" aria-labelledby="service-btn-2">
+                <div>
+                <p>
+                  Dutam details structural steel from design intent through a fabrication package. Member and
+                  connection drawings follow AISC, Eurocodes, DIN, IS, and the other standards your project
+                  requires.
+                </p>
+                </div>
+              </div>
+            </article>
+            <article class="service-item" data-service>
+              <h3>
+                <button type="button" aria-expanded="false" aria-controls="service-copy-3" id="service-btn-3">
+                  BIM Consulting
+                  <span class="service-mark" aria-hidden="true"></span>
+                </button>
+              </h3>
+              <div class="service-copy" id="service-copy-3" role="region" aria-labelledby="service-btn-3">
+                <div>
+                <p>
+                  Dutam keeps architectural and construction disciplines in one model story. Coordination across
+                  structure, HVAC, and MEP reduces clash noise before it becomes a site delay.
+                </p>
+                </div>
+              </div>
+            </article>
+            <article class="service-item" data-service>
+              <h3>
+                <button type="button" aria-expanded="false" aria-controls="service-copy-4" id="service-btn-4">
+                  Documentation
+                  <span class="service-mark" aria-hidden="true"></span>
+                </button>
+              </h3>
+              <div class="service-copy" id="service-copy-4" role="region" aria-labelledby="service-btn-4">
+                <div>
+                <p>
+                  Dutam sets up templates, workflows, and drawing standards so files stay findable, controlled,
+                  and reusable. The system is built so the next revision does not start from scratch.
+                </p>
+                </div>
+              </div>
+            </article>
+            <article class="service-item" data-service>
+              <h3>
+                <button type="button" aria-expanded="false" aria-controls="service-copy-5" id="service-btn-5">
+                  Plant Design
+                  <span class="service-mark" aria-hidden="true"></span>
+                </button>
+              </h3>
+              <div class="service-copy" id="service-copy-5" role="region" aria-labelledby="service-btn-5">
+                <div>
+                <p>
+                  Dutam supports multidisciplinary plant layout, modelling, and coordinated documentation. Plant
+                  work succeeds when interfaces between disciplines stay clear through every change.
+                </p>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
       </section>
 
       <section class="industries" aria-labelledby="industries-heading">
