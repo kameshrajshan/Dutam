@@ -78,12 +78,30 @@ document.addEventListener("click", (event) => {
   }
 });
 
+const nav = document.querySelector(".nav");
 const navToggle = document.querySelector(".nav-toggle");
 const navLinks = document.querySelector("#site-nav");
+let lastScrollY = window.scrollY;
+
 navToggle.addEventListener("click", () => {
   const open = navLinks.classList.toggle("is-open");
   navToggle.setAttribute("aria-expanded", String(open));
+  if (open) nav.classList.remove("is-hidden");
 });
+
+window.addEventListener(
+  "scroll",
+  () => {
+    const y = window.scrollY;
+    const delta = y - lastScrollY;
+    if (Math.abs(delta) < 8 && y > 8) return;
+    const menuOpen = navLinks.classList.contains("is-open");
+    if (y < 8 || delta < 0 || menuOpen) nav.classList.remove("is-hidden");
+    else nav.classList.add("is-hidden");
+    lastScrollY = y;
+  },
+  { passive: true }
+);
 
 const form = document.querySelector("#project-form");
 const status = form.querySelector(".form-status");
