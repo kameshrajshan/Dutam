@@ -64,19 +64,19 @@
           <p class="track-label">DELIVERY TRACK RECORD</p>
           <dl>
             <div>
-              <dt>1,000+</dt>
+              <dt data-count="1000" data-suffix="+">1,000+</dt>
               <dd>Engineering Assignments Completed</dd>
             </div>
             <div>
-              <dt>100,000+</dt>
+              <dt data-count="100000" data-suffix="+">100,000+</dt>
               <dd>Effort Hours Logged Across Projects</dd>
             </div>
             <div>
-              <dt>15+</dt>
+              <dt data-count="15" data-suffix="+">15+</dt>
               <dd>Long-Term Client Partnerships</dd>
             </div>
             <div>
-              <dt>25+</dt>
+              <dt data-count="25" data-suffix="+">25+</dt>
               <dd>Specialist Engineers On-Team</dd>
             </div>
             <div>
@@ -87,7 +87,7 @@
         </aside>
       </section>
 
-      <section id="about" class="who">
+      <section id="about" class="who" data-reveal>
         <h2>Who We Are</h2>
         <p>
           Our team brings together engineers with over a decade of industry experience and younger
@@ -100,12 +100,12 @@
       </section>
 
       <section id="services" class="services">
-        <div class="services-intro">
+        <div class="services-intro" data-reveal>
           <h2>Services</h2>
           <p>Dutam Engineering offers six core services that cover the full range of CAD and engineering design work.</p>
         </div>
         <div class="service-panel">
-          <div class="service-visual">
+          <div class="service-visual" data-reveal>
             <img class="is-active" src="assets/service-3d.png" alt="Engineers reviewing a 3D CAD model on screen" data-service-image />
             <img src="assets/service-cad.png" alt="Hands reviewing technical drawings on a desk" data-service-image />
             <img src="assets/service-steel.png" alt="Steel framework of an industrial structure" data-service-image />
@@ -113,7 +113,7 @@
             <img src="assets/service-docs.png" alt="Rows of organized project binders" data-service-image />
             <img src="assets/service-plant.png" alt="Industrial plant piping and vessels" data-service-image />
           </div>
-          <div class="service-list">
+          <div class="service-list" data-reveal>
             <article class="service-item is-open" data-service>
               <h3>
                 <button type="button" aria-expanded="true" aria-controls="service-copy-0" id="service-btn-0">
@@ -218,8 +218,8 @@
       </section>
 
       <section class="industries" aria-labelledby="industries-heading">
-        <img src="assets/industries.png" alt="Close view of a large industrial saw blade" />
-        <div>
+        <img src="assets/industries.png" alt="Close view of a large industrial saw blade" data-reveal />
+        <div data-reveal>
           <h2 id="industries-heading">Explore services by Industries</h2>
           <ol>
             <li>
@@ -266,80 +266,13 @@
         </div>
       </section>
 
-      <section class="quotes" aria-labelledby="quotes-heading">
-        <h2 id="quotes-heading">What they say about us</h2>
-        <div class="quote-stage">
-          <article class="quote is-active" data-quote>
-            <header>
-              <img src="assets/avatar.svg" alt="" width="56" height="56" />
-              <div>
-                <p class="quote-name">Anne Bouwman</p>
-                <p class="quote-role">Viscon Fresh Produce | The Netherlands</p>
-              </div>
-            </header>
-            <p>
-              Our cooperation with Dutam is going well. We can find each other easily through digital
-              channels. The English language is well mastered, so communication is smooth. Dutam follows
-              our drawing rules but dares to ask questions about them so that we could improve them
-              together. We notice that Dutam is gaining more experience with our machines, resulting in
-              less questions and more feedback on possible errors in our designs. We feel that Dutam is
-              committed to delivering good work and, if necessary, is willing to go the extra mile. We
-              look forward to a longer cooperation.
-            </p>
-          </article>
-          <article class="quote" data-quote hidden>
-            <header>
-              <img src="assets/avatar.svg" alt="" width="56" height="56" />
-              <div>
-                <p class="quote-name">Bart Ramaekers</p>
-                <p class="quote-role">Co-owner at WB&amp;E Facade Design</p>
-              </div>
-            </header>
-            <p>
-              Since the founding of Dutam Engineering, they have quickly become an essential and reliable
-              partner for our company. Whether it's smaller projects or more complex assignments, Dutam
-              Engineering is always ready with a solution that perfectly fits our needs. They deliver
-              drawings that meet the highest quality standards, always within the agreed deadlines. We
-              fully intend to continue working together successfully for many years to come.
-            </p>
-          </article>
-          <article class="quote" data-quote hidden>
-            <header>
-              <img src="assets/avatar.svg" alt="" width="56" height="56" />
-              <div>
-                <p class="quote-name">Drees-Peter</p>
-                <p class="quote-role">Operations Manager De Bruin Process Equipement B.V.</p>
-              </div>
-            </header>
-            <p>
-              We have been collaborating with Dutam for some time now for the development of our
-              production drawings, and we are very satisfied with their service. Their team is highly
-              professional in their communication and approach, making the collaboration smooth. The
-              drawings they deliver are of high quality, precise, and always meet our expectations.
-              Additionally, they are quick to respond, which helps us work efficiently and complete our
-              projects on time. In short, we are very pleased with Dutam as our partner and can certainly
-              recommend them for technical drawings and engineering work.
-            </p>
-          </article>
-        </div>
-        <div class="quote-controls">
-          <button type="button" data-quote-prev aria-label="Previous testimonial">
-            <img src="assets/chevron-left.svg" alt="" width="40" height="40" />
-          </button>
-          <button type="button" data-quote-next aria-label="Next testimonial">
-            <img src="assets/chevron-right.svg" alt="" width="40" height="40" />
-          </button>
-        </div>
-        <div class="dots" role="tablist" aria-label="Testimonial pages"></div>
-      </section>
-
       <section id="contact" class="connect">
-        <div class="connect-copy">
+        <div class="connect-copy" data-reveal>
           <h2>Let’s Connect.</h2>
           <p>Starting a new project?</p>
           <p>Tell us your scope, standard, and timeline and we will come back to you within 24 hours.</p>
         </div>
-        <form class="form" id="project-form" novalidate>
+        <form class="form" id="project-form" data-reveal novalidate>
           <h3>Tell Us About Your Project</h3>
           <label class="sr-only" for="full-name">Full name</label>
           <input id="full-name" name="name" type="text" placeholder="Full name" required />
@@ -369,22 +302,22 @@
 
     <footer class="footer" id="careers">
       <div class="footer-grid">
-        <div>
+        <div data-reveal>
           <h2>Dutam Engineering</h2>
           <p>
             Every project we take on is held to the same standard: technically accurate work, delivered
             on time, and structured to meet your specification.
           </p>
         </div>
-        <div>
+        <div data-reveal>
           <h2>Registered Address</h2>
           <p>B1, Mahalakshmi Flats, Sivagami Street, Srinivasa Nagar,<br />New Perungalathur,<br />Chennai – 600 063.</p>
         </div>
-        <div>
+        <div data-reveal>
           <h2>Branch Address</h2>
           <p>4/189-1 First Floor, Megha Kamalam Building, Saraswathi Street, Advaitha Ashram Road, Fairlands,<br />Salem - 636 004.</p>
         </div>
-        <div>
+        <div data-reveal>
           <h2>Contact Us</h2>
           <p>Email: info@dutamengineering.com</p>
           <p>Phone: +91 427 455 2439</p>

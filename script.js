@@ -23,34 +23,48 @@ serviceItems.forEach((item, index) => {
   });
 });
 
-const quotes = [...document.querySelectorAll("[data-quote]")];
-const dots = document.querySelector(".dots");
-let quoteIndex = 0;
+const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-function showQuote(index) {
-  quoteIndex = (index + quotes.length) % quotes.length;
-  quotes.forEach((quote, i) => {
-    const active = i === quoteIndex;
-    quote.hidden = !active;
-    quote.classList.toggle("is-active", active);
-  });
-  dots.querySelectorAll("button").forEach((dot, i) => {
-    dot.setAttribute("aria-selected", String(i === quoteIndex));
-  });
+function countUp(el) {
+  const target = Number(el.dataset.count);
+  const suffix = el.dataset.suffix || "";
+  const start = performance.now();
+  const duration = 1100;
+
+  function frame(now) {
+    const progress = Math.min(1, (now - start) / duration);
+    const eased = 1 - (1 - progress) ** 3;
+    el.textContent = Math.round(target * eased).toLocaleString("en-US") + suffix;
+    if (progress < 1) requestAnimationFrame(frame);
+  }
+
+  requestAnimationFrame(frame);
 }
 
-quotes.forEach((_, i) => {
-  const dot = document.createElement("button");
-  dot.type = "button";
-  dot.setAttribute("role", "tab");
-  dot.setAttribute("aria-label", `Testimonial ${i + 1}`);
-  dot.addEventListener("click", () => showQuote(i));
-  dots.append(dot);
-});
+if (!reduceMotion) {
+  document.documentElement.classList.add("motion");
+  document.querySelectorAll("[data-count]").forEach(countUp);
 
-document.querySelector("[data-quote-prev]").addEventListener("click", () => showQuote(quoteIndex - 1));
-document.querySelector("[data-quote-next]").addEventListener("click", () => showQuote(quoteIndex + 1));
-showQuote(0);
+  const revealEls = [...document.querySelectorAll("[data-reveal]")];
+  revealEls.forEach((el) => {
+    const siblings = [...el.parentElement.children].filter((child) => child.hasAttribute("data-reveal"));
+    const index = siblings.indexOf(el);
+    if (index > 0) el.style.transitionDelay = `${index * 90}ms`;
+  });
+
+  const revealObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add("is-in");
+        revealObserver.unobserve(entry.target);
+      });
+    },
+    { threshold: 0.18, rootMargin: "0px 0px -8% 0px" }
+  );
+
+  revealEls.forEach((el) => revealObserver.observe(el));
+}
 
 const language = document.querySelector(".language");
 const languageBtn = language.querySelector(".language-btn");
