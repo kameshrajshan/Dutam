@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Careers | Dutam Engineering</title>
+    <meta
+      name="description"
+      content="Join Dutam Engineering. Apply generally and we will match you when a role fits."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="careers-page">
+    <header class="nav">
+      <div class="nav-bar">
+        <a class="brand" href="index.html">Dutam</a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+          Menu
+        </button>
+        <nav id="site-nav" class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="index.html#about">About</a>
+          <a href="index.html#services">Services</a>
+          <a href="careers.html" aria-current="page">Careers</a>
+          <a href="contact.html">Contact us</a>
+        </nav>
+        <div class="nav-utils">
+          <div class="language">
+            <button class="language-btn" type="button" aria-expanded="false" aria-controls="language-menu">
+              <img src="assets/icon-globe.svg" alt="" width="20" height="20" />
+              <span data-language-label>English</span>
+              <img src="assets/icon-chevron.svg" alt="" width="20" height="20" />
+            </button>
+            <ul id="language-menu" class="language-menu" hidden>
+              <li><button type="button" data-lang="en">English</button></li>
+              <li><button type="button" data-lang="nl">Dutch</button></li>
+              <li><button type="button" data-lang="de">German</button></li>
+              <li><button type="button" data-lang="fr">French</button></li>
+            </ul>
+          </div>
+          <a class="btn btn-login" href="index.html#login">Login</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="page-hero" data-reveal>
+        <p class="eyebrow">Careers</p>
+        <h1>Engineer What’s Next. Grow Where Quality Matters.</h1>
+        <p class="lede">
+          Work alongside experienced modelers and engineers across machine building, construction, and
+          energy. We invest in talent that treats engineering as a craft, not a checklist.
+        </p>
+      </section>
+
+      <section class="why" aria-labelledby="why-heading">
+        <h2 id="why-heading" data-reveal>Why Join Dutam</h2>
+        <ol>
+          <li data-reveal>
+            <p class="why-index">01</p>
+            <div>
+              <h3>High-Impact Global Projects</h3>
+              <p>
+                Work on complex, real-world engineering challenges across machine building, construction,
+                and energy. Your designs, models, and detailing directly drive international fabrication
+                and plant operations.
+              </p>
+            </div>
+          </li>
+          <li data-reveal>
+            <p class="why-index">02</p>
+            <div>
+              <h3>Continuous Growth &amp; Mentorship</h3>
+              <p>
+                Advance your technical mastery through structured learning, hands-on mentorship, and
+                exposure to cutting-edge CAD, BIM, and automation tools. We treat career development as
+                an ongoing investment, not an afterthought.
+              </p>
+            </div>
+          </li>
+          <li data-reveal>
+            <p class="why-index">03</p>
+            <div>
+              <h3>Culture of Autonomy &amp; Balance</h3>
+              <p>
+                Thrive in a collaborative, cross-border environment that values precision over politics.
+                We provide flexible work practices, open communication, and the support you need to excel
+                professionally while safeguarding your personal time.
+              </p>
+            </div>
+          </li>
+        </ol>
+      </section>
+
+      <section class="apply" aria-labelledby="apply-heading">
+        <div class="apply-inner">
+          <h2 id="apply-heading" data-reveal>General application</h2>
+          <p class="apply-note" data-reveal>
+            We do not list open roles on the site. Tell us your strengths and we will match you when a fit opens.
+          </p>
+          <form class="sheet" id="career-form" data-reveal novalidate>
+            <div class="field-grid">
+              <div class="field">
+                <label for="full-name">Full name</label>
+                <input id="full-name" name="name" type="text" placeholder="Your name" autocomplete="name" required />
+              </div>
+              <div class="field">
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" placeholder="you@email.com" autocomplete="email" required />
+              </div>
+            </div>
+            <div class="field-grid">
+              <div class="field">
+                <label for="phone">Phone</label>
+                <input id="phone" name="phone" type="tel" placeholder="+91 …" autocomplete="tel" required />
+              </div>
+              <div class="field">
+                <label for="address">Address</label>
+                <input id="address" name="address" type="text" placeholder="Your address" autocomplete="street-address" required />
+              </div>
+            </div>
+            <div class="field-grid">
+              <div class="field">
+                <label for="interest">Area of interest</label>
+                <input id="interest" name="interest" type="text" placeholder="e.g. modelling, steel detailing, BIM" required />
+              </div>
+              <div class="field">
+                <label for="experience">Years of experience</label>
+                <input id="experience" name="experience" type="text" placeholder="e.g. 3" required />
+              </div>
+            </div>
+            <div class="field-grid">
+              <div class="field">
+                <label for="portfolio">Portfolio</label>
+                <input id="portfolio" name="portfolio" type="url" placeholder="https://…" />
+              </div>
+              <div class="field">
+                <label for="resume">Resume</label>
+                <input id="resume" name="resume" type="file" accept=".pdf,.doc,.docx,application/pdf" required />
+              </div>
+            </div>
+            <div class="field">
+              <label for="note">Cover note (optional)</label>
+              <input id="note" name="note" type="text" placeholder="A few lines about your background" />
+            </div>
+            <button class="btn btn-apply" type="submit">Apply now</button>
+            <p class="form-status" role="status" hidden></p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-grid">
+        <div data-reveal>
+          <h2>Dutam Engineering</h2>
+          <p>
+            Every project we take on is held to the same standard: technically accurate work, delivered
+            on time, and structured to meet your specification.
+          </p>
+        </div>
+        <div data-reveal>
+          <h2>Registered Address</h2>
+          <p>B1, Mahalakshmi Flats, Sivagami Street, Srinivasa Nagar,<br />New Perungalathur,<br />Chennai – 600 063.</p>
+        </div>
+        <div data-reveal>
+          <h2>Branch Address</h2>
+          <p>4/189-1 First Floor, Megha Kamalam Building, Saraswathi Street, Advaitha Ashram Road, Fairlands,<br />Salem - 636 004.</p>
+        </div>
+        <div data-reveal>
+          <h2>Contact Us</h2>
+          <p>Email: info@dutamengineering.com</p>
+          <p>Phone: +91 427 455 2439</p>
+        </div>
+      </div>
+      <div class="legal">
+        <p>© 2026 DUTAM. All Rights Reserved.</p>
+        <nav>
+          <a href="index.html">Home</a>
+          <a href="index.html#about">About</a>
+          <a href="index.html#services">Services</a>
+          <a href="careers.html">Careers</a>
+          <a href="contact.html">Contact us</a>
+          <a href="index.html#privacy">Privacy Policy</a>
+        </nav>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

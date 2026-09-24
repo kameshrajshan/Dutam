@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Contact | Dutam Engineering</title>
+    <meta
+      name="description"
+      content="Share your engineering scope with Dutam. We review models, timeline, and delivery requirements."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="contact-page">
+    <header class="nav">
+      <div class="nav-bar">
+        <a class="brand" href="index.html">Dutam</a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+          Menu
+        </button>
+        <nav id="site-nav" class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="index.html#about">About</a>
+          <a href="index.html#services">Services</a>
+          <a href="careers.html">Careers</a>
+          <a href="contact.html" aria-current="page">Contact us</a>
+        </nav>
+        <div class="nav-utils">
+          <div class="language">
+            <button class="language-btn" type="button" aria-expanded="false" aria-controls="language-menu">
+              <img src="assets/icon-globe.svg" alt="" width="20" height="20" />
+              <span data-language-label>English</span>
+              <img src="assets/icon-chevron.svg" alt="" width="20" height="20" />
+            </button>
+            <ul id="language-menu" class="language-menu" hidden>
+              <li><button type="button" data-lang="en">English</button></li>
+              <li><button type="button" data-lang="nl">Dutch</button></li>
+              <li><button type="button" data-lang="de">German</button></li>
+              <li><button type="button" data-lang="fr">French</button></li>
+            </ul>
+          </div>
+          <a class="btn btn-login" href="index.html#login">Login</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="page-hero" data-reveal>
+        <p class="eyebrow">Contact</p>
+        <h1>Let’s Discuss Your Engineering Scope</h1>
+        <p class="lede">
+          Share your models, timeline, and delivery requirements. We’ll review your scope and provide a clear turnaround plan.
+        </p>
+      </section>
+
+      <section class="contact-body" aria-labelledby="contact-heading">
+        <h2 id="contact-heading" class="sr-only">Send a message</h2>
+        <form class="sheet" id="contact-form" data-reveal novalidate>
+          <div class="field-grid">
+            <div class="field">
+              <label for="name">Name</label>
+              <input id="name" name="name" type="text" placeholder="Your name" autocomplete="name" required />
+            </div>
+            <div class="field">
+              <label for="company">Company</label>
+              <input id="company" name="company" type="text" placeholder="Company name" autocomplete="organization" required />
+            </div>
+          </div>
+          <div class="field-grid">
+            <div class="field">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" placeholder="you@company.com" autocomplete="email" required />
+            </div>
+            <div class="field">
+              <label for="phone">Phone</label>
+              <input id="phone" name="phone" type="tel" placeholder="+91 …" autocomplete="tel" required />
+            </div>
+          </div>
+          <div class="field-grid">
+            <div class="field">
+              <label for="industry">Industry</label>
+              <input id="industry" name="industry" type="text" placeholder="Machine building / Construction / Oil &amp; energy" required />
+            </div>
+            <div class="field">
+              <label for="services">Services</label>
+              <input id="services" name="services" type="text" placeholder="Select capabilities" required />
+            </div>
+          </div>
+          <div class="field">
+            <label for="scope">Brief scope</label>
+            <input id="scope" name="scope" type="text" placeholder="Standards, deliverables, timeline…" required />
+          </div>
+          <button class="btn btn-apply" type="submit">Send message</button>
+          <p class="form-status" role="status" hidden></p>
+        </form>
+        <aside class="office" data-reveal>
+          <h2>Office details</h2>
+          <p>Email<br />info@dutamengineering.com</p>
+          <p>Phone<br />+91 427 455 2439</p>
+          <p>Address<br />B1, Mahalakshmi Flats, Sivagami Street, Srinivasa Nagar, New Perungalathur, Chennai – 600 063.</p>
+        </aside>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-grid">
+        <div data-reveal>
+          <h2>Dutam Engineering</h2>
+          <p>
+            Every project we take on is held to the same standard: technically accurate work, delivered
+            on time, and structured to meet your specification.
+          </p>
+        </div>
+        <div data-reveal>
+          <h2>Registered Address</h2>
+          <p>B1, Mahalakshmi Flats, Sivagami Street, Srinivasa Nagar,<br />New Perungalathur,<br />Chennai – 600 063.</p>
+        </div>
+        <div data-reveal>
+          <h2>Branch Address</h2>
+          <p>4/189-1 First Floor, Megha Kamalam Building, Saraswathi Street, Advaitha Ashram Road, Fairlands,<br />Salem - 636 004.</p>
+        </div>
+        <div data-reveal>
+          <h2>Contact Us</h2>
+          <p>Email: info@dutamengineering.com</p>
+          <p>Phone: +91 427 455 2439</p>
+        </div>
+      </div>
+      <div class="legal">
+        <p>© 2026 DUTAM. All Rights Reserved.</p>
+        <nav>
+          <a href="index.html">Home</a>
+          <a href="index.html#about">About</a>
+          <a href="index.html#services">Services</a>
+          <a href="careers.html">Careers</a>
+          <a href="contact.html">Contact us</a>
+          <a href="index.html#privacy">Privacy Policy</a>
+        </nav>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

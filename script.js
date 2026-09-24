@@ -14,14 +14,16 @@ function openService(index) {
   });
 }
 
-openService(0);
+if (serviceItems.length) {
+  openService(0);
 
-serviceItems.forEach((item, index) => {
-  item.querySelector("button").addEventListener("click", () => {
-    if (item.classList.contains("is-open")) return;
-    openService(index);
+  serviceItems.forEach((item, index) => {
+    item.querySelector("button").addEventListener("click", () => {
+      if (item.classList.contains("is-open")) return;
+      openService(index);
+    });
   });
-});
+}
 
 const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
@@ -118,18 +120,35 @@ window.addEventListener(
   { passive: true }
 );
 
-const form = document.querySelector("#project-form");
-const status = form.querySelector(".form-status");
-
-form.addEventListener("submit", (event) => {
-  event.preventDefault();
-  if (!form.checkValidity()) {
+function bindForm(form, invalidMessage, successMessage) {
+  if (!form) return;
+  const status = form.querySelector(".form-status");
+  form.addEventListener("submit", (event) => {
+    event.preventDefault();
+    if (!form.checkValidity()) {
+      status.hidden = false;
+      status.textContent = invalidMessage;
+      form.reportValidity();
+      return;
+    }
     status.hidden = false;
-    status.textContent = "Please complete the required fields and accept the privacy policy.";
-    form.reportValidity();
-    return;
-  }
-  status.hidden = false;
-  status.textContent = "Thanks. A Dutam engineer will reply within one business day.";
-  form.reset();
-});
+    status.textContent = successMessage;
+    form.reset();
+  });
+}
+
+bindForm(
+  document.querySelector("#project-form"),
+  "Please complete the required fields and accept the privacy policy.",
+  "Thanks. A Dutam engineer will reply within one business day."
+);
+bindForm(
+  document.querySelector("#career-form"),
+  "Please complete the required fields.",
+  "Thanks. We'll keep your application and write when a role fits."
+);
+bindForm(
+  document.querySelector("#contact-form"),
+  "Please complete the required fields.",
+  "Thanks. A Dutam engineer will reply within one business day."
+);
