@@ -1351,11 +1351,22 @@ textarea {
 }
 
 .motion .info-card.is-in {
-  transition: opacity 0.8s ease, transform 0.8s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.25s ease;
+  transition: opacity 0.8s ease, transform 0.8s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.25s ease, border-color 0.25s ease;
 }
 
+.info-card:hover,
 .motion .info-card.is-in:hover {
-  box-shadow: 0 18px 40px color-mix(in srgb, var(--color-ink) 16%, transparent);
+  border-color: var(--color-teal-500);
+  box-shadow: 0 18px 40px color-mix(in srgb, var(--color-ink) 18%, transparent);
+}
+
+.info-card .more {
+  display: inline-block;
+  transition: transform 0.25s ease;
+}
+
+.info-card:hover .more {
+  transform: translateX(6px);
 }
 
 .info-card h3 {
@@ -1386,14 +1397,19 @@ textarea {
 }
 
 .cta-band {
+  width: 100%;
+  margin-bottom: 160px;
+  padding: 96px 0;
+  background: var(--color-teal-800);
+}
+
+.cta-layout {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 24px;
-  width: 100%;
-  margin-bottom: 160px;
-  padding: 96px var(--layout-margin);
-  background: var(--color-teal-800);
+  width: min(1280px, calc(100% - (var(--layout-margin) * 2)));
+  margin-inline: auto;
 }
 
 .cta-band p {
@@ -1975,7 +1991,8 @@ textarea {
   .about-split,
   .mv-wrap,
   .goals-layout,
-  .quotes {
+  .quotes,
+  .cta-layout {
     width: calc(100% - 32px);
   }
 
@@ -1985,7 +2002,6 @@ textarea {
     padding: var(--space-16) 0;
   }
 
-  .cta-band,
   .detail-cta,
   .detail-related,
   .detail-foot {
