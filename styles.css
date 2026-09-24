@@ -1484,6 +1484,7 @@ textarea {
   font-size: var(--font-size-h4);
   font-weight: var(--font-weight-semibold);
   line-height: normal;
+  color: var(--color-teal-500);
 }
 
 .about-nums span:nth-child(1) { padding-left: 8px; }
