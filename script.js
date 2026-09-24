@@ -68,6 +68,41 @@ if (!reduceMotion) {
   revealEls.forEach((el) => revealObserver.observe(el));
 }
 
+const quoteStage = document.querySelector("[data-quotes]");
+if (quoteStage) {
+  const quotes = [...quoteStage.querySelectorAll("[data-quote]")];
+  let quoteIndex = 0;
+
+  function fitQuoteStage() {
+    quoteStage.style.height = "auto";
+    quotes.forEach((quote) => {
+      quote.style.minHeight = "0px";
+    });
+    const tallest = Math.max(...quotes.map((quote) => quote.offsetHeight));
+    quotes.forEach((quote) => {
+      quote.style.minHeight = "";
+    });
+    quoteStage.style.height = `${tallest}px`;
+  }
+
+  function showQuote(next) {
+    quoteIndex = next;
+    quotes.forEach((quote, i) => {
+      const active = i === quoteIndex;
+      quote.classList.toggle("is-active", active);
+      quote.toggleAttribute("aria-hidden", !active);
+    });
+    fitQuoteStage();
+    quoteStage.classList.add("is-ready");
+  }
+
+  showQuote(0);
+  window.addEventListener("resize", fitQuoteStage);
+  window.setInterval(() => {
+    showQuote((quoteIndex + 1) % quotes.length);
+  }, 5000);
+}
+
 const language = document.querySelector(".language");
 const languageBtn = language.querySelector(".language-btn");
 const languageMenu = document.querySelector("#language-menu");

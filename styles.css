@@ -303,14 +303,19 @@ textarea {
 .lede {
   margin: 0;
   max-width: 700px;
-  font-size: var(--font-size-body);
-  line-height: 1.65;
+  font-size: var(--font-size-body-sm);
+  line-height: var(--font-line-height-body-sm);
 }
 
 .hero-actions {
   display: flex;
   gap: 24px;
   margin-top: 48px;
+}
+
+.hero .btn {
+  font-weight: 400;
+  line-height: var(--font-line-height-body);
 }
 
 .assurance {
@@ -327,8 +332,9 @@ textarea {
 
 .track-label {
   margin: 0 0 8px;
-  font-size: 13px;
-  font-weight: 700;
+  font-size: var(--font-size-body-sm);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--font-line-height-body-sm);
 }
 
 .track dl {
@@ -341,14 +347,16 @@ textarea {
 }
 
 .track dt {
-  font-size: 26px;
-  font-weight: 700;
+  font-size: var(--font-size-h5);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--font-line-height-h5);
   color: var(--black);
 }
 
 .track dd {
   margin: 4px 0 0;
-  font-size: 12px;
+  font-size: var(--font-size-caption);
+  line-height: var(--font-line-height-caption);
   opacity: 0.65;
 }
 
@@ -361,14 +369,15 @@ textarea {
 
 .who h2 {
   margin: 0;
-  font-size: 24px;
-  font-weight: var(--font-weight-medium);
+  font-size: var(--font-size-h4);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--font-line-height-h4);
 }
 
 .who p {
   margin: 0;
-  font-size: 18px;
-  line-height: 1.55;
+  font-size: var(--font-size-body);
+  line-height: var(--font-line-height-body);
 }
 
 .services {
@@ -386,14 +395,15 @@ textarea {
 
 .services h2 {
   margin: 0 0 20px;
-  font-size: 48px;
+  font-size: var(--font-size-h3);
   font-weight: var(--font-weight-semibold);
-  letter-spacing: -0.24px;
+  line-height: var(--font-line-height-h3);
 }
 
 .services-intro p {
   margin: 0;
   font-size: var(--font-size-body);
+  line-height: var(--font-line-height-body);
 }
 
 .service-panel {
@@ -461,8 +471,9 @@ textarea {
   background: transparent;
   color: inherit;
   text-align: left;
-  font-size: 22px;
+  font-size: var(--font-size-h6);
   font-weight: var(--font-weight-medium);
+  line-height: var(--font-line-height-h6);
   cursor: pointer;
   transition: color 0.25s ease;
 }
@@ -525,8 +536,8 @@ textarea {
 .service-copy p {
   margin: 0;
   padding-bottom: 20px;
-  font-size: 15px;
-  line-height: 1.55;
+  font-size: var(--font-size-body);
+  line-height: var(--font-line-height-body);
   color: color-mix(in srgb, var(--color-white) 82%, transparent);
 }
 
@@ -565,9 +576,9 @@ textarea {
 
 .industries h2 {
   margin: 0 0 var(--space-32);
-  font-size: 52px;
-  font-weight: 700;
-  line-height: 1.04;
+  font-size: var(--font-size-h3);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--font-line-height-h3);
 }
 
 .industries ol {
@@ -608,17 +619,17 @@ textarea {
 
 .industries strong {
   display: block;
-  font-size: 22px;
-  font-weight: 700;
-  line-height: normal;
+  font-size: var(--font-size-h6);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--font-line-height-h6);
 }
 
 .industries em {
   display: block;
   margin-top: 5px;
   font-style: normal;
-  font-size: 13px;
-  line-height: normal;
+  font-size: var(--font-size-body-sm);
+  line-height: var(--font-line-height-body-sm);
   opacity: 0.6;
 }
 
@@ -660,16 +671,18 @@ textarea {
 .connect-copy h2 {
   margin: 0 0 8px;
   padding-left: var(--space-16);
-  font-size: 48px;
+  font-size: var(--font-size-h3);
   font-weight: var(--font-weight-semibold);
+  line-height: var(--font-line-height-h3);
 }
 
 .connect-copy p {
   margin: 0;
   padding-left: var(--space-16);
   max-width: 500px;
-  font-size: 24px;
-  line-height: 1.35;
+  font-size: var(--font-size-h5);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--font-line-height-h5);
 }
 
 .form {
@@ -684,8 +697,9 @@ textarea {
 
 .form h3 {
   margin: 0 0 8px;
-  font-size: 36px;
+  font-size: var(--font-size-h4);
   font-weight: var(--font-weight-semibold);
+  line-height: var(--font-line-height-h4);
 }
 
 .form-row {
@@ -702,6 +716,9 @@ textarea {
   padding: var(--space-16) 24px;
   background: var(--white);
   color: var(--teal-950);
+  font-size: var(--font-size-body);
+  font-weight: 300;
+  line-height: normal;
   transition: box-shadow 0.25s ease;
 }
 
@@ -726,8 +743,8 @@ textarea {
   align-items: center;
   gap: var(--sds-size-space-300);
   margin: 4px 0 0;
-  font-size: var(--font-size-body-sm);
-  line-height: 1.4;
+  font-size: var(--font-size-body);
+  line-height: var(--font-line-height-body);
 }
 
 .check input {
@@ -922,9 +939,28 @@ textarea {
   animation: rise-in 0.95s 0.22s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
-.motion .connect::before {
+.motion .connect::before,
+.motion .about-hero::before {
   animation: photo-drift 22s ease-in-out infinite alternate;
 }
+
+.motion .about-hero-copy > *,
+.motion .hub-hero > *,
+.motion .detail-hero > * {
+  animation: rise-in 0.85s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.motion .about-hero-copy > *:nth-child(1),
+.motion .hub-hero > *:nth-child(1),
+.motion .detail-hero > *:nth-child(1) { animation-delay: 0.05s; }
+
+.motion .about-hero-copy > *:nth-child(2),
+.motion .hub-hero > *:nth-child(2),
+.motion .detail-hero > *:nth-child(2) { animation-delay: 0.16s; }
+
+.motion .about-hero-copy > *:nth-child(3),
+.motion .hub-hero > *:nth-child(3),
+.motion .detail-hero > *:nth-child(3) { animation-delay: 0.28s; }
 
 .motion [data-reveal] {
   opacity: 0;
@@ -939,14 +975,23 @@ textarea {
 
 @media (prefers-reduced-motion: reduce) {
   .motion .hero-copy > *,
+  .motion .about-hero-copy > *,
+  .motion .hub-hero > *,
+  .motion .detail-hero > *,
   .motion .track,
-  .motion .connect::before {
+  .motion .connect::before,
+  .motion .about-hero::before {
     animation: none;
   }
 
   .motion [data-reveal] {
     opacity: 1;
     transform: none;
+    transition: none;
+  }
+
+  .quote-stage,
+  .quote-stage .quote {
     transition: none;
   }
 }
@@ -971,16 +1016,16 @@ textarea {
 .page-hero h1 {
   margin: 0 0 var(--space-16);
   max-width: 737px;
-  font-size: 64px;
+  font-size: var(--font-size-h1);
   font-weight: 400;
-  line-height: 1.08;
+  line-height: normal;
 }
 
 .page-hero .lede {
   margin: 0;
   max-width: 737px;
-  font-size: var(--font-size-body);
-  line-height: 1.5;
+  font-size: var(--font-size-body-sm);
+  line-height: var(--font-line-height-body-sm);
   color: var(--color-neutral-200);
 }
 
@@ -993,6 +1038,10 @@ textarea {
   max-width: none;
 }
 
+.contact-page .page-hero h1 {
+  line-height: 88px;
+}
+
 .why {
   display: grid;
   grid-template-columns: minmax(0, 652fr) minmax(0, 628fr);
@@ -1002,9 +1051,9 @@ textarea {
 
 .why h2 {
   margin: 0;
-  font-size: 32px;
+  font-size: var(--font-size-h4);
   font-weight: var(--font-weight-medium);
-  line-height: 1.2;
+  line-height: 30px;
   color: var(--color-neutral-100);
 }
 
@@ -1041,11 +1090,26 @@ textarea {
   color: var(--color-neutral-100);
 }
 
+.why li:first-child h3 {
+  font-size: var(--font-size-h6);
+}
+
 .why p {
   margin: 0;
-  font-size: 18px;
   line-height: 30px;
   color: var(--color-neutral-100);
+}
+
+.why li div p {
+  font-size: 18px;
+}
+
+.why li:first-child div p {
+  font-size: var(--font-size-body);
+}
+
+.why .why-index {
+  font-size: 24px;
 }
 
 .apply {
@@ -1094,8 +1158,9 @@ textarea {
 }
 
 .field label {
-  font-size: 13px;
-  font-weight: var(--font-weight-semibold);
+  font-size: var(--font-size-body-sm);
+  font-weight: 400;
+  line-height: var(--font-line-height-body-sm);
   color: var(--color-teal-50);
 }
 
@@ -1149,8 +1214,9 @@ textarea {
   padding: var(--space-16) 28px;
   background: var(--teal-500);
   color: var(--teal-950);
-  font-size: var(--font-size-body-sm);
-  font-weight: var(--font-weight-semibold);
+  font-size: var(--font-size-body);
+  font-weight: 400;
+  line-height: var(--font-line-height-body);
 }
 
 .btn-apply:hover {
@@ -1176,14 +1242,15 @@ textarea {
 
 .office h2 {
   margin: 0;
-  font-size: 20px;
-  font-weight: var(--font-weight-semibold);
+  font-size: var(--font-size-h6);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--font-line-height-h6);
 }
 
 .office p {
   margin: 0;
-  font-size: var(--font-size-body-sm);
-  line-height: 1.45;
+  font-size: var(--font-size-body);
+  line-height: var(--font-line-height-body);
   color: var(--color-teal-50);
 }
 
@@ -1245,7 +1312,7 @@ textarea {
 .hub-block {
   width: min(1280px, calc(100% - (var(--layout-margin) * 2)));
   margin: 0 auto;
-  padding: 24px 0 40px;
+  padding: 144px 0 0;
 }
 
 .hub-block h2 {
@@ -1280,6 +1347,15 @@ textarea {
   border-radius: 8px;
   background: var(--color-white);
   color: var(--color-black);
+  box-shadow: 0 0 0 transparent;
+}
+
+.motion .info-card.is-in {
+  transition: opacity 0.8s ease, transform 0.8s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.25s ease;
+}
+
+.motion .info-card.is-in:hover {
+  box-shadow: 0 18px 40px color-mix(in srgb, var(--color-ink) 16%, transparent);
 }
 
 .info-card h3 {
@@ -1315,7 +1391,8 @@ textarea {
   justify-content: space-between;
   gap: 24px;
   width: 100%;
-  padding: 48px var(--layout-margin);
+  margin-bottom: 160px;
+  padding: 96px var(--layout-margin);
   background: var(--color-teal-800);
 }
 
@@ -1330,14 +1407,27 @@ textarea {
   color: var(--color-black);
 }
 
+.services-page .cta-band .btn-apply {
+  font-size: var(--font-size-body-sm);
+  font-weight: var(--font-weight-semibold);
+  line-height: normal;
+}
+
 .about-hero {
   position: relative;
   width: min(1280px, calc(100% - (var(--layout-margin) * 2)));
   height: 720px;
-  margin: 88px auto 0;
+  margin: var(--layout-margin) auto 0;
   border-radius: 30px;
   overflow: hidden;
+}
+
+.about-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
   background: url("assets/about-hero.png") center / cover no-repeat;
+  z-index: 0;
 }
 
 .about-hero-copy {
@@ -1369,7 +1459,7 @@ textarea {
 
 .about-nums {
   width: min(1280px, calc(100% - (var(--layout-margin) * 2)));
-  margin: 48px auto 0;
+  margin: 128px auto 0;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   padding: 0 var(--space-16);
@@ -1377,6 +1467,10 @@ textarea {
   font-weight: var(--font-weight-semibold);
   line-height: normal;
 }
+
+.about-nums span:nth-child(1) { padding-left: 8px; }
+.about-nums span:nth-child(2) { padding-left: 16px; }
+.about-nums span:nth-child(3) { padding-left: 24px; }
 
 .about-split {
   width: min(1280px, calc(100% - (var(--layout-margin) * 2)));
@@ -1413,7 +1507,7 @@ textarea {
 
 .mv-wrap {
   width: min(1280px, calc(100% - (var(--layout-margin) * 2)));
-  margin: 80px auto 0;
+  margin: 144px auto 0;
 }
 
 .mv-wrap > h2 {
@@ -1450,14 +1544,19 @@ textarea {
 }
 
 .goals {
+  width: 100%;
+  margin-top: 144px;
+  padding: 96px 0;
+  background: var(--color-teal-800);
+}
+
+.goals-layout {
   display: grid;
   grid-template-columns: minmax(0, 845fr) 411px;
   gap: 24px;
   align-items: center;
-  width: 100%;
-  margin-top: 80px;
-  padding: 48px var(--layout-margin);
-  background: var(--color-teal-800);
+  width: min(1280px, calc(100% - (var(--layout-margin) * 2)));
+  margin-inline: auto;
 }
 
 .goals-copy {
@@ -1500,7 +1599,7 @@ textarea {
 
 .quotes {
   width: min(846px, calc(100% - (var(--layout-margin) * 2)));
-  margin: 80px auto 0;
+  margin: 160px auto 0;
 }
 
 .quotes > h2 {
@@ -1509,6 +1608,33 @@ textarea {
   font-weight: var(--font-weight-semibold);
   line-height: var(--font-line-height-h2);
   text-align: center;
+}
+
+.quote-stage {
+  position: relative;
+}
+
+.motion .quote-stage.is-in {
+  transition: opacity 0.8s ease, transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.quote-stage .quote {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100%;
+  opacity: 0;
+  transition: opacity 0.7s ease;
+}
+
+.quote-stage:not(.is-ready) .quote:first-child,
+.quote-stage .quote.is-active {
+  opacity: 1;
+}
+
+.quote-stage:not(.is-ready) .quote:first-child {
+  position: relative;
 }
 
 .quote {
@@ -1541,6 +1667,10 @@ textarea {
 .quote header p {
   font-size: var(--font-size-body-sm);
   line-height: var(--font-line-height-body-sm);
+}
+
+.about-cta {
+  margin-top: 160px;
 }
 
 .about-cta p {
@@ -1635,7 +1765,7 @@ textarea {
   display: flex;
   flex-direction: column;
   gap: 14px;
-  padding: 56px 0 40px;
+  padding: var(--layout-margin) 0 128px;
 }
 
 .detail-hero .kicker {
@@ -1669,12 +1799,12 @@ textarea {
 .detail-body {
   display: flex;
   flex-direction: column;
-  gap: 32px;
-  padding-bottom: 40px;
+  gap: 48px;
+  padding-bottom: 144px;
 }
 
 .detail-body.is-cap {
-  gap: 28px;
+  gap: 48px;
 }
 
 .detail-body h2 {
@@ -1699,7 +1829,8 @@ textarea {
   display: flex;
   flex-direction: column;
   gap: var(--sds-size-space-300);
-  padding: 32px 0 40px;
+  margin-bottom: 144px;
+  padding: 48px 0;
   background: var(--color-surface);
   width: 100%;
   padding-inline: max(var(--layout-margin), calc((100% - 1280px) / 2));
@@ -1729,7 +1860,8 @@ textarea {
   align-items: center;
   justify-content: space-between;
   gap: 24px;
-  padding: 36px max(var(--layout-margin), calc((100% - 1280px) / 2));
+  margin-bottom: 160px;
+  padding: 96px max(var(--layout-margin), calc((100% - 1280px) / 2));
   background: var(--color-ink);
   color: var(--color-white);
 }
@@ -1755,7 +1887,7 @@ textarea {
 
 .detail-foot {
   width: 100%;
-  padding: 48px max(var(--layout-margin), calc((100% - 1280px) / 2)) 28px;
+  padding: 128px max(var(--layout-margin), calc((100% - 1280px) / 2)) var(--space-96);
   color: var(--color-muted);
   font-size: var(--font-size-caption);
   line-height: normal;
@@ -1766,7 +1898,7 @@ textarea {
   .card-row.caps,
   .about-split,
   .mv,
-  .goals,
+  .goals-layout,
   .goal-grid {
     grid-template-columns: 1fr;
   }
@@ -1794,7 +1926,7 @@ textarea {
 }
 
 .hub-hero {
-  padding-bottom: 24px;
+  padding: var(--layout-margin) 0 128px;
 }
 
 .hub-hero .eyebrow {
@@ -1806,7 +1938,18 @@ textarea {
 }
 
 .caps-block {
-  padding-bottom: 48px;
+  padding-top: 80px;
+  padding-bottom: 160px;
+}
+
+.btn-apply,
+.detail-cta a {
+  transition: transform 0.25s ease, background-color 0.25s ease;
+}
+
+.btn-apply:hover,
+.detail-cta a:hover {
+  transform: translateY(-2px);
 }
 
 .about-hero .btn-apply {
@@ -1831,6 +1974,7 @@ textarea {
   .about-nums,
   .about-split,
   .mv-wrap,
+  .goals-layout,
   .quotes {
     width: calc(100% - 32px);
   }
@@ -1842,7 +1986,6 @@ textarea {
   }
 
   .cta-band,
-  .goals,
   .detail-cta,
   .detail-related,
   .detail-foot {
