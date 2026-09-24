@@ -1324,12 +1324,13 @@ textarea {
 
 .card-row {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: var(--space-16);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
 }
 
 .card-row.caps {
   grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
 }
 
 .card-row + .card-row {
@@ -1341,23 +1342,24 @@ textarea {
   flex-direction: column;
   align-items: flex-start;
   gap: 10px;
-  min-height: 174px;
   padding: 24px 20px;
-  border: var(--sds-size-stroke-border) solid var(--color-line);
+  border: var(--sds-size-stroke-border) solid var(--color-teal-500);
   border-radius: 8px;
-  background: var(--color-white);
+  background: var(--color-teal-500);
   color: var(--color-black);
   box-shadow: 0 0 0 transparent;
 }
 
 .motion .info-card.is-in {
-  transition: opacity 0.8s ease, transform 0.8s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.25s ease, border-color 0.25s ease;
+  transition: opacity 0.8s ease, transform 0.8s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.25s ease, background-color 0.25s ease;
 }
 
 .info-card:hover,
 .motion .info-card.is-in:hover {
-  border-color: var(--color-teal-500);
-  box-shadow: 0 18px 40px color-mix(in srgb, var(--color-ink) 18%, transparent);
+  background: #2eafb6;
+  border-color: #2eafb6;
+  box-shadow: 0 16px 32px color-mix(in srgb, var(--color-ink) 28%, transparent);
+  transform: translateY(-2px);
 }
 
 .info-card .more {
@@ -1393,7 +1395,7 @@ textarea {
   font-size: var(--font-size-body-sm);
   font-weight: var(--font-weight-semibold);
   line-height: var(--font-line-height-body-sm);
-  color: var(--color-teal-500);
+  color: var(--color-black);
 }
 
 .cta-band {
@@ -1935,6 +1937,44 @@ textarea {
 
 .services-page {
   background: linear-gradient(180deg, #081a1b 0%, #0c2527 100%);
+}
+
+.services-page .hub-hero {
+  padding: 88px 0 0;
+}
+
+.services-page .hub-block {
+  padding-top: 134px;
+}
+
+.services-page .hub-block h2 {
+  margin-bottom: 24px;
+}
+
+.services-page .caps-block {
+  padding-top: 48px;
+  padding-bottom: 48px;
+}
+
+.services-page .caps-block h2 {
+  margin-bottom: 20px;
+}
+
+.services-page .cta-band {
+  padding: 48px 0;
+  margin-bottom: 80px;
+}
+
+.services-page .footer {
+  padding: 120px 0;
+}
+
+.services-page .footer-grid {
+  gap: 24px;
+}
+
+.services-page .legal {
+  margin-top: 94px;
 }
 
 .about-page {
