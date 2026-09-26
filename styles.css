@@ -1345,19 +1345,19 @@ textarea {
   padding: 24px 20px;
   border: var(--sds-size-stroke-border) solid var(--color-teal-500);
   border-radius: 8px;
-  background: var(--color-teal-500);
-  color: var(--color-black);
+  background: transparent;
+  color: var(--color-white);
   box-shadow: 0 0 0 transparent;
 }
 
 .motion .info-card.is-in {
-  transition: opacity 0.8s ease, transform 0.8s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.25s ease, background-color 0.25s ease;
+  transition: opacity 0.8s ease, transform 0.8s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.25s ease, background-color 0.25s ease, border-color 0.25s ease;
 }
 
 .info-card:hover,
 .motion .info-card.is-in:hover {
-  background: #2eafb6;
-  border-color: #2eafb6;
+  background: color-mix(in srgb, var(--color-teal-500) 12%, transparent);
+  border-color: var(--color-teal-500);
   box-shadow: 0 16px 32px color-mix(in srgb, var(--color-ink) 28%, transparent);
   transform: translateY(-2px);
 }
@@ -1382,7 +1382,7 @@ textarea {
   margin: 0;
   font-size: var(--font-size-body);
   line-height: var(--font-line-height-body);
-  color: var(--color-neutral-800);
+  color: var(--color-neutral-200);
 }
 
 .info-card p.sm {
@@ -1395,7 +1395,7 @@ textarea {
   font-size: var(--font-size-body-sm);
   font-weight: var(--font-weight-semibold);
   line-height: var(--font-line-height-body-sm);
-  color: var(--color-black);
+  color: var(--color-teal-500);
 }
 
 .cta-band {
@@ -1475,9 +1475,16 @@ textarea {
   line-height: normal;
 }
 
+.about-intro {
+  width: 100%;
+  margin-top: 96px;
+  padding: 96px 0;
+  color: var(--color-white);
+}
+
 .about-nums {
   width: min(1280px, calc(100% - (var(--layout-margin) * 2)));
-  margin: 128px auto 0;
+  margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   padding: 0 var(--space-16);
@@ -1503,6 +1510,10 @@ textarea {
   border-right: var(--sds-size-stroke-border) solid var(--color-teal-500);
 }
 
+.about-split h2 {
+  color: var(--color-white);
+}
+
 .about-split article:last-child {
   border-right: 0;
 }
@@ -1526,7 +1537,7 @@ textarea {
 
 .mv-wrap {
   width: min(1280px, calc(100% - (var(--layout-margin) * 2)));
-  margin: 144px auto 0;
+  margin: 96px auto 0;
 }
 
 .mv-wrap > h2 {
@@ -1564,7 +1575,7 @@ textarea {
 
 .goals {
   width: 100%;
-  margin-top: 144px;
+  margin-top: 96px;
   padding: 96px 0;
   background: var(--color-teal-800);
 }
