@@ -65,7 +65,25 @@ if (!reduceMotion) {
     { threshold: 0.18, rootMargin: "0px 0px -8% 0px" }
   );
 
-  revealEls.forEach((el) => revealObserver.observe(el));
+  const intro = document.querySelector(".about-intro");
+  const introEls = intro ? [...intro.querySelectorAll("[data-reveal]")] : [];
+  const introSet = new Set(introEls);
+
+  revealEls.forEach((el) => {
+    if (!introSet.has(el)) revealObserver.observe(el);
+  });
+
+  if (intro && introEls.length) {
+    const introObserver = new IntersectionObserver(
+      (entries) => {
+        if (!entries.some((entry) => entry.isIntersecting)) return;
+        introEls.forEach((el) => el.classList.add("is-in"));
+        introObserver.disconnect();
+      },
+      { threshold: 0.2, rootMargin: "0px 0px -28% 0px" }
+    );
+    introObserver.observe(intro);
+  }
 }
 
 const quoteStage = document.querySelector("[data-quotes]");
