@@ -62,7 +62,7 @@ if (!reduceMotion) {
         revealObserver.unobserve(entry.target);
       });
     },
-    { threshold: 0.18, rootMargin: "0px 0px -8% 0px" }
+    { threshold: 0.18, rootMargin: "0px 0px -40px 0px" }
   );
 
   const intro = document.querySelector(".about-intro");
@@ -110,15 +110,17 @@ if (quoteStage) {
       quote.classList.toggle("is-active", active);
       quote.toggleAttribute("aria-hidden", !active);
     });
-    fitQuoteStage();
-    quoteStage.classList.add("is-ready");
   }
 
   showQuote(0);
+  fitQuoteStage();
+  quoteStage.classList.add("is-ready");
   window.addEventListener("resize", fitQuoteStage);
-  window.setInterval(() => {
-    showQuote((quoteIndex + 1) % quotes.length);
-  }, 5000);
+  if (!reduceMotion) {
+    window.setInterval(() => {
+      showQuote((quoteIndex + 1) % quotes.length);
+    }, 5000);
+  }
 }
 
 const language = document.querySelector(".language");
@@ -148,6 +150,13 @@ document.addEventListener("click", (event) => {
   }
 });
 
+document.addEventListener("keydown", (event) => {
+  if (event.key !== "Escape" || languageMenu.hidden) return;
+  languageMenu.hidden = true;
+  languageBtn.setAttribute("aria-expanded", "false");
+  languageBtn.focus();
+});
+
 const nav = document.querySelector(".nav");
 const navToggle = document.querySelector(".nav-toggle");
 const navLinks = document.querySelector("#site-nav");
@@ -158,6 +167,14 @@ navToggle.addEventListener("click", () => {
   navToggle.setAttribute("aria-expanded", String(open));
   if (open) nav.classList.remove("is-hidden");
 });
+
+navLinks.addEventListener("click", (event) => {
+  if (!event.target.closest("a")) return;
+  navLinks.classList.remove("is-open");
+  navToggle.setAttribute("aria-expanded", "false");
+});
+
+nav.addEventListener("focusin", () => nav.classList.remove("is-hidden"));
 
 window.addEventListener(
   "scroll",
