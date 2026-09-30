@@ -59,10 +59,10 @@
       </section>
 
       <section class="about-intro">
-      <p class="about-nums" data-reveal><span>01</span><span>02</span><span>03</span></p>
+      <p class="about-nums" data-reveal aria-hidden="true"><span>01</span><span>02</span><span>03</span></p>
       <section class="about-split">
         <article data-reveal>
-          <h2>Who we are</h2>
+          <h2><span class="split-num">01</span> Who we are</h2>
           <p>
             Dutam is an engineering services company of experienced and energetic engineers. We apply
             detailed knowledge across every aspect of design and drafting, providing our clients with
@@ -70,7 +70,7 @@
           </p>
         </article>
         <article data-reveal>
-          <h2>Why Dutam</h2>
+          <h2><span class="split-num">02</span> Why Dutam</h2>
           <p>
             Our ambitions have no borders. We are determined to extend our impact and reach to provide
             advanced solutions worldwide. Our goal is to be a global influencer, bringing innovative
@@ -78,7 +78,7 @@
           </p>
         </article>
         <article data-reveal>
-          <h2>What we do</h2>
+          <h2><span class="split-num">03</span> What we do</h2>
           <p>
             Dutam specializes in engineering services that meet and often exceed our customer
             expectations. We offer a wide range of CAD-related services in machine building and
@@ -110,11 +110,16 @@
 
       <section class="goals">
         <div class="goals-layout">
-        <div class="goals-copy">
-        <div data-reveal>
-          <p class="eyebrow">Our Goals</p>
-          <h2>Long-term partnerships. Deeper expertise. Less repetitive work.</h2>
-        </div>
+          <div class="goals-intro" data-reveal>
+            <p class="eyebrow">Our Goals</p>
+            <h2>Long-term partnerships. Deeper expertise. Less repetitive work.</h2>
+          </div>
+          <img
+            class="goals-image"
+            src="assets/about-goals.png"
+            alt="Technical drawing with a ruler, pens, and a plotted chart"
+            data-reveal
+          />
           <div class="goal-grid">
             <article class="goal-card" data-reveal>
               <h3>Client-Driven Value</h3>
@@ -146,94 +151,53 @@
             </article>
           </div>
         </div>
-        <img src="assets/about-goals.png" alt="Technical drawing with a ruler, pens, and a plotted chart" data-reveal />
-        </div>
       </section>
 
-      <section class="quotes">
-        <h2 data-reveal>What they say about us</h2>
-        <div class="quote-stage" data-quotes data-reveal>
-          <article class="quote is-active" data-quote>
-            <header>
-              <img src="assets/avatar-anne.svg" alt="" width="56" height="56" />
-              <div>
-                <h3>Anne Bouwman</h3>
-                <p>Viscon Fresh Produce | The Netherlands</p>
+      <section class="quotes" data-quotes data-reveal aria-labelledby="quotes-heading">
+        <div class="quotes-panel">
+          <header class="quotes-head">
+            <h2 id="quotes-heading">What they say about us</h2>
+          </header>
+
+          <div class="quotes-grid">
+            <article class="quotes-feature">
+              <div class="quotes-feature-top">
+                <p class="quotes-kicker" data-quote-index>Testimonial 01 / 05</p>
+                <p class="quotes-display" data-quote-display></p>
+                <p class="quotes-full" data-quote-full hidden></p>
               </div>
-            </header>
-            <p>
-              Our cooperation with Dutam is going well. We can find each other easily through digital
-              channels. The English language is well mastered, so communication is smooth. Dutam follows
-              our drawing rules but dares to ask questions about them so that we could improve them
-              together. We notice that Dutam is gaining more experience with our machines, resulting in
-              less questions and more feedback on possible errors in our designs. We feel that Dutam is
-              committed to delivering good work and, if necessary, is willing to go the extra mile. We
-              look forward to a longer cooperation.
-            </p>
-          </article>
-          <article class="quote" data-quote aria-hidden="true">
-            <header>
-              <img src="assets/avatar.svg" alt="" width="56" height="56" />
-              <div>
-                <h3>Richard Walther</h3>
-                <p>Founder, Walther Cad Planung GmbH</p>
+              <div class="quotes-feature-meta">
+                <button class="quotes-expand" type="button" data-quote-expand aria-expanded="false">
+                  Read full statement →
+                </button>
               </div>
-            </header>
-            <p>
-              I do appreciate the good quality work of Dutam and the good workflow they have. The team
-              is trained professionally. What I do appreciate the most is the team. Each and every one
-              is doing his best to bring the project to a successful result.
-            </p>
-          </article>
-          <article class="quote" data-quote aria-hidden="true">
-            <header>
-              <img src="assets/avatar.svg" alt="" width="56" height="56" />
-              <div>
-                <h3>Bart Ramaekers</h3>
-                <p>Co-owner, WB&amp;E Facade Design</p>
+            </article>
+
+            <aside class="quotes-side">
+              <div class="quotes-client">
+                <div>
+                  <p class="quotes-kicker">Client</p>
+                  <p class="quotes-name" data-quote-name></p>
+                  <p class="quotes-org" data-quote-org></p>
+                </div>
+                <p class="quotes-active"><span class="quotes-dot" aria-hidden="true"></span> Active</p>
               </div>
-            </header>
-            <p>
-              Since the founding of Dutam Engineering, they have quickly become an essential and reliable
-              partner for our company. Whether it's smaller projects or more complex assignments, Dutam
-              Engineering is always ready with a solution that perfectly fits our needs. They deliver
-              drawings that meet the highest quality standards, always within the agreed deadlines. We
-              fully intend to continue working together successfully for many years to come.
-            </p>
-          </article>
-          <article class="quote" data-quote aria-hidden="true">
-            <header>
-              <img src="assets/avatar.svg" alt="" width="56" height="56" />
-              <div>
-                <h3>Raymond and Bas</h3>
-                <p>Owners, Draw2Design B.V.</p>
+              <nav class="quotes-voices" aria-label="Client voices">
+                <p class="quotes-kicker">Voices</p>
+                <ul data-quote-voices></ul>
+              </nav>
+            </aside>
+          </div>
+
+          <div class="quotes-strip">
+            <div class="quotes-nav">
+              <p class="quotes-kicker">Navigate</p>
+              <div class="quotes-nav-actions">
+                <button type="button" data-quote-prev>← Prev</button>
+                <button type="button" data-quote-next>Next →</button>
               </div>
-            </header>
-            <p>
-              Our collaboration with Dutam Engineering has developed into a structural partnership in
-              which we see Dutam as an extension of our company. A company that speaks our language,
-              understands our working methods, is flexible, and always works according to schedule and
-              agreements. A trusted address for engineering work.
-            </p>
-          </article>
-          <article class="quote" data-quote aria-hidden="true">
-            <header>
-              <img src="assets/avatar.svg" alt="" width="56" height="56" />
-              <div>
-                <h3>Drees-Peter</h3>
-                <p>Operations Manager, De Bruin Process Equipement B.V.</p>
-              </div>
-            </header>
-            <p>
-              We have been collaborating with Dutam for some time now for the development of our
-              production drawings, and we are very satisfied with their service. Their team is highly
-              professional in their communication and approach, making the collaboration smooth. The
-              drawings they deliver are of high quality, precise, and always meet our expectations.
-              Additionally, they are quick to respond, which helps us work efficiently and complete our
-              projects on time. In short, we are very pleased with Dutam as our partner and can certainly
-              recommend them for technical drawings and engineering work.
-            </p>
-          </article>
+            </div>
+          </div>
         </div>
       </section>
 
