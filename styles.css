@@ -1745,7 +1745,7 @@ textarea {
 }
 
 .services-page {
-  background: linear-gradient(180deg, #081a1b 0%, #0c2527 100%);
+  background: linear-gradient(180deg, var(--teal-950) 0%, var(--teal-900) 100%);
 }
 
 .services-page .hub-hero {
