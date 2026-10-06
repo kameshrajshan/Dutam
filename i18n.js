@@ -20,6 +20,11 @@
     "footer.copyright": "© 2026 DUTAM. All Rights Reserved.",
     "footer.email": "Email: info@dutamengineering.com",
     "footer.phone": "Phone: +91 427 455 2439",
+    "footer.social_linkedin": "LinkedIn",
+    "footer.social_facebook": "Facebook",
+    "footer.social_youtube": "YouTube",
+    "footer.social_instagram": "Instagram",
+    "footer.social_label": "Social media",
 
     "form.invalid_required": "Please complete the required fields.",
     "form.invalid_privacy":
@@ -594,6 +599,11 @@
     "footer.copyright": "© 2026 DUTAM. Alle rechten voorbehouden.",
     "footer.email": "E-mail: info@dutamengineering.com",
     "footer.phone": "Telefoon: +91 427 455 2439",
+    "footer.social_linkedin": "LinkedIn",
+    "footer.social_facebook": "Facebook",
+    "footer.social_youtube": "YouTube",
+    "footer.social_instagram": "Instagram",
+    "footer.social_label": "Sociale media",
 
     "form.invalid_required": "Vul alle verplichte velden in.",
     "form.invalid_privacy":
@@ -1174,6 +1184,11 @@
     "footer.copyright": "© 2026 DUTAM. Alle Rechte vorbehalten.",
     "footer.email": "E-Mail: info@dutamengineering.com",
     "footer.phone": "Telefon: +91 427 455 2439",
+    "footer.social_linkedin": "LinkedIn",
+    "footer.social_facebook": "Facebook",
+    "footer.social_youtube": "YouTube",
+    "footer.social_instagram": "Instagram",
+    "footer.social_label": "Soziale Medien",
 
     "form.invalid_required": "Bitte füllen Sie alle Pflichtfelder aus.",
     "form.invalid_privacy":
@@ -1757,6 +1772,11 @@
     "footer.copyright": "© 2026 DUTAM. Tous droits réservés.",
     "footer.email": "E-mail : info@dutamengineering.com",
     "footer.phone": "Téléphone : +91 427 455 2439",
+    "footer.social_linkedin": "LinkedIn",
+    "footer.social_facebook": "Facebook",
+    "footer.social_youtube": "YouTube",
+    "footer.social_instagram": "Instagram",
+    "footer.social_label": "Réseaux sociaux",
 
     "form.invalid_required": "Veuillez remplir les champs obligatoires.",
     "form.invalid_privacy":
