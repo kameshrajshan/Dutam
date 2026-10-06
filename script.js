@@ -87,50 +87,16 @@ if (!reduceMotion) {
 }
 
 const quoteRoot = document.querySelector("[data-quotes]");
-if (quoteRoot) {
-  const testimonials = [
-    {
-      name: "Anne Bouwman",
-      org: "Viscon Fresh Produce\nThe Netherlands",
-      display:
-        "Our cooperation with Dutam is going well. We can find each other easily through digital channels.",
-      full:
-        "Our cooperation with Dutam is going well. We can find each other easily through digital channels. The English language is well mastered, so communication is smooth. Dutam follows our drawing rules but dares to ask questions about them so that we could improve them together. We notice that Dutam is gaining more experience with our machines, resulting in less questions and more feedback on possible errors in our designs. We feel that Dutam is committed to delivering good work and, if necessary, is willing to go the extra mile. We look forward to a longer cooperation.",
-    },
-    {
-      name: "Richard Walther",
-      org: "Founder, Walther Cad Planung GmbH\nGermany",
-      display:
-        "I do appreciate the good quality work of Dutam and the good workflow they have.",
-      full:
-        "I do appreciate the good quality work of Dutam and the good workflow they have. The team is trained professionally. What I do appreciate the most is the team. Each and every one is doing his best to bring the project to a successful result.",
-    },
-    {
-      name: "Bart Ramaekers",
-      org: "Co-owner, WB&E Facade Design\nBelgium",
-      display:
-        "Dutam Engineering is always ready with a solution that perfectly fits our needs.",
-      full:
-        "Since the founding of Dutam Engineering, they have quickly become an essential and reliable partner for our company. Whether it's smaller projects or more complex assignments, Dutam Engineering is always ready with a solution that perfectly fits our needs. They deliver drawings that meet the highest quality standards, always within the agreed deadlines. We fully intend to continue working together successfully for many years to come.",
-    },
-    {
-      name: "Raymond and Bas",
-      org: "Owners, Draw2Design B.V.\nThe Netherlands",
-      display:
-        "We see Dutam as an extension of our company. A trusted address for engineering work.",
-      full:
-        "Our collaboration with Dutam Engineering has developed into a structural partnership in which we see Dutam as an extension of our company. A company that speaks our language, understands our working methods, is flexible, and always works according to schedule and agreements. A trusted address for engineering work.",
-    },
-    {
-      name: "Drees-Peter",
-      org: "Operations Manager, De Bruin Process Equipement B.V.\nThe Netherlands",
-      display:
-        "We are very pleased with Dutam as our partner and can certainly recommend them.",
-      full:
-        "We have been collaborating with Dutam for some time now for the development of our production drawings, and we are very satisfied with their service. Their team is highly professional in their communication and approach, making the collaboration smooth. The drawings they deliver are of high quality, precise, and always meet our expectations. Additionally, they are quick to respond, which helps us work efficiently and complete our projects on time. In short, we are very pleased with Dutam as our partner and can certainly recommend them for technical drawings and engineering work.",
-    },
-  ];
+let quoteController = null;
 
+function getTestimonials(lang) {
+  const dict = window.DUTAM_I18N && window.DUTAM_I18N[lang];
+  const list = dict && Array.isArray(dict.testimonials) ? dict.testimonials : null;
+  if (list && list.length) return list;
+  return (window.DUTAM_I18N && window.DUTAM_I18N.en && window.DUTAM_I18N.en.testimonials) || [];
+}
+
+if (quoteRoot) {
   const indexEl = quoteRoot.querySelector("[data-quote-index]");
   const displayEl = quoteRoot.querySelector("[data-quote-display]");
   const fullEl = quoteRoot.querySelector("[data-quote-full]");
@@ -143,33 +109,42 @@ if (quoteRoot) {
   let quoteIndex = 0;
   let expanded = false;
   let autoTimer;
+  let testimonials = getTestimonials((window.DutamI18n && window.DutamI18n.getLang()) || "en");
+  let voiceButtons = [];
 
-  testimonials.forEach((item, i) => {
-    const li = document.createElement("li");
-    const button = document.createElement("button");
-    button.type = "button";
-    button.textContent = item.name;
-    button.addEventListener("click", () => showQuote(i, true));
-    li.appendChild(button);
-    voicesEl.appendChild(li);
-  });
-
-  const voiceButtons = [...voicesEl.querySelectorAll("button")];
+  function buildVoices() {
+    voicesEl.innerHTML = "";
+    testimonials.forEach((item, i) => {
+      const li = document.createElement("li");
+      const button = document.createElement("button");
+      button.type = "button";
+      button.textContent = item.name;
+      button.addEventListener("click", () => showQuote(i, true));
+      li.appendChild(button);
+      voicesEl.appendChild(li);
+    });
+    voiceButtons = [...voicesEl.querySelectorAll("button")];
+  }
 
   function setExpanded(next) {
     expanded = next;
     fullEl.hidden = !expanded;
     displayEl.hidden = expanded;
     expandBtn.setAttribute("aria-expanded", String(expanded));
-    expandBtn.textContent = expanded ? "Show highlight ←" : "Read full statement →";
+    const expandKey = expanded ? "about.quotes_collapse" : "about.quotes_expand";
+    expandBtn.textContent = window.DutamI18n ? window.DutamI18n.t(expandKey) : expandBtn.textContent;
   }
 
   function showQuote(next, userDriven = false) {
+    if (!testimonials.length) return;
     quoteIndex = (next + testimonials.length) % testimonials.length;
     const item = testimonials[quoteIndex];
     const n = String(quoteIndex + 1).padStart(2, "0");
     const total = String(testimonials.length).padStart(2, "0");
-    indexEl.textContent = `Testimonial ${n} / ${total}`;
+    const indexTemplate = window.DutamI18n
+      ? window.DutamI18n.t("about.quotes_index")
+      : "Testimonial {n} / {total}";
+    indexEl.textContent = indexTemplate.replace("{n}", n).replace("{total}", total);
     displayEl.textContent = item.display;
     fullEl.textContent = item.full;
     nameEl.textContent = item.name;
@@ -187,6 +162,19 @@ if (quoteRoot) {
     autoTimer = window.setInterval(() => showQuote(quoteIndex + 1), 7000);
   }
 
+  function refreshQuotes(lang) {
+    const currentName = testimonials[quoteIndex] && testimonials[quoteIndex].name;
+    testimonials = getTestimonials(lang);
+    buildVoices();
+    let nextIndex = 0;
+    if (currentName) {
+      const found = testimonials.findIndex((item) => item.name === currentName);
+      if (found >= 0) nextIndex = found;
+    }
+    showQuote(nextIndex);
+  }
+
+  buildVoices();
   expandBtn.addEventListener("click", () => setExpanded(!expanded));
   prevBtn.addEventListener("click", () => showQuote(quoteIndex - 1, true));
   nextBtn.addEventListener("click", () => showQuote(quoteIndex + 1, true));
@@ -195,41 +183,52 @@ if (quoteRoot) {
   if (!reduceMotion) {
     autoTimer = window.setInterval(() => showQuote(quoteIndex + 1), 7000);
   }
+
+  quoteController = { refreshQuotes };
 }
 
 const language = document.querySelector(".language");
-const languageBtn = language.querySelector(".language-btn");
+const languageBtn = language && language.querySelector(".language-btn");
 const languageMenu = document.querySelector("#language-menu");
-const languageLabel = document.querySelector("[data-language-label]");
 
-languageBtn.addEventListener("click", () => {
-  const open = languageMenu.hidden;
-  languageMenu.hidden = !open;
-  languageBtn.setAttribute("aria-expanded", String(open));
-});
+function applyLanguage(lang) {
+  if (!window.DutamI18n) return lang || "en";
+  const next = window.DutamI18n.apply(lang);
+  if (quoteController) quoteController.refreshQuotes(next);
+  return next;
+}
 
-languageMenu.addEventListener("click", (event) => {
-  const choice = event.target.closest("[data-lang]");
-  if (!choice) return;
-  languageLabel.textContent = choice.textContent;
-  document.documentElement.lang = choice.dataset.lang;
-  languageMenu.hidden = true;
-  languageBtn.setAttribute("aria-expanded", "false");
-});
+if (language && languageBtn && languageMenu && window.DutamI18n) {
+  languageBtn.addEventListener("click", () => {
+    const open = languageMenu.hidden;
+    languageMenu.hidden = !open;
+    languageBtn.setAttribute("aria-expanded", String(open));
+  });
 
-document.addEventListener("click", (event) => {
-  if (!language.contains(event.target)) {
+  languageMenu.addEventListener("click", (event) => {
+    const choice = event.target.closest("[data-lang]");
+    if (!choice) return;
+    applyLanguage(choice.dataset.lang);
     languageMenu.hidden = true;
     languageBtn.setAttribute("aria-expanded", "false");
-  }
-});
+  });
 
-document.addEventListener("keydown", (event) => {
-  if (event.key !== "Escape" || languageMenu.hidden) return;
-  languageMenu.hidden = true;
-  languageBtn.setAttribute("aria-expanded", "false");
-  languageBtn.focus();
-});
+  document.addEventListener("click", (event) => {
+    if (!language.contains(event.target)) {
+      languageMenu.hidden = true;
+      languageBtn.setAttribute("aria-expanded", "false");
+    }
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key !== "Escape" || languageMenu.hidden) return;
+    languageMenu.hidden = true;
+    languageBtn.setAttribute("aria-expanded", "false");
+    languageBtn.focus();
+  });
+
+  applyLanguage(window.DutamI18n.getLang());
+}
 
 const nav = document.querySelector(".nav");
 const navToggle = document.querySelector(".nav-toggle");
@@ -264,38 +263,27 @@ window.addEventListener(
   { passive: true }
 );
 
-function bindForm(form, invalidMessage, successMessage) {
+function bindForm(form, invalidKey, successKey) {
   if (!form) return;
   const status = form.querySelector(".form-status");
   form.addEventListener("submit", (event) => {
     event.preventDefault();
+    const t = (key, fallback) => (window.DutamI18n ? window.DutamI18n.t(key) : fallback);
     if (!form.checkValidity()) {
       status.hidden = false;
-      status.textContent = invalidMessage;
+      status.textContent = t(invalidKey, "Please complete the required fields.");
       form.reportValidity();
       return;
     }
     status.hidden = false;
-    status.textContent = successMessage;
+    status.textContent = t(successKey, "Thanks.");
     form.reset();
   });
 }
 
-bindForm(
-  document.querySelector("#project-form"),
-  "Please complete the required fields and accept the privacy policy.",
-  "Thanks. A Dutam engineer will reply within one business day."
-);
-bindForm(
-  document.querySelector("#career-form"),
-  "Please complete the required fields.",
-  "Thanks. We'll keep your application and write when a role fits."
-);
-bindForm(
-  document.querySelector("#contact-form"),
-  "Please complete the required fields.",
-  "Thanks. A Dutam engineer will reply within one business day."
-);
+bindForm(document.querySelector("#project-form"), "form.invalid_privacy", "form.success_contact");
+bindForm(document.querySelector("#career-form"), "form.invalid_required", "form.success_career");
+bindForm(document.querySelector("#contact-form"), "form.invalid_required", "form.success_contact");
 
 const industryTrack = document.querySelector(".industry-track");
 const industryMarqueeMq = window.matchMedia("(max-width: 760px)");

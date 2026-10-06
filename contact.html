@@ -3,9 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-    <title>Contact | Dutam Engineering</title>
+    <title data-i18n-title="contact.title">Contact | Dutam Engineering</title>
     <meta
       name="description"
+      data-i18n="contact.meta"
+      data-i18n-meta="description"
       content="Share your engineering scope with Dutam. We review models, timeline, and delivery requirements."
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -20,15 +22,15 @@
     <header class="nav">
       <div class="nav-bar">
         <a class="brand" href="index.html"><img src="assets/Logo.png" alt="Dutam" /></a>
-        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-i18n="nav.menu">
           Menu
         </button>
         <nav id="site-nav" class="nav-links">
-          <a href="index.html">Home</a>
-          <a href="about.html">About</a>
-          <a href="services.html">Services</a>
-          <a href="careers.html">Careers</a>
-          <a href="contact.html" aria-current="page">Contact us</a>
+          <a href="index.html" data-i18n="nav.home">Home</a>
+          <a href="about.html" data-i18n="nav.about">About</a>
+          <a href="services.html" data-i18n="nav.services">Services</a>
+          <a href="careers.html" data-i18n="nav.careers">Careers</a>
+          <a href="contact.html" aria-current="page" data-i18n="nav.contact">Contact us</a>
         </nav>
         <div class="nav-utils">
           <div class="language">
@@ -44,65 +46,65 @@
               <li><button type="button" data-lang="fr">French</button></li>
             </ul>
           </div>
-          <a class="btn btn-login" href="index.html#login">Login</a>
+          <a class="btn btn-login" href="https://dpms.svtawny.com:85/home" data-i18n="nav.login">Login</a>
         </div>
       </div>
     </header>
 
     <main>
       <section class="page-hero">
-        <p class="eyebrow">Contact</p>
-        <h1>Let’s Discuss Your Engineering Scope</h1>
-        <p class="lede">
+        <p class="eyebrow" data-i18n="contact.eyebrow">Contact</p>
+        <h1 data-i18n="contact.h1">Let’s Discuss Your Engineering Scope</h1>
+        <p class="lede" data-i18n="contact.lede">
           Share your models, timeline, and delivery requirements. We’ll review your scope and provide a clear turnaround plan.
         </p>
       </section>
 
       <section class="contact-body" aria-labelledby="contact-heading">
-        <h2 id="contact-heading" class="sr-only">Send a message</h2>
+        <h2 id="contact-heading" class="sr-only" data-i18n="contact.form_sr">Send a message</h2>
         <form class="sheet" id="contact-form" data-reveal novalidate>
           <div class="field-grid">
             <div class="field">
-              <label for="name">Name</label>
-              <input id="name" name="name" type="text" placeholder="Your name" autocomplete="name" required />
+              <label for="name" data-i18n="contact.label_name">Name</label>
+              <input id="name" name="name" type="text" placeholder="Your name" data-i18n-placeholder="contact.ph_name" autocomplete="name" required />
             </div>
             <div class="field">
-              <label for="company">Company</label>
-              <input id="company" name="company" type="text" placeholder="Company name" autocomplete="organization" required />
-            </div>
-          </div>
-          <div class="field-grid">
-            <div class="field">
-              <label for="email">Email</label>
-              <input id="email" name="email" type="email" placeholder="you@company.com" autocomplete="email" required />
-            </div>
-            <div class="field">
-              <label for="phone">Phone</label>
-              <input id="phone" name="phone" type="tel" placeholder="+91 …" autocomplete="tel" required />
+              <label for="company" data-i18n="contact.label_company">Company</label>
+              <input id="company" name="company" type="text" placeholder="Company name" data-i18n-placeholder="contact.ph_company" autocomplete="organization" required />
             </div>
           </div>
           <div class="field-grid">
             <div class="field">
-              <label for="industry">Industry</label>
-              <input id="industry" name="industry" type="text" placeholder="Machine building / Construction / Oil &amp; energy" required />
+              <label for="email" data-i18n="contact.label_email">Email</label>
+              <input id="email" name="email" type="email" placeholder="you@company.com" data-i18n-placeholder="contact.ph_email" autocomplete="email" required />
             </div>
             <div class="field">
-              <label for="services">Services</label>
-              <input id="services" name="services" type="text" placeholder="Select capabilities" required />
+              <label for="phone" data-i18n="contact.label_phone">Phone</label>
+              <input id="phone" name="phone" type="tel" placeholder="+91 …" data-i18n-placeholder="contact.ph_phone" autocomplete="tel" required />
+            </div>
+          </div>
+          <div class="field-grid">
+            <div class="field">
+              <label for="industry" data-i18n="contact.label_industry">Industry</label>
+              <input id="industry" name="industry" type="text" placeholder="Machine building / Construction / Oil &amp; energy" data-i18n-placeholder="contact.ph_industry" required />
+            </div>
+            <div class="field">
+              <label for="services" data-i18n="contact.label_services">Services</label>
+              <input id="services" name="services" type="text" placeholder="Select capabilities" data-i18n-placeholder="contact.ph_services" required />
             </div>
           </div>
           <div class="field">
-            <label for="scope">Brief scope</label>
-            <input id="scope" name="scope" type="text" placeholder="Standards, deliverables, timeline…" required />
+            <label for="scope" data-i18n="contact.label_scope">Brief scope</label>
+            <input id="scope" name="scope" type="text" placeholder="Standards, deliverables, timeline…" data-i18n-placeholder="contact.ph_scope" required />
           </div>
-          <button class="btn btn-apply" type="submit">Send message</button>
+          <button class="btn btn-apply" type="submit" data-i18n="contact.submit">Send message</button>
           <p class="form-status" role="status" hidden></p>
         </form>
         <aside class="office" data-reveal>
-          <h2>Office details</h2>
-          <p>Email<br />info@dutamengineering.com</p>
-          <p>Phone<br />+91 427 455 2439</p>
-          <p>Address<br />B1, Mahalakshmi Flats, Sivagami Street, Srinivasa Nagar, New Perungalathur, Chennai – 600 063.</p>
+          <h2 data-i18n="contact.office_h2">Office details</h2>
+          <p><span data-i18n="contact.office_email_label">Email</span><br />info@dutamengineering.com</p>
+          <p><span data-i18n="contact.office_phone_label">Phone</span><br />+91 427 455 2439</p>
+          <p><span data-i18n="contact.office_address_label">Address</span><br />B1, Mahalakshmi Flats, Sivagami Street, Srinivasa Nagar, New Perungalathur, Chennai – 600 063.</p>
         </aside>
       </section>
     </main>
@@ -110,38 +112,39 @@
     <footer class="footer">
       <div class="footer-grid">
         <div data-reveal>
-          <h2>Dutam Engineering</h2>
-          <p>
+          <h2 data-i18n="footer.company">Dutam Engineering</h2>
+          <p data-i18n="footer.blurb">
             Every project we take on is held to the same standard: technically accurate work, delivered
             on time, and structured to meet your specification.
           </p>
         </div>
         <div data-reveal>
-          <h2>Registered Address</h2>
+          <h2 data-i18n="footer.registered">Registered Address</h2>
           <p>B1, Mahalakshmi Flats, Sivagami Street, Srinivasa Nagar,<br />New Perungalathur,<br />Chennai – 600 063.</p>
         </div>
         <div data-reveal>
-          <h2>Branch Address</h2>
+          <h2 data-i18n="footer.branch">Branch Address</h2>
           <p>4/189-1 First Floor, Megha Kamalam Building, Saraswathi Street, Advaitha Ashram Road, Fairlands,<br />Salem - 636 004.</p>
         </div>
         <div data-reveal>
-          <h2>Contact Us</h2>
-          <p>Email: info@dutamengineering.com</p>
-          <p>Phone: +91 427 455 2439</p>
+          <h2 data-i18n="footer.contact_heading">Contact Us</h2>
+          <p data-i18n="footer.email">Email: info@dutamengineering.com</p>
+          <p data-i18n="footer.phone">Phone: +91 427 455 2439</p>
         </div>
       </div>
       <div class="legal">
-        <p>© 2026 DUTAM. All Rights Reserved.</p>
+        <p data-i18n="footer.copyright">© 2026 DUTAM. All Rights Reserved.</p>
         <nav>
-          <a href="index.html">Home</a>
-          <a href="about.html">About</a>
-          <a href="services.html">Services</a>
-          <a href="careers.html">Careers</a>
-          <a href="contact.html">Contact us</a>
-          <a href="index.html#privacy">Privacy Policy</a>
+          <a href="index.html" data-i18n="nav.home">Home</a>
+          <a href="about.html" data-i18n="nav.about">About</a>
+          <a href="services.html" data-i18n="nav.services">Services</a>
+          <a href="careers.html" data-i18n="nav.careers">Careers</a>
+          <a href="contact.html" aria-current="page" data-i18n="nav.contact">Contact us</a>
+          <a href="index.html#privacy" data-i18n="nav.privacy">Privacy Policy</a>
         </nav>
       </div>
     </footer>
-    <script src="script.js"></script>
+    <script src="i18n.js?v=2"></script>
+    <script src="script.js?v=2"></script>
   </body>
 </html>

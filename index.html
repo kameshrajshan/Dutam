@@ -3,9 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-    <title>Dutam Engineering | Precision CAD Engineering</title>
+    <title data-i18n-title="home.title">Dutam Engineering | Precision CAD Engineering</title>
     <meta
       name="description"
+      data-i18n="home.meta"
+      data-i18n-meta="description"
       content="Dutam delivers 3D modeling, steel detailing, BIM consulting, and CAD automation for machine building, construction, and oil and energy projects."
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -20,15 +22,15 @@
     <header class="nav">
       <div class="nav-bar">
         <a class="brand" href="index.html"><img src="assets/Logo.png" alt="Dutam" /></a>
-        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-i18n="nav.menu">
           Menu
         </button>
         <nav id="site-nav" class="nav-links">
-          <a href="index.html">Home</a>
-          <a href="about.html">About</a>
-          <a href="services.html">Services</a>
-          <a href="careers.html">Careers</a>
-          <a href="contact.html">Contact us</a>
+          <a href="index.html" data-i18n="nav.home">Home</a>
+          <a href="about.html" data-i18n="nav.about">About</a>
+          <a href="services.html" data-i18n="nav.services">Services</a>
+          <a href="careers.html" data-i18n="nav.careers">Careers</a>
+          <a href="contact.html" data-i18n="nav.contact">Contact us</a>
         </nav>
         <div class="nav-utils">
           <div class="language">
@@ -44,7 +46,7 @@
               <li><button type="button" data-lang="fr">French</button></li>
             </ul>
           </div>
-          <a class="btn btn-login" href="#login">Login</a>
+          <a class="btn btn-login" href="https://dpms.svtawny.com:85/home" data-i18n="nav.login">Login</a>
         </div>
       </div>
     </header>
@@ -52,48 +54,48 @@
     <main id="top">
       <section class="hero">
         <div class="hero-copy">
-          <p class="eyebrow">engineering partner</p>
-          <h1>Precision CAD Engineering for Global Industry.</h1>
-          <p class="lede">
+          <p class="eyebrow" data-i18n="home.eyebrow">engineering partner</p>
+          <h1 data-i18n="home.h1">Precision CAD Engineering for Global Industry.</h1>
+          <p class="lede" data-i18n="home.lede">
             We deliver 3D modeling, steel detailing, BIM consulting, and CAD automation for machine
             building, construction, and oil &amp; energy projects — on time, to standard, and to spec.
           </p>
           <div class="hero-actions">
-            <a class="btn btn-primary" href="#contact">Book a Discovery Call</a>
-            <a class="btn btn-ghost" href="#services">View Our Work</a>
+            <a class="btn btn-primary" href="#contact" data-i18n="home.cta_primary">Book a Discovery Call</a>
+            <a class="btn btn-ghost" href="#services" data-i18n="home.cta_secondary">View Our Work</a>
           </div>
-          <p class="assurance">No commitment required · Response within 24 hours · NDA available</p>
+          <p class="assurance" data-i18n="home.assurance">No commitment required · Response within 24 hours · NDA available</p>
         </div>
-        <aside class="track" aria-label="Delivery track record">
-          <p class="track-label">DELIVERY TRACK RECORD</p>
+        <aside class="track" data-i18n-aria="home.track_aria" aria-label="Delivery track record">
+          <p class="track-label" data-i18n="home.track_label">DELIVERY TRACK RECORD</p>
           <dl>
             <div>
               <dt data-count="1000" data-suffix="+">1,000+</dt>
-              <dd>Engineering Assignments Completed</dd>
+              <dd data-i18n="home.stat1_dd">Engineering Assignments Completed</dd>
             </div>
             <div>
               <dt data-count="100000" data-suffix="+">100,000+</dt>
-              <dd>Effort Hours Logged Across Projects</dd>
+              <dd data-i18n="home.stat2_dd">Effort Hours Logged Across Projects</dd>
             </div>
             <div>
               <dt data-count="15" data-suffix="+">15+</dt>
-              <dd>Long-Term Client Partnerships</dd>
+              <dd data-i18n="home.stat3_dd">Long-Term Client Partnerships</dd>
             </div>
             <div>
               <dt data-count="25" data-suffix="+">25+</dt>
-              <dd>Specialist Engineers On-Team</dd>
+              <dd data-i18n="home.stat4_dd">Specialist Engineers On-Team</dd>
             </div>
             <div>
               <dt>AISC · EN · DIN · IS</dt>
-              <dd>Standards Delivered To</dd>
+              <dd data-i18n="home.stat5_dd">Standards Delivered To</dd>
             </div>
           </dl>
         </aside>
       </section>
 
       <section id="about" class="who" data-reveal>
-        <h2>Who We Are</h2>
-        <p>
+        <h2 data-i18n="home.who_h2">Who We Are</h2>
+        <p data-i18n="home.who_p">
           Our team brings together engineers with over a decade of industry experience and younger
           engineers trained on current tools like AutoCAD, HiCAD, and Revit. The senior engineers
           understand how projects fail in the field. The junior engineers know the fastest way to
@@ -105,29 +107,29 @@
 
       <section id="services" class="services">
         <div class="services-intro" data-reveal>
-          <h2>Services</h2>
-          <p>Dutam Engineering offers six core services that cover the full range of CAD and engineering design work.</p>
+          <h2 data-i18n="home.services_h2">Services</h2>
+          <p data-i18n="home.services_p">Dutam Engineering offers six core services that cover the full range of CAD and engineering design work.</p>
         </div>
         <div class="service-panel">
           <div class="service-visual" data-reveal>
-            <img class="is-active" src="assets/service-3d.png" alt="Engineers collaborating on a structural 3D model across dual monitors" data-service-image />
-            <img src="assets/service-cad.png" alt="Hands reviewing technical drawings on a desk" data-service-image />
-            <img src="assets/service-steel.png" alt="Steel framework of an industrial structure" data-service-image />
-            <img src="assets/service-bim.png" alt="Engineer working at a dual-monitor workstation" data-service-image />
-            <img src="assets/service-docs.png" alt="Architect scale and drafting tools on technical drawings" data-service-image />
-            <img src="assets/service-plant.png" alt="Daylight view of industrial plant towers and piping" data-service-image />
+            <img class="is-active" src="assets/service-3d.png" alt="Engineers collaborating on a structural 3D model across dual monitors" data-service-image data-i18n-alt="home.alt_svc1" />
+            <img src="assets/service-cad.png" alt="Hands reviewing technical drawings on a desk" data-service-image data-i18n-alt="home.alt_svc2" />
+            <img src="assets/service-steel.png" alt="Steel framework of an industrial structure" data-service-image data-i18n-alt="home.alt_svc3" />
+            <img src="assets/service-bim.png" alt="Engineer working at a dual-monitor workstation" data-service-image data-i18n-alt="home.alt_svc4" />
+            <img src="assets/service-docs.png" alt="Architect scale and drafting tools on technical drawings" data-service-image data-i18n-alt="home.alt_svc5" />
+            <img src="assets/service-plant.png" alt="Daylight view of industrial plant towers and piping" data-service-image data-i18n-alt="home.alt_svc6" />
           </div>
           <div class="service-list" data-reveal>
             <article class="service-item is-open" data-service>
               <h3>
                 <button type="button" aria-expanded="true" aria-controls="service-copy-0" id="service-btn-0">
-                  3D Modeling and Drafting
+                  <span data-i18n="home.svc1_title">3D Modeling and Drafting</span>
                   <span class="service-mark" aria-hidden="true"></span>
                 </button>
               </h3>
               <div class="service-copy" id="service-copy-0" role="region" aria-labelledby="service-btn-0">
                 <div>
-                <p>
+                <p data-i18n="home.svc1_p">
                   Dutam builds accurate 3D models and production drawings for equipment, structures, and plant
                   components. Visualize early, detail precisely, and issue drawing sets that fabrication and
                   assembly can follow without guesswork.
@@ -138,13 +140,13 @@
             <article class="service-item" data-service>
               <h3>
                 <button type="button" aria-expanded="false" aria-controls="service-copy-1" id="service-btn-1">
-                  CAD Customization
+                  <span data-i18n="home.svc2_title">CAD Customization</span>
                   <span class="service-mark" aria-hidden="true"></span>
                 </button>
               </h3>
               <div class="service-copy" id="service-copy-1" role="region" aria-labelledby="service-btn-1">
                 <div>
-                <p>
+                <p data-i18n="home.svc2_p">
                   Dutam builds custom tools, scripts, and interfaces so engineers spend time on decisions, not
                   repeated clicks. Automation covers common CAD platforms and connects design work to the systems
                   your team already uses.
@@ -155,13 +157,13 @@
             <article class="service-item" data-service>
               <h3>
                 <button type="button" aria-expanded="false" aria-controls="service-copy-2" id="service-btn-2">
-                  Steel Detailing
+                  <span data-i18n="home.svc3_title">Steel Detailing</span>
                   <span class="service-mark" aria-hidden="true"></span>
                 </button>
               </h3>
               <div class="service-copy" id="service-copy-2" role="region" aria-labelledby="service-btn-2">
                 <div>
-                <p>
+                <p data-i18n="home.svc3_p">
                   Dutam details structural steel from design intent through a fabrication package. Member and
                   connection drawings follow AISC, Eurocodes, DIN, IS, and the other standards your project
                   requires.
@@ -172,13 +174,13 @@
             <article class="service-item" data-service>
               <h3>
                 <button type="button" aria-expanded="false" aria-controls="service-copy-3" id="service-btn-3">
-                  BIM Consulting
+                  <span data-i18n="home.svc4_title">BIM Consulting</span>
                   <span class="service-mark" aria-hidden="true"></span>
                 </button>
               </h3>
               <div class="service-copy" id="service-copy-3" role="region" aria-labelledby="service-btn-3">
                 <div>
-                <p>
+                <p data-i18n="home.svc4_p">
                   Dutam keeps architectural and construction disciplines in one model story. Coordination across
                   structure, HVAC, and MEP reduces clash noise before it becomes a site delay.
                 </p>
@@ -188,13 +190,13 @@
             <article class="service-item" data-service>
               <h3>
                 <button type="button" aria-expanded="false" aria-controls="service-copy-4" id="service-btn-4">
-                  Documentation
+                  <span data-i18n="home.svc5_title">Documentation</span>
                   <span class="service-mark" aria-hidden="true"></span>
                 </button>
               </h3>
               <div class="service-copy" id="service-copy-4" role="region" aria-labelledby="service-btn-4">
                 <div>
-                <p>
+                <p data-i18n="home.svc5_p">
                   Dutam sets up templates, workflows, and drawing standards so files stay findable, controlled,
                   and reusable. The system is built so the next revision does not start from scratch.
                 </p>
@@ -204,13 +206,13 @@
             <article class="service-item" data-service>
               <h3>
                 <button type="button" aria-expanded="false" aria-controls="service-copy-5" id="service-btn-5">
-                  Plant Design
+                  <span data-i18n="home.svc6_title">Plant Design</span>
                   <span class="service-mark" aria-hidden="true"></span>
                 </button>
               </h3>
               <div class="service-copy" id="service-copy-5" role="region" aria-labelledby="service-btn-5">
                 <div>
-                <p>
+                <p data-i18n="home.svc6_p">
                   Dutam supports multidisciplinary plant layout, modelling, and coordinated documentation. Plant
                   work succeeds when interfaces between disciplines stay clear through every change.
                 </p>
@@ -223,14 +225,14 @@
 
       <section class="industries" aria-labelledby="industries-heading">
         <div class="industries-copy">
-          <h2 id="industries-heading" data-reveal>Explore services by<br />Industries</h2>
+          <h2 id="industries-heading" data-reveal data-i18n-html="home.industries_h2_html">Explore services by<br />Industries</h2>
           <ol data-reveal>
             <li>
               <a href="services.html">
                 <span class="num">01</span>
                 <span>
-                  <strong>Industrial Machinery</strong>
-                  <em>Engineering solutions for high-output machinery.</em>
+                  <strong data-i18n="home.ind1_title">Industrial Machinery</strong>
+                  <em data-i18n="home.ind1_em">Engineering solutions for high-output machinery.</em>
                 </span>
                 <span class="arrow" aria-hidden="true">↗</span>
               </a>
@@ -239,8 +241,8 @@
               <a href="services.html">
                 <span class="num">02</span>
                 <span>
-                  <strong>Construction</strong>
-                  <em>Structural and construction engineering for commercial projects.</em>
+                  <strong data-i18n="home.ind2_title">Construction</strong>
+                  <em data-i18n="home.ind2_em">Structural and construction engineering for commercial projects.</em>
                 </span>
                 <span class="arrow" aria-hidden="true">↗</span>
               </a>
@@ -249,8 +251,8 @@
               <a href="services.html">
                 <span class="num">03</span>
                 <span>
-                  <strong>Oil &amp; Energy</strong>
-                  <em>Piping design and engineering for oil and energy projects.</em>
+                  <strong data-i18n="home.ind3_title">Oil &amp; Energy</strong>
+                  <em data-i18n="home.ind3_em">Piping design and engineering for oil and energy projects.</em>
                 </span>
                 <span class="arrow" aria-hidden="true">↗</span>
               </a>
@@ -259,8 +261,8 @@
               <a href="services.html">
                 <span class="num">04</span>
                 <span>
-                  <strong>Plant Design</strong>
-                  <em>Plant design and engineering for industrial projects.</em>
+                  <strong data-i18n="home.ind4_title">Plant Design</strong>
+                  <em data-i18n="home.ind4_em">Plant design and engineering for industrial projects.</em>
                 </span>
                 <span class="arrow" aria-hidden="true">↗</span>
               </a>
@@ -269,48 +271,48 @@
         </div>
         <div class="industry-mosaic" data-reveal>
           <div class="industry-track">
-            <img class="tile-engine" src="assets/industry-engine.png" alt="Close view of an engine camshaft and valves" />
-            <img class="tile-pipes" src="assets/industry-pipes.png" alt="Industrial piping and valves" />
-            <img class="tile-gears" src="assets/industry-gears.png" alt="Interlocking industrial gears" />
-            <img class="tile-cranes" src="assets/industry-cranes.png" alt="Tower cranes above a construction frame" />
-            <img class="tile-drawing" src="assets/industry-drawing.png" alt="Engineer marking up technical drawings" />
-            <img class="tile-cad" src="assets/industry-cad.png" alt="CAD model of a mechanical part on screen" />
-            <img class="tile-tanks" src="assets/industry-tanks.png" alt="Stainless steel process tanks and piping" />
+            <img class="tile-engine" src="assets/industry-engine.png" alt="Close view of an engine camshaft and valves" data-i18n-alt="home.alt_eng" />
+            <img class="tile-pipes" src="assets/industry-pipes.png" alt="Industrial piping and valves" data-i18n-alt="home.alt_pipes" />
+            <img class="tile-gears" src="assets/industry-gears.png" alt="Interlocking industrial gears" data-i18n-alt="home.alt_gears" />
+            <img class="tile-cranes" src="assets/industry-cranes.png" alt="Tower cranes above a construction frame" data-i18n-alt="home.alt_cranes" />
+            <img class="tile-drawing" src="assets/industry-drawing.png" alt="Engineer marking up technical drawings" data-i18n-alt="home.alt_drawing" />
+            <img class="tile-cad" src="assets/industry-cad.png" alt="CAD model of a mechanical part on screen" data-i18n-alt="home.alt_cad" />
+            <img class="tile-tanks" src="assets/industry-tanks.png" alt="Stainless steel process tanks and piping" data-i18n-alt="home.alt_tanks" />
           </div>
         </div>
       </section>
 
       <section id="contact" class="connect">
         <div class="connect-copy" data-reveal>
-          <h2>Let’s Connect.</h2>
-          <p>Starting a new project?</p>
-          <p>Tell us your scope, standard, and timeline and we will come back to you within 24 hours.</p>
+          <h2 data-i18n="home.connect_h2">Let’s Connect.</h2>
+          <p data-i18n="home.connect_p1">Starting a new project?</p>
+          <p data-i18n="home.connect_p2">Tell us your scope, standard, and timeline and we will come back to you within 24 hours.</p>
         </div>
         <form class="form" id="project-form" data-reveal novalidate>
-          <h3>Tell Us About Your Project</h3>
-          <label class="sr-only" for="full-name">Full name</label>
-          <input id="full-name" name="name" type="text" placeholder="Full name" required />
+          <h3 data-i18n="home.form_h3">Tell Us About Your Project</h3>
+          <label class="sr-only" for="full-name" data-i18n="home.ph_name">Full name</label>
+          <input id="full-name" name="name" type="text" placeholder="Full name" data-i18n-placeholder="home.ph_name" required />
           <div class="form-row">
-            <label class="sr-only" for="email">Email</label>
-            <input id="email" name="email" type="email" placeholder="Email" required />
-            <label class="sr-only" for="company">Company Name</label>
-            <input id="company" name="company" type="text" placeholder="Company Name" required />
+            <label class="sr-only" for="email" data-i18n="home.ph_email">Email</label>
+            <input id="email" name="email" type="email" placeholder="Email" data-i18n-placeholder="home.ph_email" required />
+            <label class="sr-only" for="company" data-i18n="home.ph_company">Company Name</label>
+            <input id="company" name="company" type="text" placeholder="Company Name" data-i18n-placeholder="home.ph_company" required />
           </div>
           <div class="form-row">
-            <label class="sr-only" for="phone">Phone number</label>
-            <input id="phone" name="phone" type="tel" placeholder="Phone number" required />
-            <label class="sr-only" for="project">Project Type</label>
-            <input id="project" name="project" type="text" placeholder="Project Type" required />
+            <label class="sr-only" for="phone" data-i18n="home.ph_phone">Phone number</label>
+            <input id="phone" name="phone" type="tel" placeholder="Phone number" data-i18n-placeholder="home.ph_phone" required />
+            <label class="sr-only" for="project" data-i18n="home.ph_project">Project Type</label>
+            <input id="project" name="project" type="text" placeholder="Project Type" data-i18n-placeholder="home.ph_project" required />
           </div>
-          <label class="sr-only" for="comments">Comments</label>
-          <textarea id="comments" name="comments" placeholder="Comments" rows="5"></textarea>
+          <label class="sr-only" for="comments" data-i18n="home.ph_comments">Comments</label>
+          <textarea id="comments" name="comments" placeholder="Comments" data-i18n-placeholder="home.ph_comments" rows="5"></textarea>
           <div class="check">
             <input id="privacy" type="checkbox" name="privacy" required />
             <p>
-              <label for="privacy">I have read and understood the </label><a href="#privacy">privacy policy</a>
+              <label for="privacy"><span data-i18n="home.privacy_prefix">I have read and understood the </span></label><a href="#privacy" data-i18n="home.privacy_link">privacy policy</a>
             </p>
           </div>
-          <button class="btn btn-primary" type="submit">Submit</button>
+          <button class="btn btn-primary" type="submit" data-i18n="home.submit">Submit</button>
           <p class="form-status" role="status" hidden></p>
         </form>
       </section>
@@ -319,38 +321,39 @@
     <footer class="footer">
       <div class="footer-grid">
         <div data-reveal>
-          <h2>Dutam Engineering</h2>
-          <p>
+          <h2 data-i18n="footer.company">Dutam Engineering</h2>
+          <p data-i18n="footer.blurb">
             Every project we take on is held to the same standard: technically accurate work, delivered
             on time, and structured to meet your specification.
           </p>
         </div>
         <div data-reveal>
-          <h2>Registered Address</h2>
+          <h2 data-i18n="footer.registered">Registered Address</h2>
           <p>B1, Mahalakshmi Flats, Sivagami Street, Srinivasa Nagar,<br />New Perungalathur,<br />Chennai – 600 063.</p>
         </div>
         <div data-reveal>
-          <h2>Branch Address</h2>
+          <h2 data-i18n="footer.branch">Branch Address</h2>
           <p>4/189-1 First Floor, Megha Kamalam Building, Saraswathi Street, Advaitha Ashram Road, Fairlands,<br />Salem - 636 004.</p>
         </div>
         <div data-reveal>
-          <h2>Contact Us</h2>
-          <p>Email: info@dutamengineering.com</p>
-          <p>Phone: +91 427 455 2439</p>
+          <h2 data-i18n="footer.contact_heading">Contact Us</h2>
+          <p data-i18n="footer.email">Email: info@dutamengineering.com</p>
+          <p data-i18n="footer.phone">Phone: +91 427 455 2439</p>
         </div>
       </div>
       <div class="legal">
-        <p>© 2026 DUTAM. All Rights Reserved.</p>
+        <p data-i18n="footer.copyright">© 2026 DUTAM. All Rights Reserved.</p>
         <nav>
-          <a href="index.html">Home</a>
-          <a href="about.html">About</a>
-          <a href="services.html">Services</a>
-          <a href="careers.html">Careers</a>
-          <a href="contact.html">Contact us</a>
-          <a href="index.html#privacy">Privacy Policy</a>
+          <a href="index.html" data-i18n="nav.home">Home</a>
+          <a href="about.html" data-i18n="nav.about">About</a>
+          <a href="services.html" data-i18n="nav.services">Services</a>
+          <a href="careers.html" data-i18n="nav.careers">Careers</a>
+          <a href="contact.html" data-i18n="nav.contact">Contact us</a>
+          <a href="index.html#privacy" data-i18n="nav.privacy">Privacy Policy</a>
         </nav>
       </div>
     </footer>
-    <script src="script.js"></script>
+    <script src="i18n.js?v=2"></script>
+    <script src="script.js?v=2"></script>
   </body>
 </html>
