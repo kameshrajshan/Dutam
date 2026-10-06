@@ -200,8 +200,10 @@ textarea {
 
 .brand img {
   display: block;
-  height: 48px;
+  height: 60px;
   width: auto;
+  max-width: min(220px, 48vw);
+  object-fit: contain;
 }
 
 .nav-links {
@@ -984,7 +986,8 @@ textarea {
   }
 
   .brand img {
-    height: 36px;
+    height: 44px;
+    max-width: min(180px, 55vw);
   }
 
   .nav-toggle {
