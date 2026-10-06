@@ -226,22 +226,13 @@ const languageMenu = document.querySelector("#language-menu");
 
 function applyLanguage(lang) {
   if (!window.DutamI18n) return lang || "en";
-  const next = window.DutamI18n.apply(lang);
-  if (quoteController) quoteController.refreshQuotes(next);
-  return next;
+  return window.DutamI18n.apply(lang);
 }
 
-if (window.DutamI18n) {
-  applyLanguage(window.DutamI18n.getLang());
-}
-
+// i18n.js owns boot/pageshow apply; quotes only need the change event.
 document.addEventListener("dutam:langchange", (event) => {
   const lang = event.detail && event.detail.lang;
   if (quoteController && lang) quoteController.refreshQuotes(lang);
-});
-
-window.addEventListener("pageshow", () => {
-  if (window.DutamI18n) applyLanguage(window.DutamI18n.getLang());
 });
 
 if (language && languageBtn && languageMenu) {
