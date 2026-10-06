@@ -314,6 +314,58 @@
     "contact.office_email_label": "Email",
     "contact.office_phone_label": "Phone",
     "contact.office_address_label": "Address",
+
+    "privacy.title": "Privacy Policy | Dutam Engineering",
+    "privacy.meta":
+      "How Dutam Engineering handles personal data submitted through enquiry and contact forms.",
+    "privacy.eyebrow": "Legal",
+    "privacy.h1": "Privacy Policy",
+    "privacy.lede":
+      "This policy explains how Dutam Engineering collects and uses personal information when you send an enquiry through our website forms.",
+    "privacy.updated": "Last updated: October 2026",
+    "privacy.s1_h2": "Who we are",
+    "privacy.s1_p":
+      "Dutam Engineering (“Dutam”, “we”, “us”) provides CAD, detailing, BIM, and related engineering services. For privacy questions about website enquiries, contact us at info@dutamengineering.com or +91 427 455 2439.",
+    "privacy.s2_h2": "What we collect when you send an enquiry",
+    "privacy.s2_p":
+      "When you use our contact, discovery, or related enquiry forms, we may collect the details you provide, such as:",
+    "privacy.s2_li1": "Name and company name",
+    "privacy.s2_li2": "Email address and phone number",
+    "privacy.s2_li3": "Industry, project type, services of interest, and scope notes",
+    "privacy.s2_li4": "Any other information you choose to include in your message",
+    "privacy.s2_p2": "We do not ask for payment card details through these enquiry forms.",
+    "privacy.s3_h2": "Why we use this information",
+    "privacy.s3_p": "We use enquiry data to:",
+    "privacy.s3_li1": "Respond to your request and discuss your engineering scope",
+    "privacy.s3_li2": "Prepare a turnaround plan, estimate, or follow-up questions",
+    "privacy.s3_li3": "Keep a record of communications related to your enquiry",
+    "privacy.s3_li4": "Improve how we handle future enquiries where appropriate",
+    "privacy.s3_p2":
+      "We process this information because you asked us to respond (our legitimate interest in handling business enquiries) and, where required, based on your consent when you submit the form and accept this policy.",
+    "privacy.s4_h2": "How long we keep it",
+    "privacy.s4_p":
+      "In line with common B2B practice for sales and project enquiries, we retain enquiry information for 365 to 730 days (12 to 24 months) from the date of your submission or your last related communication, whichever is later. After that period, we delete or anonymize the data unless a longer retention is required by law or an active project relationship.",
+    "privacy.s5_h2": "Who we share it with",
+    "privacy.s5_p":
+      "Enquiry details are reviewed by Dutam staff who need them to respond. We do not sell your personal information. We may use trusted service providers (for example email or hosting) to operate the website, under arrangements that require them to protect your data. We may also disclose information if required by law.",
+    "privacy.s6_h2": "International transfers",
+    "privacy.s6_p":
+      "Dutam operates from India and may work with clients and partners in other countries. If your enquiry data is processed outside your country, we take reasonable steps to protect it in line with applicable law.",
+    "privacy.s7_h2": "Your choices and rights",
+    "privacy.s7_p":
+      "Depending on where you live, you may have rights to access, correct, delete, or restrict use of your personal data, or to object to certain processing. To exercise these rights for an enquiry you sent us, email info@dutamengineering.com with enough detail for us to identify your request.",
+    "privacy.s8_h2": "Security",
+    "privacy.s8_p":
+      "We take reasonable technical and organizational measures to protect personal information against unauthorized access, loss, or misuse. No method of transmission over the internet is completely secure.",
+    "privacy.s9_h2": "Career applications",
+    "privacy.s9_p":
+      "If you apply through our careers form, we use the information you provide (including resume or portfolio links) only to assess your application and contact you about opportunities. Unsuccessful applications are retained for 180 to 365 days (6 to 12 months) unless you ask us to keep your profile for future roles.",
+    "privacy.s10_h2": "Changes to this policy",
+    "privacy.s10_p":
+      "We may update this page from time to time. The “Last updated” date at the top will change when we do. Continued use of the enquiry forms after an update means you acknowledge the revised policy.",
+    "privacy.s11_h2": "Contact",
+    "privacy.s11_p":
+      "Questions about this privacy policy or an enquiry you submitted can be sent to info@dutamengineering.com, or by post to our Branch Address: 4/189-1 First Floor, Megha Kamalam Building, Saraswathi Street, Advaitha Ashram Road, Fairlands, Salem - 636 004.",
   };
 
   var nl = {
@@ -632,6 +684,58 @@
     "contact.office_email_label": "E-mail",
     "contact.office_phone_label": "Telefoon",
     "contact.office_address_label": "Adres",
+
+    "privacy.title": "Privacybeleid | Dutam Engineering",
+    "privacy.meta":
+      "Hoe Dutam Engineering persoonsgegevens verwerkt die via aanvraag- en contactformulieren worden ingediend.",
+    "privacy.eyebrow": "Juridisch",
+    "privacy.h1": "Privacybeleid",
+    "privacy.lede":
+      "Dit beleid legt uit hoe Dutam Engineering persoonsgegevens verzamelt en gebruikt wanneer u via onze websiteformulieren een aanvraag stuurt.",
+    "privacy.updated": "Laatst bijgewerkt: oktober 2026",
+    "privacy.s1_h2": "Wie wij zijn",
+    "privacy.s1_p":
+      "Dutam Engineering (“Dutam”, “wij”, “ons”) levert CAD-, detailing-, BIM- en gerelateerde engineeringsdiensten. Voor privacyvragen over websiteaanvragen kunt u ons bereiken via info@dutamengineering.com of +91 427 455 2439.",
+    "privacy.s2_h2": "Wat we verzamelen bij een aanvraag",
+    "privacy.s2_p":
+      "Wanneer u onze contact-, discovery- of gerelateerde aanvraagformulieren gebruikt, kunnen we de door u verstrekte gegevens verzamelen, zoals:",
+    "privacy.s2_li1": "Naam en bedrijfsnaam",
+    "privacy.s2_li2": "E-mailadres en telefoonnummer",
+    "privacy.s2_li3": "Branche, projecttype, gewenste diensten en scope-opmerkingen",
+    "privacy.s2_li4": "Overige informatie die u in uw bericht opneemt",
+    "privacy.s2_p2": "Via deze aanvraagformulieren vragen we geen betaalkaartgegevens.",
+    "privacy.s3_h2": "Waarom we deze informatie gebruiken",
+    "privacy.s3_p": "We gebruiken aanvraaggegevens om:",
+    "privacy.s3_li1": "Op uw verzoek te reageren en uw engineeringscope te bespreken",
+    "privacy.s3_li2": "Een doorlooptijdplan, offerte of vervolgvragen voor te bereiden",
+    "privacy.s3_li3": "Een registratie van communicatie over uw aanvraag bij te houden",
+    "privacy.s3_li4": "Waar passend, onze afhandeling van toekomstige aanvragen te verbeteren",
+    "privacy.s3_p2":
+      "We verwerken deze informatie omdat u ons om een reactie heeft gevraagd (ons gerechtvaardigd belang bij zakelijke aanvragen) en, waar vereist, op basis van uw toestemming wanneer u het formulier indient en dit beleid accepteert.",
+    "privacy.s4_h2": "Hoe lang we het bewaren",
+    "privacy.s4_p":
+      "In lijn met gangbare B2B-praktijk voor sales- en projectaanvragen bewaren we aanvraaginformatie 365 tot 730 dagen (12 tot 24 maanden) vanaf de datum van indiening of uw laatste gerelateerde communicatie, afhankelijk van wat later is. Daarna verwijderen of anonimiseren we de gegevens, tenzij een langere bewaartermijn wettelijk vereist is of er een actieve projectrelatie bestaat.",
+    "privacy.s5_h2": "Met wie we het delen",
+    "privacy.s5_p":
+      "Aanvraaggegevens worden bekeken door Dutam-medewerkers die ze nodig hebben om te reageren. We verkopen uw persoonsgegevens niet. We kunnen vertrouwde dienstverleners gebruiken (bijvoorbeeld e-mail of hosting) om de website te laten werken, onder afspraken die hen verplichten uw gegevens te beschermen. We kunnen gegevens ook delen als de wet dat vereist.",
+    "privacy.s6_h2": "Internationale doorgifte",
+    "privacy.s6_p":
+      "Dutam werkt vanuit India en kan samenwerken met klanten en partners in andere landen. Als uw aanvraaggegevens buiten uw land worden verwerkt, nemen we redelijke maatregelen om ze in overeenstemming met de toepasselijke wet te beschermen.",
+    "privacy.s7_h2": "Uw keuzes en rechten",
+    "privacy.s7_p":
+      "Afhankelijk van waar u woont, kunt u rechten hebben om uw persoonsgegevens in te zien, te corrigeren, te wissen of het gebruik ervan te beperken, of om bezwaar te maken tegen bepaalde verwerking. Om deze rechten uit te oefenen voor een aanvraag die u ons stuurde, mailt u info@dutamengineering.com met voldoende details om uw verzoek te identificeren.",
+    "privacy.s8_h2": "Beveiliging",
+    "privacy.s8_p":
+      "We nemen redelijke technische en organisatorische maatregelen om persoonsgegevens te beschermen tegen ongeautoriseerde toegang, verlies of misbruik. Geen enkele methode van internetoverdracht is volledig veilig.",
+    "privacy.s9_h2": "Sollicitaties",
+    "privacy.s9_p":
+      "Als u via ons carrièreformulier solliciteert, gebruiken we de door u verstrekte informatie (inclusief cv- of portfoliolinks) alleen om uw sollicitatie te beoordelen en u te contacteren over mogelijkheden. Afgewezen sollicitaties bewaren we 180 tot 365 dagen (6 tot 12 maanden), tenzij u ons vraagt uw profiel voor toekomstige rollen te behouden.",
+    "privacy.s10_h2": "Wijzigingen in dit beleid",
+    "privacy.s10_p":
+      "We kunnen deze pagina van tijd tot tijd bijwerken. De datum “Laatst bijgewerkt” bovenaan wijzigt dan. Door na een update de aanvraagformulieren te blijven gebruiken, erkent u het herziene beleid.",
+    "privacy.s11_h2": "Contact",
+    "privacy.s11_p":
+      "Vragen over dit privacybeleid of een door u ingediende aanvraag kunt u sturen naar info@dutamengineering.com, of per post naar ons vestigingsadres: 4/189-1 First Floor, Megha Kamalam Building, Saraswathi Street, Advaitha Ashram Road, Fairlands, Salem - 636 004.",
   };
 
   var de = {
@@ -950,6 +1054,58 @@
     "contact.office_email_label": "E-Mail",
     "contact.office_phone_label": "Telefon",
     "contact.office_address_label": "Adresse",
+
+    "privacy.title": "Datenschutz | Dutam Engineering",
+    "privacy.meta":
+      "Wie Dutam Engineering personenbezogene Daten verarbeitet, die über Anfrage- und Kontaktformulare übermittelt werden.",
+    "privacy.eyebrow": "Rechtliches",
+    "privacy.h1": "Datenschutzerklärung",
+    "privacy.lede":
+      "Diese Erklärung beschreibt, wie Dutam Engineering personenbezogene Daten erhebt und verwendet, wenn Sie über unsere Website-Formulare eine Anfrage senden.",
+    "privacy.updated": "Zuletzt aktualisiert: Oktober 2026",
+    "privacy.s1_h2": "Wer wir sind",
+    "privacy.s1_p":
+      "Dutam Engineering („Dutam“, „wir“, „uns“) bietet CAD-, Detailing-, BIM- und verwandte Engineering-Dienstleistungen. Bei Datenschutzfragen zu Website-Anfragen erreichen Sie uns unter info@dutamengineering.com oder +91 427 455 2439.",
+    "privacy.s2_h2": "Was wir bei einer Anfrage erheben",
+    "privacy.s2_p":
+      "Wenn Sie unsere Kontakt-, Discovery- oder verwandten Anfrageformulare nutzen, können wir die von Ihnen angegebenen Angaben erheben, zum Beispiel:",
+    "privacy.s2_li1": "Name und Firmenname",
+    "privacy.s2_li2": "E-Mail-Adresse und Telefonnummer",
+    "privacy.s2_li3": "Branche, Projekttyp, interessierende Leistungen und Scope-Hinweise",
+    "privacy.s2_li4": "Weitere Informationen, die Sie in Ihrer Nachricht angeben",
+    "privacy.s2_p2": "Über diese Anfrageformulare erheben wir keine Zahlungskartendaten.",
+    "privacy.s3_h2": "Warum wir diese Informationen nutzen",
+    "privacy.s3_p": "Wir nutzen Anfragedaten, um:",
+    "privacy.s3_li1": "Auf Ihre Anfrage zu antworten und Ihren Engineering-Scope zu besprechen",
+    "privacy.s3_li2": "Einen Durchlaufplan, ein Angebot oder Rückfragen vorzubereiten",
+    "privacy.s3_li3": "Eine Dokumentation der Kommunikation zu Ihrer Anfrage zu führen",
+    "privacy.s3_li4": "Wo sinnvoll, die Bearbeitung künftiger Anfragen zu verbessern",
+    "privacy.s3_p2":
+      "Wir verarbeiten diese Informationen, weil Sie uns um eine Antwort gebeten haben (unser berechtigtes Interesse an der Bearbeitung geschäftlicher Anfragen) und, soweit erforderlich, auf Grundlage Ihrer Einwilligung, wenn Sie das Formular absenden und diese Erklärung akzeptieren.",
+    "privacy.s4_h2": "Wie lange wir sie speichern",
+    "privacy.s4_p":
+      "Im Einklang mit üblicher B2B-Praxis für Vertriebs- und Projektanfragen speichern wir Anfrageinformationen 365 bis 730 Tage (12 bis 24 Monate) ab dem Datum Ihrer Einreichung oder Ihrer letzten zugehörigen Kommunikation, je nachdem, was später liegt. Danach löschen oder anonymisieren wir die Daten, sofern keine längere Aufbewahrung gesetzlich erforderlich ist oder eine aktive Projektbeziehung besteht.",
+    "privacy.s5_h2": "Mit wem wir sie teilen",
+    "privacy.s5_p":
+      "Anfragedetails werden von Dutam-Mitarbeitenden eingesehen, die sie zur Antwort benötigen. Wir verkaufen Ihre personenbezogenen Daten nicht. Wir können vertrauenswürdige Dienstleister (z. B. E-Mail oder Hosting) einsetzen, unter Vereinbarungen, die den Schutz Ihrer Daten verlangen. Eine Offenlegung kann auch gesetzlich erforderlich sein.",
+    "privacy.s6_h2": "Internationale Übermittlungen",
+    "privacy.s6_p":
+      "Dutam arbeitet von Indien aus und kann mit Kunden und Partnern in anderen Ländern zusammenarbeiten. Wenn Ihre Anfragedaten außerhalb Ihres Landes verarbeitet werden, treffen wir angemessene Maßnahmen zum Schutz gemäß geltendem Recht.",
+    "privacy.s7_h2": "Ihre Wahlmöglichkeiten und Rechte",
+    "privacy.s7_p":
+      "Je nach Ihrem Wohnsitz können Sie Rechte auf Auskunft, Berichtigung, Löschung oder Einschränkung der Nutzung Ihrer personenbezogenen Daten haben oder der Verarbeitung widersprechen. Zur Ausübung dieser Rechte zu einer Anfrage mailen Sie info@dutamengineering.com mit ausreichend Angaben zur Identifizierung Ihres Anliegens.",
+    "privacy.s8_h2": "Sicherheit",
+    "privacy.s8_p":
+      "Wir treffen angemessene technische und organisatorische Maßnahmen zum Schutz personenbezogener Daten vor unbefugtem Zugriff, Verlust oder Missbrauch. Keine Übertragung über das Internet ist vollständig sicher.",
+    "privacy.s9_h2": "Stellenbewerbungen",
+    "privacy.s9_p":
+      "Wenn Sie über unser Karriereformular bewerben, nutzen wir die von Ihnen angegebenen Informationen (einschließlich Lebenslauf- oder Portfolio-Links) nur zur Prüfung Ihrer Bewerbung und zur Kontaktaufnahme. Nicht erfolgreiche Bewerbungen speichern wir 180 bis 365 Tage (6 bis 12 Monate), sofern Sie uns nicht bitten, Ihr Profil für künftige Rollen zu behalten.",
+    "privacy.s10_h2": "Änderungen dieser Erklärung",
+    "privacy.s10_p":
+      "Wir können diese Seite von Zeit zu Zeit aktualisieren. Das Datum „Zuletzt aktualisiert“ oben ändert sich dann. Die weitere Nutzung der Anfrageformulare nach einer Aktualisierung bedeutet, dass Sie die überarbeitete Erklärung zur Kenntnis nehmen.",
+    "privacy.s11_h2": "Kontakt",
+    "privacy.s11_p":
+      "Fragen zu dieser Datenschutzerklärung oder zu einer von Ihnen eingereichten Anfrage senden Sie an info@dutamengineering.com oder postalisch an unsere Niederlassungsadresse: 4/189-1 First Floor, Megha Kamalam Building, Saraswathi Street, Advaitha Ashram Road, Fairlands, Salem - 636 004.",
   };
 
   var fr = {
@@ -1270,6 +1426,58 @@
     "contact.office_email_label": "E-mail",
     "contact.office_phone_label": "Téléphone",
     "contact.office_address_label": "Adresse",
+
+    "privacy.title": "Politique de confidentialité | Dutam Engineering",
+    "privacy.meta":
+      "Comment Dutam Engineering traite les données personnelles envoyées via les formulaires de demande et de contact.",
+    "privacy.eyebrow": "Mentions légales",
+    "privacy.h1": "Politique de confidentialité",
+    "privacy.lede":
+      "Cette politique explique comment Dutam Engineering collecte et utilise les informations personnelles lorsque vous envoyez une demande via les formulaires de notre site.",
+    "privacy.updated": "Dernière mise à jour : octobre 2026",
+    "privacy.s1_h2": "Qui nous sommes",
+    "privacy.s1_p":
+      "Dutam Engineering (« Dutam », « nous ») fournit des services de CAO, de detailing, de BIM et d’ingénierie associés. Pour toute question de confidentialité relative aux demandes du site, contactez-nous à info@dutamengineering.com ou au +91 427 455 2439.",
+    "privacy.s2_h2": "Ce que nous collectons lors d’une demande",
+    "privacy.s2_p":
+      "Lorsque vous utilisez nos formulaires de contact, de découverte ou de demande associés, nous pouvons collecter les informations que vous fournissez, notamment :",
+    "privacy.s2_li1": "Nom et nom de l’entreprise",
+    "privacy.s2_li2": "Adresse e-mail et numéro de téléphone",
+    "privacy.s2_li3": "Secteur, type de projet, services souhaités et notes de périmètre",
+    "privacy.s2_li4": "Toute autre information que vous choisissez d’inclure dans votre message",
+    "privacy.s2_p2": "Nous ne demandons pas de données de carte de paiement via ces formulaires de demande.",
+    "privacy.s3_h2": "Pourquoi nous utilisons ces informations",
+    "privacy.s3_p": "Nous utilisons les données de demande pour :",
+    "privacy.s3_li1": "Répondre à votre demande et discuter de votre périmètre d’ingénierie",
+    "privacy.s3_li2": "Préparer un plan de délai, une estimation ou des questions de suivi",
+    "privacy.s3_li3": "Conserver un historique des échanges liés à votre demande",
+    "privacy.s3_li4": "Améliorer, le cas échéant, le traitement des demandes futures",
+    "privacy.s3_p2":
+      "Nous traitons ces informations parce que vous nous avez demandé de répondre (notre intérêt légitime à traiter des demandes professionnelles) et, le cas échéant, sur la base de votre consentement lorsque vous soumettez le formulaire et acceptez cette politique.",
+    "privacy.s4_h2": "Durée de conservation",
+    "privacy.s4_p":
+      "Conformément aux pratiques B2B courantes pour les demandes commerciales et de projet, nous conservons les informations de demande pendant 365 à 730 jours (12 à 24 mois) à compter de la date de votre envoi ou de votre dernière communication associée, selon la date la plus récente. Passé ce délai, nous supprimons ou anonymisons les données, sauf si une conservation plus longue est exigée par la loi ou qu’une relation de projet active existe.",
+    "privacy.s5_h2": "Avec qui nous les partageons",
+    "privacy.s5_p":
+      "Les détails de la demande sont consultés par le personnel Dutam qui en a besoin pour répondre. Nous ne vendons pas vos informations personnelles. Nous pouvons faire appel à des prestataires de confiance (par exemple e-mail ou hébergement) pour faire fonctionner le site, sous des arrangements exigeant la protection de vos données. Nous pouvons aussi divulguer des informations si la loi l’exige.",
+    "privacy.s6_h2": "Transferts internationaux",
+    "privacy.s6_p":
+      "Dutam opère depuis l’Inde et peut travailler avec des clients et partenaires dans d’autres pays. Si vos données de demande sont traitées hors de votre pays, nous prenons des mesures raisonnables pour les protéger conformément au droit applicable.",
+    "privacy.s7_h2": "Vos choix et vos droits",
+    "privacy.s7_p":
+      "Selon votre lieu de résidence, vous pouvez disposer de droits d’accès, de rectification, de suppression ou de limitation de l’utilisation de vos données personnelles, ou d’opposition à certains traitements. Pour exercer ces droits concernant une demande que vous nous avez envoyée, écrivez à info@dutamengineering.com avec suffisamment de détails pour identifier votre demande.",
+    "privacy.s8_h2": "Sécurité",
+    "privacy.s8_p":
+      "Nous prenons des mesures techniques et organisationnelles raisonnables pour protéger les informations personnelles contre l’accès non autorisé, la perte ou l’utilisation abusive. Aucune méthode de transmission sur Internet n’est totalement sécurisée.",
+    "privacy.s9_h2": "Candidatures",
+    "privacy.s9_p":
+      "Si vous postulez via notre formulaire carrières, nous utilisons les informations que vous fournissez (y compris CV ou liens de portfolio) uniquement pour évaluer votre candidature et vous contacter au sujet d’opportunités. Les candidatures non retenues sont conservées 180 à 365 jours (6 à 12 mois), sauf si vous nous demandez de garder votre profil pour de futurs postes.",
+    "privacy.s10_h2": "Modifications de cette politique",
+    "privacy.s10_p":
+      "Nous pouvons mettre à jour cette page de temps à autre. La date « Dernière mise à jour » en haut changera alors. Continuer à utiliser les formulaires de demande après une mise à jour signifie que vous prenez acte de la politique révisée.",
+    "privacy.s11_h2": "Contact",
+    "privacy.s11_p":
+      "Les questions sur cette politique de confidentialité ou sur une demande que vous avez soumise peuvent être envoyées à info@dutamengineering.com, ou par courrier à notre adresse de succursale : 4/189-1 First Floor, Megha Kamalam Building, Saraswathi Street, Advaitha Ashram Road, Fairlands, Salem - 636 004.",
   };
 
   window.DUTAM_I18N = { en: en, nl: nl, de: de, fr: fr };

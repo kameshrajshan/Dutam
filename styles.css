@@ -1343,7 +1343,8 @@ textarea {
 .page-hero,
 .why,
 .contact-body,
-.apply-inner {
+.apply-inner,
+.privacy-doc {
   width: min(var(--size-content), calc(100% - (var(--margin) * 2)));
   margin-inline: auto;
 }
@@ -1384,6 +1385,52 @@ textarea {
 
 .contact-page .page-hero h1 {
   line-height: 88px;
+}
+
+.privacy-page .page-hero {
+  padding-bottom: var(--space-48);
+}
+
+.privacy-updated {
+  margin: var(--space-24) 0 0;
+  font-size: var(--font-size-caption);
+  line-height: var(--font-line-height-caption);
+  color: var(--color-text-muted);
+}
+
+.privacy-doc {
+  padding: 0 0 var(--space-96);
+  display: grid;
+  gap: var(--space-48);
+  max-width: 737px;
+}
+
+.privacy-doc section h2 {
+  margin: 0 0 var(--space-16);
+  font-size: var(--font-size-h5);
+  font-weight: var(--font-weight-medium);
+  line-height: normal;
+}
+
+.privacy-doc p,
+.privacy-doc li {
+  margin: 0;
+  font-size: var(--font-size-body-sm);
+  line-height: var(--font-line-height-body-sm);
+  color: var(--color-neutral-200);
+}
+
+.privacy-doc p + p,
+.privacy-doc p + ul,
+.privacy-doc ul + p {
+  margin-top: var(--space-16);
+}
+
+.privacy-doc ul {
+  margin: 0;
+  padding-left: 1.25rem;
+  display: grid;
+  gap: var(--space-8);
 }
 
 .why {
