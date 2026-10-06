@@ -35,7 +35,7 @@
     "home.eyebrow": "engineering partner",
     "home.h1": "Precision CAD Engineering for Global Industry.",
     "home.lede":
-      "We deliver 3D modeling, steel detailing, BIM consulting, and CAD automation for machine building, construction, and oil & energy projects — on time, to standard, and to spec.",
+      "We deliver 3D modeling, steel detailing, BIM consulting, and CAD automation for machine building, construction, and oil and energy projects. We deliver on time, to standard, and to spec.",
     "home.cta_primary": "Book a Discovery Call",
     "home.cta_secondary": "View Our Work",
     "home.assurance":
@@ -381,7 +381,7 @@
     "detail.ind_machine.lede":
       "Dutam supports OEMs and machine builders with accurate 3D models, production drawings, and CAD workflows that keep design intent intact from concept through fabrication.",
     "detail.ind_machine.challenge":
-      "Machine packages stall when models, BOMs, and shop drawings drift apart—or when every revision becomes a manual redraw. Clients need partners who understand both the product and the CAD process behind it.",
+      "Machine packages stall when models, BOMs, and shop drawings drift apart, or when every revision becomes a manual redraw. Clients need partners who understand both the product and the CAD process behind it.",
     "detail.ind_machine.d1": "Equipment and machinery 3D models ready for design review",
     "detail.ind_machine.d2": "Manufacturing and assembly drawing sets",
     "detail.ind_machine.d3": "CAD customization for repeat components and routines",
@@ -419,7 +419,7 @@
     "detail.ind_oil.lede":
       "Dutam supports oil, energy, and related facility work with plant documentation, coordinated models, and disciplined change control across disciplines.",
     "detail.ind_oil.challenge":
-      "Energy projects generate dense interfaces—piping, structure, equipment, and platforms. Incomplete documentation and unmanaged revisions create schedule risk and safety exposure.",
+      "Energy projects generate dense interfaces across piping, structure, equipment, and platforms. Incomplete documentation and unmanaged revisions create schedule risk and safety exposure.",
     "detail.ind_oil.d1": "Plant layout and equipment arrangement support",
     "detail.ind_oil.d2": "Coordinated multidisciplinary documentation packages",
     "detail.ind_oil.d3": "Interface tracking across structure, piping, and equipment",
@@ -436,7 +436,7 @@
     "detail.ind_plant.h1": "Plant & Processing",
     "detail.ind_plant.hero": "Layouts, piping, platforms, and equipment arrangements built for industrial reality.",
     "detail.ind_plant.lede":
-      "Dutam delivers plant and processing engineering support—layouts, piping and equipment arrangements, industrial platforms, and tank-related design documentation.",
+      "Dutam delivers plant and processing engineering support. That includes layouts, piping and equipment arrangements, industrial platforms, and tank-related design documentation.",
     "detail.ind_plant.challenge":
       "Plant projects fail quietly when equipment, access, and piping routes are designed in isolation. Later revisions cascade across disciplines and erase earlier coordination work.",
     "detail.ind_plant.d1": "Plant layouts and general arrangements",
@@ -455,7 +455,7 @@
     "detail.cap_3d.h1": "3D Modelling & Drafting",
     "detail.cap_3d.hero": "Models and drawing sets fabrication and assembly can follow without guesswork.",
     "detail.cap_3d.lede":
-      "Dutam builds accurate 3D models and production drawings for equipment, structures, and plant components—so visualization, detailing, and issue happen from one controlled source.",
+      "Dutam builds accurate 3D models and production drawings for equipment, structures, and plant components. Visualization, detailing, and issue then happen from one controlled source.",
     "detail.cap_3d.challenge":
       "When models are incomplete or drawings lag the model, shops invent missing information. That inventiveness becomes rework, scrap, and schedule slip.",
     "detail.cap_3d.d1": "3D models for equipment, structures, and plant components",
@@ -473,7 +473,7 @@
     "detail.cap_cad.h1": "CAD Customization",
     "detail.cap_cad.hero": "Automation and interfaces so engineers spend time on decisions, not repeated clicks.",
     "detail.cap_cad.lede":
-      "Dutam builds custom tools, scripts, and CAD interfaces that connect design work to the systems your team already uses—cutting repetitive effort without locking you into brittle workflows.",
+      "Dutam builds custom tools, scripts, and CAD interfaces that connect design work to the systems your team already uses. This cuts repetitive effort without locking you into brittle workflows.",
     "detail.cap_cad.challenge":
       "Engineering hours disappear into copy-paste routines, manual BOM cleanup, and tool hopping. Customization only helps when it matches how your team actually works.",
     "detail.cap_cad.d1": "Scripts and macros for common CAD platforms",
@@ -491,7 +491,7 @@
     "detail.cap_steel.h1": "Steel Detailing",
     "detail.cap_steel.hero": "Connection-aware structural packages to the standards your project requires.",
     "detail.cap_steel.lede":
-      "Dutam details structural steel from design intent through a fabrication package—member and connection drawings following AISC, Eurocodes, DIN, IS, and project-specific rules.",
+      "Dutam details structural steel from design intent through a fabrication package. Member and connection drawings follow AISC, Eurocodes, DIN, IS, and project-specific rules.",
     "detail.cap_steel.challenge":
       "Incomplete connections and unclear bolt/weld intent force fabricators to interpret. Interpretation is where cost and schedule risk hide.",
     "detail.cap_steel.d1": "Member and connection detailing packages",
@@ -509,7 +509,7 @@
     "detail.cap_bim.h1": "BIM Consulting",
     "detail.cap_bim.hero": "One model story across structure, HVAC, MEP, and construction disciplines.",
     "detail.cap_bim.lede":
-      "Dutam keeps architectural and construction disciplines coordinated in a shared model context—reducing clash noise before it becomes a site delay.",
+      "Dutam keeps architectural and construction disciplines coordinated in a shared model context. This reduces clash noise before it becomes a site delay.",
     "detail.cap_bim.challenge":
       "BIM fails when it is treated as a file format instead of a coordination process. Without clear LOD, ownership, and clash discipline, models become decorative.",
     "detail.cap_bim.d1": "Multidisciplinary model coordination support",
@@ -547,7 +547,7 @@
     "detail.cap_plant.h1": "Plant Engineering Design",
     "detail.cap_plant.hero": "Multidisciplinary plant design with careful interface discipline.",
     "detail.cap_plant.lede":
-      "Dutam supports plant layout, modelling, and coordinated documentation—because plant work succeeds when interfaces between disciplines stay clear through every change.",
+      "Dutam supports plant layout, modelling, and coordinated documentation. Plant work succeeds when interfaces between disciplines stay clear through every change.",
     "detail.cap_plant.challenge":
       "Plant design is an interface problem as much as a modelling problem. When piping, structure, and equipment change independently, the GA becomes fiction.",
     "detail.cap_plant.d1": "Plant layout and GA development support",
@@ -595,7 +595,7 @@
     "home.eyebrow": "engineeringpartner",
     "home.h1": "Precisie CAD-engineering voor de wereldwijde industrie.",
     "home.lede":
-      "Wij leveren 3D-modelleren, staaldetailing, BIM-advies en CAD-automatisering voor machinebouw, bouw en olie- & energieprojecten — op tijd, volgens norm en volgens specificatie.",
+      "Wij leveren 3D-modelleren, staaldetailing, BIM-advies en CAD-automatisering voor machinebouw, bouw en olie- en energieprojecten. We leveren op tijd, volgens norm en volgens specificatie.",
     "home.cta_primary": "Plan een kennismakingsgesprek",
     "home.cta_secondary": "Bekijk ons werk",
     "home.assurance":
@@ -943,7 +943,7 @@
     "detail.ind_machine.lede":
       "Dutam ondersteunt OEM’s en machinebouwers met nauwkeurige 3D-modellen, productietekeningen en CAD-workflows die ontwerpintentie intact houden van concept tot fabricage.",
     "detail.ind_machine.challenge":
-      "Machinepakketten stagneren wanneer modellen, stuklijsten en werktekeningen uit elkaar lopen—of wanneer elke revisie een handmatige hertekening wordt. Klanten hebben partners nodig die zowel het product als het CAD-proces begrijpen.",
+      "Machinepakketten stagneren wanneer modellen, stuklijsten en werktekeningen uit elkaar lopen, of wanneer elke revisie een handmatige hertekening wordt. Klanten hebben partners nodig die zowel het product als het CAD-proces begrijpen.",
     "detail.ind_machine.d1": "3D-modellen van apparatuur en machines, klaar voor design review",
     "detail.ind_machine.d2": "Productie- en assemblagetekeningen",
     "detail.ind_machine.d3": "CAD-customization voor herhaalcomponenten en routines",
@@ -983,7 +983,7 @@
     "detail.ind_oil.lede":
       "Dutam ondersteunt olie-, energie- en gerelateerd facility-werk met plantocumentatie, gecoördineerde modellen en gedisciplineerde wijzigingscontrole over disciplines.",
     "detail.ind_oil.challenge":
-      "Energieprojecten genereren dichte interfaces—leidingen, constructie, apparatuur en platforms. Onvolledige documentatie en onbeheerde revisies creëren planningsrisico en veiligheidsblootstelling.",
+      "Energieprojecten genereren dichte interfaces tussen leidingen, constructie, apparatuur en platforms. Onvolledige documentatie en onbeheerde revisies creëren planningsrisico en veiligheidsblootstelling.",
     "detail.ind_oil.d1": "Ondersteuning bij plantlayout en apparatuuropstelling",
     "detail.ind_oil.d2": "Gecoördineerde multidisciplinaire documentatiepakketten",
     "detail.ind_oil.d3": "Interface-tracking over constructie, leidingen en apparatuur",
@@ -1000,7 +1000,7 @@
     "detail.ind_plant.hero":
       "Layouts, leidingen, platforms en apparatuuropstellingen gebouwd voor industriële realiteit.",
     "detail.ind_plant.lede":
-      "Dutam levert plant- en processing-engineeringsondersteuning—layouts, leiding- en apparatuuropstellingen, industriële platforms en tankgerelateerde ontwerpdocumentatie.",
+      "Dutam levert plant- en processing-engineeringsondersteuning. Dat omvat layouts, leiding- en apparatuuropstellingen, industriële platforms en tankgerelateerde ontwerpdocumentatie.",
     "detail.ind_plant.challenge":
       "Plantprojecten falen stil wanneer apparatuur, toegankelijkheid en leidingroutes geïsoleerd worden ontworpen. Latere revisies cascaderen over disciplines en wissen eerdere coördinatie uit.",
     "detail.ind_plant.d1": "Plantlayouts en general arrangements",
@@ -1019,7 +1019,7 @@
     "detail.cap_3d.h1": "3D-modellering & tekenwerk",
     "detail.cap_3d.hero": "Modellen en tekeningen die fabricage en assemblage zonder giswerk kunnen volgen.",
     "detail.cap_3d.lede":
-      "Dutam bouwt nauwkeurige 3D-modellen en productietekeningen voor apparatuur, constructies en plantcomponenten—zodat visualisatie, detailing en issue vanuit één gecontroleerde bron gebeuren.",
+      "Dutam bouwt nauwkeurige 3D-modellen en productietekeningen voor apparatuur, constructies en plantcomponenten. Visualisatie, detailing en issue gebeuren dan vanuit één gecontroleerde bron.",
     "detail.cap_3d.challenge":
       "Wanneer modellen onvolledig zijn of tekeningen achterlopen op het model, bedenken werkplaatsen ontbrekende informatie. Die inventiviteit wordt herwerk, scrap en planningvertraging.",
     "detail.cap_3d.d1": "3D-modellen voor apparatuur, constructies en plantcomponenten",
@@ -1038,7 +1038,7 @@
     "detail.cap_cad.hero":
       "Automatisering en interfaces zodat engineers tijd besteden aan beslissingen, niet aan herhaalde klikken.",
     "detail.cap_cad.lede":
-      "Dutam bouwt custom tools, scripts en CAD-interfaces die ontwerpwerk verbinden met de systemen die uw team al gebruikt—met minder repetitief werk, zonder breekbare workflows.",
+      "Dutam bouwt custom tools, scripts en CAD-interfaces die ontwerpwerk verbinden met de systemen die uw team al gebruikt. Zo is er minder repetitief werk, zonder breekbare workflows.",
     "detail.cap_cad.challenge":
       "Engineeringsuren verdwijnen in copy-paste-routines, handmatige BOM-opschoning en toolhoppen. Customization helpt alleen wanneer het past bij hoe uw team echt werkt.",
     "detail.cap_cad.d1": "Scripts en macro’s voor gangbare CAD-platforms",
@@ -1057,7 +1057,7 @@
     "detail.cap_steel.h1": "Staaledetailing",
     "detail.cap_steel.hero": "Verbindingsbewuste structurele pakketten volgens de normen die uw project vereist.",
     "detail.cap_steel.lede":
-      "Dutam detailleert constructiestaal van ontwerpintentie tot fabricagepakket—lid- en verbindingstekeningen volgens AISC, Eurocodes, DIN, IS en projectspecifieke regels.",
+      "Dutam detailleert constructiestaal van ontwerpintentie tot fabricagepakket. Lid- en verbindingstekeningen volgen AISC, Eurocodes, DIN, IS en projectspecifieke regels.",
     "detail.cap_steel.challenge":
       "Onvolledige verbindingen en onduidelijke bout-/lasintentie dwingen fabrikanten tot interpretatie. Interpretatie is waar kosten- en planningsrisico schuilen.",
     "detail.cap_steel.d1": "Lid- en verbindingsdetailingpakketten",
@@ -1076,7 +1076,7 @@
     "detail.cap_bim.h1": "BIM-consulting",
     "detail.cap_bim.hero": "Eén modelverhaal over constructie, HVAC, W-installaties en bouwdisciplines.",
     "detail.cap_bim.lede":
-      "Dutam houdt architectonische en bouwdisciplines gecoördineerd in een gedeelde modelcontext—clash-ruis verminderen voordat het een bouwplaatsvertraging wordt.",
+      "Dutam houdt architectonische en bouwdisciplines gecoördineerd in een gedeelde modelcontext. Zo verminderen we clash-ruis voordat het een bouwplaatsvertraging wordt.",
     "detail.cap_bim.challenge":
       "BIM faalt wanneer het als bestandsformaat wordt behandeld in plaats van als coördinatieproces. Zonder duidelijke LOD, eigenaarschap en clash-discipline worden modellen decoratief.",
     "detail.cap_bim.d1": "Multidisciplinaire modelcoördinatie",
@@ -1113,7 +1113,7 @@
     "detail.cap_plant.h1": "Plant engineering design",
     "detail.cap_plant.hero": "Multidisciplinair plantontwerp met zorgvuldige interfacediscipline.",
     "detail.cap_plant.lede":
-      "Dutam ondersteunt plantlayout, modellering en gecoördineerde documentatie—omdat plantwerk slaagt wanneer interfaces tussen disciplines bij elke wijziging helder blijven.",
+      "Dutam ondersteunt plantlayout, modellering en gecoördineerde documentatie. Plantwerk slaagt wanneer interfaces tussen disciplines bij elke wijziging helder blijven.",
     "detail.cap_plant.challenge":
       "Plantontwerp is evenzeer een interfaceprobleem als een modelleringsprobleem. Wanneer leidingen, constructie en apparatuur onafhankelijk wijzigen, wordt de GA fictie.",
     "detail.cap_plant.d1": "Ondersteuning bij plantlayout en GA-ontwikkeling",
@@ -1161,7 +1161,7 @@
     "home.eyebrow": "Engineering-Partner",
     "home.h1": "Präzises CAD-Engineering für die globale Industrie.",
     "home.lede":
-      "Wir liefern 3D-Modellierung, Stahlbauteildetaillierung, BIM-Beratung und CAD-Automatisierung für Maschinenbau, Bauwesen sowie Öl- & Energieprojekte — termingerecht, normgerecht und spezifikationskonform.",
+      "Wir liefern 3D-Modellierung, Stahlbauteildetaillierung, BIM-Beratung und CAD-Automatisierung für Maschinenbau, Bauwesen sowie Öl- und Energieprojekte. Wir liefern termingerecht, normgerecht und spezifikationskonform.",
     "home.cta_primary": "Entdeckungsgespräch buchen",
     "home.cta_secondary": "Unsere Arbeit ansehen",
     "home.assurance":
@@ -1211,7 +1211,7 @@
     "home.connect_h2": "Lassen Sie uns sprechen.",
     "home.connect_p1": "Starten Sie ein neues Projekt?",
     "home.connect_p2":
-      "Nennen Sie uns Scope, Norm und Zeitplan — wir melden uns innerhalb von 24 Stunden.",
+      "Nennen Sie uns Scope, Norm und Zeitplan. Wir melden uns innerhalb von 24 Stunden.",
     "home.form_h3": "Erzählen Sie uns von Ihrem Projekt",
     "home.ph_name": "Vollständiger Name",
     "home.ph_email": "E-Mail",
@@ -1300,7 +1300,7 @@
         display:
           "Unsere Zusammenarbeit mit Dutam läuft gut. Über digitale Kanäle finden wir uns leicht.",
         full:
-          "Unsere Zusammenarbeit mit Dutam läuft gut. Über digitale Kanäle finden wir uns leicht. Englisch wird gut beherrscht, sodass die Kommunikation reibungslos verläuft. Dutam folgt unseren Zeichnungsregeln, stellt aber auch Fragen dazu, damit wir sie gemeinsam verbessern können. Wir merken, dass Dutam mehr Erfahrung mit unseren Maschinen gewinnt — das führt zu weniger Fragen und mehr Feedback zu möglichen Fehlern in unseren Entwürfen. Wir spüren, dass Dutam sich für gute Arbeit engagiert und bei Bedarf die Extrameile geht. Wir freuen uns auf eine längere Zusammenarbeit.",
+          "Unsere Zusammenarbeit mit Dutam läuft gut. Über digitale Kanäle finden wir uns leicht. Englisch wird gut beherrscht, sodass die Kommunikation reibungslos verläuft. Dutam folgt unseren Zeichnungsregeln, stellt aber auch Fragen dazu, damit wir sie gemeinsam verbessern können. Wir merken, dass Dutam mehr Erfahrung mit unseren Maschinen gewinnt. Das führt zu weniger Fragen und mehr Feedback zu möglichen Fehlern in unseren Entwürfen. Wir spüren, dass Dutam sich für gute Arbeit engagiert und bei Bedarf die Extrameile geht. Wir freuen uns auf eine längere Zusammenarbeit.",
       },
       {
         name: "Richard Walther",
@@ -1316,7 +1316,7 @@
         display:
           "Dutam Engineering ist stets bereit mit einer Lösung, die genau zu unseren Anforderungen passt.",
         full:
-          "Seit der Gründung von Dutam Engineering sind sie schnell zu einem unverzichtbaren und zuverlässigen Partner für unser Unternehmen geworden. Ob kleinere Projekte oder komplexere Aufträge — Dutam Engineering ist stets bereit mit einer Lösung, die genau zu unseren Anforderungen passt. Sie liefern Zeichnungen, die höchsten Qualitätsstandards entsprechen, immer innerhalb der vereinbarten Fristen. Wir beabsichtigen, noch viele Jahre erfolgreich zusammenzuarbeiten.",
+          "Seit der Gründung von Dutam Engineering sind sie schnell zu einem unverzichtbaren und zuverlässigen Partner für unser Unternehmen geworden. Ob kleinere Projekte oder komplexere Aufträge: Dutam Engineering ist stets bereit mit einer Lösung, die genau zu unseren Anforderungen passt. Sie liefern Zeichnungen, die höchsten Qualitätsstandards entsprechen, immer innerhalb der vereinbarten Fristen. Wir beabsichtigen, noch viele Jahre erfolgreich zusammenzuarbeiten.",
       },
       {
         name: "Raymond and Bas",
@@ -1342,7 +1342,7 @@
     "services.eyebrow": "Leistungen",
     "services.h1": "Multidisziplinäres Engineering. Kompromissloses Detail.",
     "services.lede":
-      "Wählen Sie Ihre Branche für branchenspezifische Herausforderungen — oder tauchen Sie in unsere 6 Kernfähigkeiten für dedizierte Modellierung, Automatisierung und Detaillierung ein.",
+      "Wählen Sie Ihre Branche für branchenspezifische Herausforderungen. Alternativ tauchen Sie in unsere 6 Kernfähigkeiten für dedizierte Modellierung, Automatisierung und Detaillierung ein.",
     "services.industries_h2": "Branchen",
     "services.caps_h2": "Fähigkeiten",
     "services.ind1_h3": "Maschinenbau",
@@ -1379,11 +1379,11 @@
 
     "careers.title": "Karriere | Dutam Engineering",
     "careers.meta":
-      "Werden Sie Teil von Dutam Engineering. Bewerben Sie sich allgemein — wir matchen Sie, wenn eine Rolle passt.",
+      "Werden Sie Teil von Dutam Engineering. Bewerben Sie sich allgemein. Wir matchen Sie, wenn eine Rolle passt.",
     "careers.eyebrow": "Karriere",
     "careers.h1": "Engineern Sie das Nächste. Wachsen Sie, wo Qualität zählt.",
     "careers.lede":
-      "Arbeiten Sie neben erfahrenen Modellierern und Ingenieuren in Maschinenbau, Bauwesen und Energie. Wir investieren in Talente, die Engineering als Handwerk sehen — nicht als Checkliste.",
+      "Arbeiten Sie neben erfahrenen Modellierern und Ingenieuren in Maschinenbau, Bauwesen und Energie. Wir investieren in Talente, die Engineering als Handwerk sehen, nicht als Checkliste.",
     "careers.why_h2": "Warum Dutam",
     "careers.why1_h3": "Wirkungsstarke globale Projekte",
     "careers.why1_p":
@@ -1396,7 +1396,7 @@
       "Gedeihen Sie in einer kollaborativen, grenzüberschreitenden Umgebung, die Präzision über Politik stellt. Wir bieten flexible Arbeitsweisen, offene Kommunikation und die Unterstützung, die Sie brauchen, um beruflich zu excellieren und zugleich Ihre persönliche Zeit zu schützen.",
     "careers.apply_h2": "Initiativbewerbung",
     "careers.apply_note":
-      "Wir listen keine offenen Stellen auf der Website. Nennen Sie uns Ihre Stärken — wir matchen Sie, wenn eine passende Rolle frei wird.",
+      "Wir listen keine offenen Stellen auf der Website. Nennen Sie uns Ihre Stärken. Wir matchen Sie, wenn eine passende Rolle frei wird.",
     "careers.label_name": "Vollständiger Name",
     "careers.ph_name": "Ihr Name",
     "careers.label_email": "E-Mail",
@@ -1510,7 +1510,7 @@
     "detail.ind_machine.lede":
       "Dutam unterstützt OEMs und Maschinenbauer mit präzisen 3D-Modellen, Fertigungszeichnungen und CAD-Workflows, die die Designabsicht vom Konzept bis zur Fertigung erhalten.",
     "detail.ind_machine.challenge":
-      "Maschinenpakete stocken, wenn Modelle, Stücklisten und Werkstattzeichnungen auseinanderlaufen—oder jede Revision zum manuellen Neuzeichnen wird. Kunden brauchen Partner, die Produkt und CAD-Prozess verstehen.",
+      "Maschinenpakete stocken, wenn Modelle, Stücklisten und Werkstattzeichnungen auseinanderlaufen, oder wenn jede Revision zum manuellen Neuzeichnen wird. Kunden brauchen Partner, die Produkt und CAD-Prozess verstehen.",
     "detail.ind_machine.d1": "3D-Modelle von Anlagen und Maschinen, bereit für Design Reviews",
     "detail.ind_machine.d2": "Fertigungs- und Montagezeichnungssätze",
     "detail.ind_machine.d3": "CAD-Customizing für Wiederholteile und Routinen",
@@ -1550,7 +1550,7 @@
     "detail.ind_oil.lede":
       "Dutam unterstützt Öl-, Energie- und verwandte Facility-Arbeit mit Anlagendokumentation, koordinierten Modellen und disziplinierter Änderungskontrolle über Fachrichtungen.",
     "detail.ind_oil.challenge":
-      "Energieprojekte erzeugen dichte Schnittstellen—Rohrleitung, Tragwerk, Equipment und Plattformen. Unvollständige Dokumentation und unkontrollierte Revisionen erzeugen Terminrisiko und Sicherheitsrisiken.",
+      "Energieprojekte erzeugen dichte Schnittstellen zwischen Rohrleitung, Tragwerk, Equipment und Plattformen. Unvollständige Dokumentation und unkontrollierte Revisionen erzeugen Terminrisiko und Sicherheitsrisiken.",
     "detail.ind_oil.d1": "Unterstützung bei Anlagenlayout und Equipment-Anordnung",
     "detail.ind_oil.d2": "Koordinierte multidisziplinäre Dokumentationspakete",
     "detail.ind_oil.d3": "Schnittstellenverfolgung über Tragwerk, Rohrleitung und Equipment",
@@ -1568,7 +1568,7 @@
     "detail.ind_plant.hero":
       "Layouts, Rohrleitungen, Plattformen und Equipment-Anordnungen für die industrielle Realität.",
     "detail.ind_plant.lede":
-      "Dutam liefert Engineering-Unterstützung für Plant & Processing—Layouts, Rohrleitungs- und Equipment-Anordnungen, Industrieplattformen und tankbezogene Designdokumentation.",
+      "Dutam liefert Engineering-Unterstützung für Plant und Processing. Das umfasst Layouts, Rohrleitungs- und Equipment-Anordnungen, Industrieplattformen und tankbezogene Designdokumentation.",
     "detail.ind_plant.challenge":
       "Plant-Projekte scheitern leise, wenn Equipment, Zugang und Rohrleitungswege isoliert geplant werden. Spätere Revisionen kaskadieren über Disziplinen und löschen frühere Koordination.",
     "detail.ind_plant.d1": "Anlagenlayouts und General Arrangements",
@@ -1587,7 +1587,7 @@
     "detail.cap_3d.h1": "3D-Modellierung & Zeichnungswesen",
     "detail.cap_3d.hero": "Modelle und Zeichnungssätze, denen Fertigung und Montage ohne Raten folgen können.",
     "detail.cap_3d.lede":
-      "Dutam erstellt präzise 3D-Modelle und Fertigungszeichnungen für Anlagen, Tragwerke und Plant-Komponenten—damit Visualisierung, Detailing und Issue aus einer kontrollierten Quelle kommen.",
+      "Dutam erstellt präzise 3D-Modelle und Fertigungszeichnungen für Anlagen, Tragwerke und Plant-Komponenten. Visualisierung, Detailing und Issue kommen dann aus einer kontrollierten Quelle.",
     "detail.cap_3d.challenge":
       "Wenn Modelle unvollständig sind oder Zeichnungen hinter dem Modell zurückbleiben, erfinden Werkstätten fehlende Informationen. Diese Erfindung wird zu Nacharbeit, Ausschuss und Terminverzug.",
     "detail.cap_3d.d1": "3D-Modelle für Anlagen, Tragwerke und Plant-Komponenten",
@@ -1607,7 +1607,7 @@
     "detail.cap_cad.hero":
       "Automatisierung und Schnittstellen, damit Ingenieure Zeit für Entscheidungen statt wiederholte Klicks haben.",
     "detail.cap_cad.lede":
-      "Dutam baut Custom-Tools, Skripte und CAD-Schnittstellen, die Designarbeit mit den Systemen verbinden, die Ihr Team bereits nutzt—weniger Wiederholung, ohne spröde Workflows.",
+      "Dutam baut Custom-Tools, Skripte und CAD-Schnittstellen, die Designarbeit mit den Systemen verbinden, die Ihr Team bereits nutzt. So entsteht weniger Wiederholung, ohne spröde Workflows.",
     "detail.cap_cad.challenge":
       "Engineering-Stunden verschwinden in Copy-Paste-Routinen, manueller BOM-Bereinigung und Tool-Hopping. Customizing hilft nur, wenn es zur realen Arbeitsweise passt.",
     "detail.cap_cad.d1": "Skripte und Makros für gängige CAD-Plattformen",
@@ -1625,7 +1625,7 @@
     "detail.cap_steel.h1": "Stahlbau-Detailing",
     "detail.cap_steel.hero": "Anschlussbewusste Tragwerkspakete nach den Normen Ihres Projekts.",
     "detail.cap_steel.lede":
-      "Dutam detailliert Stahltragwerke von der Designabsicht bis zum Fertigungspaket—Stab- und Anschlusszeichnungen nach AISC, Eurocodes, DIN, IS und projektspezifischen Regeln.",
+      "Dutam detailliert Stahltragwerke von der Designabsicht bis zum Fertigungspaket. Stab- und Anschlusszeichnungen folgen AISC, Eurocodes, DIN, IS und projektspezifischen Regeln.",
     "detail.cap_steel.challenge":
       "Unvollständige Anschlüsse und unklare Schrauben-/Schweißabsicht zwingen Fertiger zur Interpretation. Interpretation ist, wo Kosten- und Terminrisiko stecken.",
     "detail.cap_steel.d1": "Stab- und Anschluss-Detailingpakete",
@@ -1644,7 +1644,7 @@
     "detail.cap_bim.h1": "BIM-Consulting",
     "detail.cap_bim.hero": "Eine Modellgeschichte über Tragwerk, HVAC, TGA und Baudisziplinen.",
     "detail.cap_bim.lede":
-      "Dutam hält Architektur- und Baudisziplinen in einem gemeinsamen Modellkontext koordiniert—Clash-Rauschen reduzieren, bevor es zum Baustellenverzug wird.",
+      "Dutam hält Architektur- und Baudisziplinen in einem gemeinsamen Modellkontext koordiniert. So reduzieren wir Clash-Rauschen, bevor es zum Baustellenverzug wird.",
     "detail.cap_bim.challenge":
       "BIM scheitert, wenn es als Dateiformat statt als Koordinationsprozess behandelt wird. Ohne klares LOD, Ownership und Clash-Disziplin werden Modelle dekorativ.",
     "detail.cap_bim.d1": "Multidisziplinäre Modellkoordination",
@@ -1682,7 +1682,7 @@
     "detail.cap_plant.h1": "Plant Engineering Design",
     "detail.cap_plant.hero": "Multidisziplinäres Anlagendesign mit sorgfältiger Schnittstellendisziplin.",
     "detail.cap_plant.lede":
-      "Dutam unterstützt Anlagenlayout, Modellierung und koordinierte Dokumentation—weil Plant-Arbeit gelingt, wenn Schnittstellen zwischen Disziplinen bei jeder Änderung klar bleiben.",
+      "Dutam unterstützt Anlagenlayout, Modellierung und koordinierte Dokumentation. Plant-Arbeit gelingt, wenn Schnittstellen zwischen Disziplinen bei jeder Änderung klar bleiben.",
     "detail.cap_plant.challenge":
       "Anlagendesign ist ebenso ein Schnittstellenproblem wie ein Modellierungsproblem. Wenn Rohrleitung, Tragwerk und Equipment unabhängig ändern, wird die GA zur Fiktion.",
     "detail.cap_plant.d1": "Unterstützung bei Anlagenlayout und GA-Entwicklung",
@@ -1730,7 +1730,7 @@
     "home.eyebrow": "partenaire d’ingénierie",
     "home.h1": "Ingénierie CAO de précision pour l’industrie mondiale.",
     "home.lede":
-      "Nous livrons la modélisation 3D, le detailing acier, le conseil BIM et l’automatisation CAO pour la construction de machines, le bâtiment et les projets pétrole & énergie — dans les délais, selon les normes et selon les spécifications.",
+      "Nous livrons la modélisation 3D, le detailing acier, le conseil BIM et l’automatisation CAO pour la construction de machines, le bâtiment et les projets pétrole et énergie. Nous livrons dans les délais, selon les normes et selon les spécifications.",
     "home.cta_primary": "Réserver un appel découverte",
     "home.cta_secondary": "Voir nos réalisations",
     "home.assurance":
@@ -1782,7 +1782,7 @@
     "home.connect_h2": "Restons en contact.",
     "home.connect_p1": "Vous démarrez un nouveau projet ?",
     "home.connect_p2":
-      "Indiquez-nous votre périmètre, votre norme et votre planning — nous vous répondrons sous 24 heures.",
+      "Indiquez-nous votre périmètre, votre norme et votre planning. Nous vous répondrons sous 24 heures.",
     "home.form_h3": "Parlez-nous de votre projet",
     "home.ph_name": "Nom complet",
     "home.ph_email": "E-mail",
@@ -1950,7 +1950,7 @@
 
     "careers.title": "Carrières | Dutam Engineering",
     "careers.meta":
-      "Rejoignez Dutam Engineering. Candidatez de façon générale — nous vous matcherons lorsqu’un poste conviendra.",
+      "Rejoignez Dutam Engineering. Candidatez de façon générale. Nous vous matcherons lorsqu’un poste conviendra.",
     "careers.eyebrow": "Carrières",
     "careers.h1": "Engineerez la suite. Grandissez là où la qualité compte.",
     "careers.lede":
@@ -1967,7 +1967,7 @@
       "Épanouissez-vous dans un environnement collaboratif et transfrontalier qui valorise la précision plutôt que la politique. Nous offrons des pratiques de travail flexibles, une communication ouverte et le soutien nécessaire pour exceller professionnellement tout en préservant votre temps personnel.",
     "careers.apply_h2": "Candidature générale",
     "careers.apply_note":
-      "Nous ne listons pas les postes ouverts sur le site. Indiquez-nous vos atouts — nous vous matcherons lorsqu’un poste conviendra.",
+      "Nous ne listons pas les postes ouverts sur le site. Indiquez-nous vos atouts. Nous vous matcherons lorsqu’un poste conviendra.",
     "careers.label_name": "Nom complet",
     "careers.ph_name": "Votre nom",
     "careers.label_email": "E-mail",
@@ -2082,7 +2082,7 @@
     "detail.ind_machine.lede":
       "Dutam accompagne les OEM et constructeurs de machines avec des modèles 3D précis, des plans de production et des workflows CAO qui préservent l’intention de conception du concept à la fabrication.",
     "detail.ind_machine.challenge":
-      "Les packages machines stagnent lorsque modèles, nomenclatures et plans atelier divergent—ou lorsque chaque révision devient un redessin manuel. Les clients ont besoin de partenaires qui comprennent le produit et le processus CAO.",
+      "Les packages machines stagnent lorsque modèles, nomenclatures et plans atelier divergent, ou lorsque chaque révision devient un redessin manuel. Les clients ont besoin de partenaires qui comprennent le produit et le processus CAO.",
     "detail.ind_machine.d1": "Modèles 3D d’équipements et machines prêts pour design review",
     "detail.ind_machine.d2": "Jeux de plans de fabrication et d’assemblage",
     "detail.ind_machine.d3": "Personnalisation CAO pour composants répétitifs et routines",
@@ -2121,7 +2121,7 @@
     "detail.ind_oil.lede":
       "Dutam soutient le pétrole, l’énergie et les facilities associées avec documentation usine, modèles coordonnés et contrôle discipliné des changements entre disciplines.",
     "detail.ind_oil.challenge":
-      "Les projets énergie génèrent des interfaces denses—tuyauterie, structure, équipements et plateformes. Une documentation incomplète et des révisions non maîtrisées créent risque planning et exposition sécurité.",
+      "Les projets énergie génèrent des interfaces denses entre tuyauterie, structure, équipements et plateformes. Une documentation incomplète et des révisions non maîtrisées créent risque planning et exposition sécurité.",
     "detail.ind_oil.d1": "Support layout usine et arrangement d’équipements",
     "detail.ind_oil.d2": "Packages documentaires multidisciplinaires coordonnés",
     "detail.ind_oil.d3": "Suivi d’interfaces entre structure, tuyauterie et équipements",
@@ -2139,7 +2139,7 @@
     "detail.ind_plant.hero":
       "Layouts, tuyauterie, plateformes et arrangements d’équipements pensés pour la réalité industrielle.",
     "detail.ind_plant.lede":
-      "Dutam fournit un support d’ingénierie usine et process—layouts, arrangements tuyauterie et équipements, plateformes industrielles et documentation de conception liée aux réservoirs.",
+      "Dutam fournit un support d’ingénierie usine et process. Cela comprend layouts, arrangements tuyauterie et équipements, plateformes industrielles et documentation de conception liée aux réservoirs.",
     "detail.ind_plant.challenge":
       "Les projets usine échouent silencieusement lorsque équipements, accès et tracés de tuyauterie sont conçus isolément. Les révisions ultérieures se propagent entre disciplines et effacent la coordination antérieure.",
     "detail.ind_plant.d1": "Layouts usine et general arrangements",
@@ -2159,7 +2159,7 @@
     "detail.cap_3d.hero":
       "Modèles et jeux de plans que fabrication et assemblage peuvent suivre sans approximation.",
     "detail.cap_3d.lede":
-      "Dutam construit des modèles 3D précis et des plans de production pour équipements, structures et composants d’usine—pour que visualisation, detailing et émission partent d’une source contrôlée.",
+      "Dutam construit des modèles 3D précis et des plans de production pour équipements, structures et composants d’usine. Visualisation, detailing et émission partent alors d’une source contrôlée.",
     "detail.cap_3d.challenge":
       "Lorsque les modèles sont incomplets ou que les plans retardent le modèle, les ateliers inventent l’information manquante. Cette inventivité devient reprises, rebuts et glissement de planning.",
     "detail.cap_3d.d1": "Modèles 3D pour équipements, structures et composants d’usine",
@@ -2179,7 +2179,7 @@
     "detail.cap_cad.hero":
       "Automatisation et interfaces pour que les ingénieurs passent du temps sur les décisions, pas sur les clics répétés.",
     "detail.cap_cad.lede":
-      "Dutam construit outils, scripts et interfaces CAO qui connectent le travail de conception aux systèmes déjà utilisés par votre équipe—moins d’effort répétitif, sans workflows fragiles.",
+      "Dutam construit outils, scripts et interfaces CAO qui connectent le travail de conception aux systèmes déjà utilisés par votre équipe. Cela réduit l’effort répétitif, sans workflows fragiles.",
     "detail.cap_cad.challenge":
       "Les heures d’ingénierie disparaissent en routines copier-coller, nettoyage BOM manuel et sauts d’outils. La personnalisation n’aide que si elle correspond à la façon dont votre équipe travaille vraiment.",
     "detail.cap_cad.d1": "Scripts et macros pour plateformes CAO courantes",
@@ -2198,7 +2198,7 @@
     "detail.cap_steel.h1": "Detailing acier",
     "detail.cap_steel.hero": "Packages structurels sensibles aux assemblages selon les standards de votre projet.",
     "detail.cap_steel.lede":
-      "Dutam détail l’acier structurel de l’intention de conception jusqu’au package fabrication—plans de barres et assemblages suivant AISC, Eurocodes, DIN, IS et règles projet.",
+      "Dutam détail l’acier structurel de l’intention de conception jusqu’au package fabrication. Les plans de barres et assemblages suivent AISC, Eurocodes, DIN, IS et règles projet.",
     "detail.cap_steel.challenge":
       "Des assemblages incomplets et une intention boulon/soudure floue forcent les fabricants à interpréter. L’interprétation est là où se cachent coût et risque planning.",
     "detail.cap_steel.d1": "Packages de detailing barres et assemblages",
@@ -2217,7 +2217,7 @@
     "detail.cap_bim.h1": "Conseil BIM",
     "detail.cap_bim.hero": "Une histoire de modèle partagée entre structure, CVC, MEP et disciplines construction.",
     "detail.cap_bim.lede":
-      "Dutam maintient les disciplines architecturales et construction coordonnées dans un contexte de modèle partagé—réduisant le bruit de clash avant qu’il ne devienne un retard chantier.",
+      "Dutam maintient les disciplines architecturales et construction coordonnées dans un contexte de modèle partagé. Cela réduit le bruit de clash avant qu’il ne devienne un retard chantier.",
     "detail.cap_bim.challenge":
       "Le BIM échoue lorsqu’il est traité comme un format de fichier plutôt qu’un processus de coordination. Sans LOD, propriété et discipline de clash clairs, les modèles deviennent décoratifs.",
     "detail.cap_bim.d1": "Support de coordination de modèles multidisciplinaires",
@@ -2255,7 +2255,7 @@
     "detail.cap_plant.h1": "Ingénierie usine",
     "detail.cap_plant.hero": "Conception d’usine multidisciplinaire avec une discipline d’interface soignée.",
     "detail.cap_plant.lede":
-      "Dutam soutient layout usine, modélisation et documentation coordonnée—parce que le travail usine réussit lorsque les interfaces entre disciplines restent claires à chaque changement.",
+      "Dutam soutient layout usine, modélisation et documentation coordonnée. Le travail usine réussit lorsque les interfaces entre disciplines restent claires à chaque changement.",
     "detail.cap_plant.challenge":
       "La conception d’usine est autant un problème d’interfaces qu’un problème de modélisation. Lorsque tuyauterie, structure et équipements changent indépendamment, le GA devient fiction.",
     "detail.cap_plant.d1": "Support layout usine et développement GA",
