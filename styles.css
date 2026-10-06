@@ -621,16 +621,18 @@ textarea {
 .industries {
   display: grid;
   grid-template-columns: minmax(0, 517fr) minmax(0, 737fr);
-  grid-template-areas:
-    "title mosaic"
-    "list mosaic";
   gap: 26px;
-  align-items: start;
+  align-items: stretch;
   padding: 160px 0;
 }
 
+.industries-copy {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
 .industries h2 {
-  grid-area: title;
   margin: 0 0 var(--space-32);
   font-size: var(--font-size-h3);
   font-weight: var(--font-weight-semibold);
@@ -638,23 +640,27 @@ textarea {
 }
 
 .industries ol {
-  grid-area: list;
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
+/* Outer shell stretches to the copy column; images are absolutely filled inside */
 .industry-mosaic {
-  grid-area: mosaic;
-  display: grid;
+  position: relative;
   width: 100%;
-  aspect-ratio: 737 / 927;
-  grid-template-columns: 194fr 24fr 84fr 24fr 194fr 24fr 193fr;
-  grid-template-rows: 211fr 24fr 420fr 24fr 248fr;
+  min-width: 0;
+  min-height: 0;
+  aspect-ratio: auto;
+  overflow: hidden;
 }
 
 .industry-track {
-  display: contents;
+  position: absolute;
+  inset: 0;
+  display: grid;
+  grid-template-columns: 194fr 24fr 84fr 24fr 194fr 24fr 193fr;
+  grid-template-rows: 211fr 24fr 420fr 24fr 248fr;
 }
 
 .industry-mosaic img {
@@ -662,7 +668,6 @@ textarea {
   height: 100%;
   min-width: 0;
   min-height: 0;
-  aspect-ratio: 1 / 1;
   object-fit: cover;
   border-radius: var(--radius-2xl);
 }
@@ -912,11 +917,28 @@ textarea {
     grid-template-columns: 1fr;
   }
 
-  .industries {
-    grid-template-areas:
-      "title"
-      "mosaic"
-      "list";
+  /* Keep stacked order: heading → mosaic → list */
+  .industries-copy {
+    display: contents;
+  }
+
+  .industries h2 {
+    order: 1;
+  }
+
+  .industry-mosaic {
+    order: 2;
+    position: relative;
+    aspect-ratio: 737 / 927;
+  }
+
+  .industry-track {
+    position: absolute;
+    inset: 0;
+  }
+
+  .industries ol {
+    order: 3;
   }
 
   .hero h1 {
@@ -1104,16 +1126,21 @@ textarea {
 
   .industry-mosaic {
     display: block;
+    position: relative;
     width: calc(100% + (var(--layout-margin) * 2));
     margin-left: calc(var(--layout-margin) * -1);
     aspect-ratio: auto;
+    height: 160px;
     overflow: hidden;
     mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
   }
 
   .industry-track {
+    position: static;
+    inset: auto;
     display: flex;
     width: max-content;
+    height: 100%;
     gap: var(--space-12);
     animation: industry-marquee 36s linear infinite;
   }
@@ -1887,32 +1914,42 @@ textarea {
 .goals-layout {
   display: grid;
   grid-template-columns: minmax(0, 845fr) 411px;
-  grid-template-areas:
-    "intro image"
-    "cards image";
   gap: var(--space-24);
-  align-items: start;
+  align-items: stretch;
   width: min(var(--size-content), calc(100% - (var(--layout-margin) * 2)));
   margin-inline: auto;
 }
 
+.goals-copy {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
 .goals-intro {
-  grid-area: intro;
+  min-width: 0;
 }
 
 .goal-grid {
-  grid-area: cards;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 48px 24px;
 }
 
+/* Shell stretches to copy column; image fills absolutely */
+.goals-visual {
+  position: relative;
+  min-width: 0;
+  min-height: 0;
+  overflow: hidden;
+  border-radius: var(--radius-2xl);
+}
+
 .goals-image {
-  grid-area: image;
-  align-self: center;
+  position: absolute;
+  inset: 0;
   width: 100%;
-  aspect-ratio: 411 / 583;
-  height: auto;
+  height: 100%;
   object-fit: cover;
   border-radius: var(--radius-2xl);
 }
@@ -2232,16 +2269,32 @@ textarea {
 
   .goals-layout {
     grid-template-columns: 1fr;
-    grid-template-areas:
-      "intro"
-      "image"
-      "cards";
+  }
+
+  /* Stacked order: intro → image → cards */
+  .goals-copy {
+    display: contents;
+  }
+
+  .goals-intro {
+    order: 1;
+  }
+
+  .goals-visual {
+    order: 2;
+    position: relative;
+    aspect-ratio: 16 / 10;
   }
 
   .goals-image {
-    aspect-ratio: 16 / 10;
-    height: auto;
-    min-height: 0;
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .goal-grid {
+    order: 3;
   }
 
   .about-split article {
@@ -2429,10 +2482,12 @@ textarea {
     line-height: 36px;
   }
 
-  .goals-image {
+  .goals-visual {
     aspect-ratio: 16 / 10;
-    min-height: 0;
-    height: auto;
+    border-radius: var(--radius-xl);
+  }
+
+  .goals-image {
     border-radius: var(--radius-xl);
   }
 
