@@ -54,35 +54,68 @@ if (!reduceMotion) {
     if (index > 0) el.style.transitionDelay = `${index * 90}ms`;
   });
 
-  const revealObserver = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (!entry.isIntersecting) return;
-        entry.target.classList.add("is-in");
-        revealObserver.unobserve(entry.target);
-      });
-    },
-    { threshold: 0.18, rootMargin: "0px 0px -40px 0px" }
-  );
-
   const intro = document.querySelector(".about-intro");
   const introEls = intro ? [...intro.querySelectorAll("[data-reveal]")] : [];
   const introSet = new Set(introEls);
+  let pendingReveals = revealEls.filter((el) => !introSet.has(el));
+  let revealObserver = null;
 
-  revealEls.forEach((el) => {
-    if (!introSet.has(el)) revealObserver.observe(el);
-  });
+  function revealEl(el) {
+    if (!el || el.classList.contains("is-in")) return;
+    el.classList.add("is-in");
+    if (revealObserver) revealObserver.unobserve(el);
+  }
+
+  function shouldReveal(el) {
+    const rect = el.getBoundingClientRect();
+    const viewH = window.innerHeight || document.documentElement.clientHeight;
+    // In view, near view, or already scrolled past (fast scroll / jump navigation).
+    return rect.top < viewH * 0.92 && rect.bottom > 0;
+  }
+
+  function flushReveals() {
+    if (!pendingReveals.length) return;
+    pendingReveals = pendingReveals.filter((el) => {
+      if (shouldReveal(el)) {
+        revealEl(el);
+        return false;
+      }
+      return true;
+    });
+  }
+
+  revealObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        revealEl(entry.target);
+      });
+      pendingReveals = pendingReveals.filter((el) => !el.classList.contains("is-in"));
+    },
+    { threshold: 0.08, rootMargin: "0px 0px -8% 0px" }
+  );
+
+  pendingReveals.forEach((el) => revealObserver.observe(el));
+  flushReveals();
+  window.addEventListener("scroll", flushReveals, { passive: true });
+  window.addEventListener("resize", flushReveals);
 
   if (intro && introEls.length) {
+    const revealIntro = () => {
+      introEls.forEach((el) => el.classList.add("is-in"));
+      introObserver.disconnect();
+    };
     const introObserver = new IntersectionObserver(
       (entries) => {
         if (!entries.some((entry) => entry.isIntersecting)) return;
-        introEls.forEach((el) => el.classList.add("is-in"));
-        introObserver.disconnect();
+        revealIntro();
       },
-      { threshold: 0.2, rootMargin: "0px 0px -28% 0px" }
+      { threshold: 0.12, rootMargin: "0px 0px -12% 0px" }
     );
     introObserver.observe(intro);
+    const introRect = intro.getBoundingClientRect();
+    const viewH = window.innerHeight || document.documentElement.clientHeight;
+    if (introRect.top < viewH * 0.88 && introRect.bottom > 0) revealIntro();
   }
 }
 
