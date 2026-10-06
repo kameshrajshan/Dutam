@@ -304,9 +304,23 @@
     "contact.label_phone": "Phone",
     "contact.ph_phone": "+91 …",
     "contact.label_industry": "Industry",
-    "contact.ph_industry": "Machine building / Construction / Oil & energy",
+    "contact.ph_industry": "Select industry",
     "contact.label_services": "Services",
-    "contact.ph_services": "Select capabilities",
+    "contact.ph_services": "Select service",
+    "contact.opt_ind_machine": "Machine building",
+    "contact.opt_ind_construction": "Construction",
+    "contact.opt_ind_oil": "Oil & energy",
+    "contact.opt_ind_plant": "Plant & Processing",
+    "contact.opt_svc_3d": "3D Modelling & Drafting",
+    "contact.opt_svc_cad": "CAD Customization",
+    "contact.opt_svc_steel": "Steel Detailing",
+    "contact.opt_svc_bim": "BIM Consulting",
+    "contact.opt_svc_docs": "Documentation & Standardization",
+    "contact.opt_svc_plant": "Plant Engineering Design",
+    "contact.opt_other": "Other",
+    "contact.label_other": "Please specify",
+    "contact.ph_other_industry": "Your industry",
+    "contact.ph_other_services": "Your service need",
     "contact.label_scope": "Brief scope",
     "contact.ph_scope": "Standards, deliverables, timeline…",
     "contact.submit": "Send message",
@@ -867,9 +881,23 @@
     "contact.label_phone": "Telefoon",
     "contact.ph_phone": "+91 …",
     "contact.label_industry": "Branche",
-    "contact.ph_industry": "Machinebouw / Bouw / Olie & energie",
+    "contact.ph_industry": "Selecteer branche",
     "contact.label_services": "Diensten",
-    "contact.ph_services": "Selecteer capaciteiten",
+    "contact.ph_services": "Selecteer dienst",
+    "contact.opt_ind_machine": "Machinebouw",
+    "contact.opt_ind_construction": "Bouw",
+    "contact.opt_ind_oil": "Olie & energie",
+    "contact.opt_ind_plant": "Plant & processing",
+    "contact.opt_svc_3d": "3D-modellering & tekenwerk",
+    "contact.opt_svc_cad": "CAD-customization",
+    "contact.opt_svc_steel": "Staaledetailing",
+    "contact.opt_svc_bim": "BIM-consulting",
+    "contact.opt_svc_docs": "Documentatie & standaardisatie",
+    "contact.opt_svc_plant": "Plant engineering design",
+    "contact.opt_other": "Overig",
+    "contact.label_other": "Graag specificeren",
+    "contact.ph_other_industry": "Uw branche",
+    "contact.ph_other_services": "Uw dienstenbehoefte",
     "contact.label_scope": "Korte scope",
     "contact.ph_scope": "Normen, deliverables, planning…",
     "contact.submit": "Bericht versturen",
@@ -1433,9 +1461,23 @@
     "contact.label_phone": "Telefon",
     "contact.ph_phone": "+91 …",
     "contact.label_industry": "Branche",
-    "contact.ph_industry": "Maschinenbau / Bauwesen / Öl & Energie",
+    "contact.ph_industry": "Branche auswählen",
     "contact.label_services": "Leistungen",
-    "contact.ph_services": "Fähigkeiten auswählen",
+    "contact.ph_services": "Leistung auswählen",
+    "contact.opt_ind_machine": "Maschinenbau",
+    "contact.opt_ind_construction": "Bauwesen",
+    "contact.opt_ind_oil": "Öl & Energie",
+    "contact.opt_ind_plant": "Plant & Processing",
+    "contact.opt_svc_3d": "3D-Modellierung & Zeichnungswesen",
+    "contact.opt_svc_cad": "CAD-Customizing",
+    "contact.opt_svc_steel": "Stahlbau-Detailing",
+    "contact.opt_svc_bim": "BIM-Consulting",
+    "contact.opt_svc_docs": "Dokumentation & Standardisierung",
+    "contact.opt_svc_plant": "Plant Engineering Design",
+    "contact.opt_other": "Sonstiges",
+    "contact.label_other": "Bitte angeben",
+    "contact.ph_other_industry": "Ihre Branche",
+    "contact.ph_other_services": "Ihr Leistungsbedarf",
     "contact.label_scope": "Kurzer Scope",
     "contact.ph_scope": "Normen, Liefergegenstände, Zeitplan…",
     "contact.submit": "Nachricht senden",
@@ -2004,9 +2046,23 @@
     "contact.label_phone": "Téléphone",
     "contact.ph_phone": "+91 …",
     "contact.label_industry": "Secteur",
-    "contact.ph_industry": "Construction de machines / Bâtiment / Pétrole & énergie",
+    "contact.ph_industry": "Sélectionner le secteur",
     "contact.label_services": "Services",
-    "contact.ph_services": "Sélectionner les capacités",
+    "contact.ph_services": "Sélectionner le service",
+    "contact.opt_ind_machine": "Construction de machines",
+    "contact.opt_ind_construction": "Construction",
+    "contact.opt_ind_oil": "Pétrole & énergie",
+    "contact.opt_ind_plant": "Usine & process",
+    "contact.opt_svc_3d": "Modélisation 3D & dessin",
+    "contact.opt_svc_cad": "Personnalisation CAO",
+    "contact.opt_svc_steel": "Detailing acier",
+    "contact.opt_svc_bim": "Conseil BIM",
+    "contact.opt_svc_docs": "Documentation & standardisation",
+    "contact.opt_svc_plant": "Ingénierie usine",
+    "contact.opt_other": "Autre",
+    "contact.label_other": "Veuillez préciser",
+    "contact.ph_other_industry": "Votre secteur",
+    "contact.ph_other_services": "Votre besoin de service",
     "contact.label_scope": "Périmètre succinct",
     "contact.ph_scope": "Normes, livrables, planning…",
     "contact.submit": "Envoyer le message",
@@ -2271,6 +2327,64 @@
 
   window.DUTAM_I18N = { en: en, nl: nl, de: de, fr: fr };
 
+  function normalizeLang(lang) {
+    return window.DutamI18n.supported.indexOf(lang) !== -1 ? lang : "";
+  }
+
+  function readCookie(name) {
+    try {
+      var parts = ("; " + document.cookie).split("; " + name + "=");
+      if (parts.length < 2) return "";
+      return decodeURIComponent(parts.pop().split(";").shift() || "");
+    } catch (e) {
+      return "";
+    }
+  }
+
+  function writeCookie(name, value) {
+    try {
+      document.cookie =
+        name +
+        "=" +
+        encodeURIComponent(value) +
+        "; path=/; max-age=31536000; SameSite=Lax";
+    } catch (e) {}
+  }
+
+  function readUrlLang() {
+    try {
+      return normalizeLang(new URL(location.href).searchParams.get("lang"));
+    } catch (e) {
+      return "";
+    }
+  }
+
+  function isInternalHref(href) {
+    if (!href || href.charAt(0) === "#") return false;
+    if (/^(mailto:|tel:|javascript:)/i.test(href)) return false;
+    if (/^https?:\/\//i.test(href)) {
+      try {
+        return new URL(href).origin === location.origin;
+      } catch (e) {
+        return false;
+      }
+    }
+    return true;
+  }
+
+  function hrefWithLang(href, lang) {
+    if (!isInternalHref(href)) return href;
+    var hashIdx = href.indexOf("#");
+    var hash = hashIdx >= 0 ? href.slice(hashIdx) : "";
+    var base = hashIdx >= 0 ? href.slice(0, hashIdx) : href;
+    var qIdx = base.indexOf("?");
+    var path = qIdx >= 0 ? base.slice(0, qIdx) : base;
+    var params = new URLSearchParams(qIdx >= 0 ? base.slice(qIdx + 1) : "");
+    params.set("lang", lang);
+    var query = params.toString();
+    return path + (query ? "?" + query : "") + hash;
+  }
+
   window.DutamI18n = {
     STORAGE_KEY: "dutam-lang",
     supported: ["en", "nl", "de", "fr"],
@@ -2282,19 +2396,54 @@
     },
 
     getLang: function () {
+      var fromUrl = readUrlLang();
+      if (fromUrl) return fromUrl;
+
+      var fromCookie = normalizeLang(readCookie(this.STORAGE_KEY));
+      if (fromCookie) return fromCookie;
+
       try {
-        var stored = localStorage.getItem(this.STORAGE_KEY);
-        if (stored && this.supported.indexOf(stored) !== -1) return stored;
+        var stored = normalizeLang(localStorage.getItem(this.STORAGE_KEY));
+        if (stored) return stored;
       } catch (e) {}
+
       return "en";
     },
 
     setLang: function (lang) {
-      var next = this.supported.indexOf(lang) !== -1 ? lang : "en";
+      var next = normalizeLang(lang) || "en";
+
       try {
         localStorage.setItem(this.STORAGE_KEY, next);
       } catch (e) {}
+
+      writeCookie(this.STORAGE_KEY, next);
+
+      try {
+        var url = new URL(location.href);
+        if (url.searchParams.get("lang") !== next) {
+          url.searchParams.set("lang", next);
+          history.replaceState(
+            null,
+            "",
+            url.pathname + url.search + url.hash
+          );
+        }
+      } catch (e) {}
+
       return next;
+    },
+
+    stampLinks: function (lang) {
+      var l = normalizeLang(lang) || this.getLang();
+      var anchors = document.querySelectorAll("a[href]");
+      for (var i = 0; i < anchors.length; i++) {
+        var a = anchors[i];
+        var href = a.getAttribute("href");
+        if (!href) continue;
+        var next = hrefWithLang(href, l);
+        if (next !== href) a.setAttribute("href", next);
+      }
     },
 
     t: function (key, lang) {
@@ -2308,15 +2457,17 @@
     },
 
     apply: function (lang) {
-      var l = lang != null ? this.setLang(lang) : this.getLang();
+      var l = lang != null ? this.setLang(lang) : this.setLang(this.getLang());
       if (this.supported.indexOf(l) === -1) l = "en";
 
       document.documentElement.lang = l;
+      document.documentElement.setAttribute("data-dutam-lang", l);
 
       var nodes = document.querySelectorAll("[data-i18n]");
       for (var i = 0; i < nodes.length; i++) {
         var el = nodes[i];
-        if (el.tagName === "META") continue;
+        // Never wipe <select> trees; translate option labels only.
+        if (el.tagName === "META" || el.tagName === "SELECT") continue;
         var key = el.getAttribute("data-i18n");
         if (key) el.textContent = this.t(key, l);
       }
@@ -2343,8 +2494,8 @@
       }
 
       var altNodes = document.querySelectorAll("[data-i18n-alt]");
-      for (var t = 0; t < altNodes.length; t++) {
-        var altEl = altNodes[t];
+      for (var ai = 0; ai < altNodes.length; ai++) {
+        var altEl = altNodes[ai];
         var altKey = altEl.getAttribute("data-i18n-alt");
         if (altKey) altEl.setAttribute("alt", this.t(altKey, l));
       }
@@ -2369,6 +2520,8 @@
         labelNodes[lb].textContent = this.labels[l] || this.labels.en;
       }
 
+      this.stampLinks(l);
+
       try {
         document.dispatchEvent(
           new CustomEvent("dutam:langchange", { detail: { lang: l } })
@@ -2382,4 +2535,37 @@
       return l;
     },
   };
+
+  function bootLang() {
+    window.DutamI18n.apply(window.DutamI18n.getLang());
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", bootLang);
+  } else {
+    bootLang();
+  }
+
+  // Back/forward cache restores the old translated DOM without re-running scripts.
+  window.addEventListener("pageshow", function () {
+    bootLang();
+  });
+
+  // Keep lang on every in-site navigation, even if a link was missed by stampLinks.
+  document.addEventListener(
+    "click",
+    function (event) {
+      var anchor = event.target.closest && event.target.closest("a[href]");
+      if (!anchor) return;
+      var href = anchor.getAttribute("href");
+      if (!href) return;
+      var next = hrefWithLang(href, window.DutamI18n.getLang());
+      if (next !== href) anchor.setAttribute("href", next);
+    },
+    true
+  );
+
+  window.addEventListener("storage", function (event) {
+    if (event.key === window.DutamI18n.STORAGE_KEY) bootLang();
+  });
 })();

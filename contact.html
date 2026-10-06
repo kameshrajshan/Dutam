@@ -86,11 +86,35 @@
           <div class="field-grid">
             <div class="field">
               <label for="industry" data-i18n="contact.label_industry">Industry</label>
-              <input id="industry" name="industry" type="text" placeholder="Machine building / Construction / Oil &amp; energy" data-i18n-placeholder="contact.ph_industry" required />
+              <select id="industry" name="industry" required data-other-field="industry-other-wrap">
+                <option value="" disabled selected data-i18n="contact.ph_industry">Select industry</option>
+                <option value="machine-building" data-i18n="contact.opt_ind_machine">Machine building</option>
+                <option value="construction" data-i18n="contact.opt_ind_construction">Construction</option>
+                <option value="oil-energy" data-i18n="contact.opt_ind_oil">Oil &amp; energy</option>
+                <option value="plant-processing" data-i18n="contact.opt_ind_plant">Plant &amp; Processing</option>
+                <option value="other" data-i18n="contact.opt_other">Other</option>
+              </select>
+              <div class="field-other" id="industry-other-wrap" hidden>
+                <label for="industry-other" data-i18n="contact.label_other">Please specify</label>
+                <input id="industry-other" name="industry_other" type="text" placeholder="Your industry" data-i18n-placeholder="contact.ph_other_industry" autocomplete="off" />
+              </div>
             </div>
             <div class="field">
               <label for="services" data-i18n="contact.label_services">Services</label>
-              <input id="services" name="services" type="text" placeholder="Select capabilities" data-i18n-placeholder="contact.ph_services" required />
+              <select id="services" name="services" required data-other-field="services-other-wrap">
+                <option value="" disabled selected data-i18n="contact.ph_services">Select service</option>
+                <option value="3d-modelling" data-i18n="contact.opt_svc_3d">3D Modelling &amp; Drafting</option>
+                <option value="cad-customization" data-i18n="contact.opt_svc_cad">CAD Customization</option>
+                <option value="steel-detailing" data-i18n="contact.opt_svc_steel">Steel Detailing</option>
+                <option value="bim-consulting" data-i18n="contact.opt_svc_bim">BIM Consulting</option>
+                <option value="documentation" data-i18n="contact.opt_svc_docs">Documentation &amp; Standardization</option>
+                <option value="plant-engineering" data-i18n="contact.opt_svc_plant">Plant Engineering Design</option>
+                <option value="other" data-i18n="contact.opt_other">Other</option>
+              </select>
+              <div class="field-other" id="services-other-wrap" hidden>
+                <label for="services-other" data-i18n="contact.label_other">Please specify</label>
+                <input id="services-other" name="services_other" type="text" placeholder="Your service need" data-i18n-placeholder="contact.ph_other_services" autocomplete="off" />
+              </div>
             </div>
           </div>
           <div class="field">
@@ -144,7 +168,7 @@
         </nav>
       </div>
     </footer>
-    <script src="i18n.js?v=2"></script>
-    <script src="script.js?v=2"></script>
+    <script src="i18n.js?v=6"></script>
+    <script src="script.js?v=6"></script>
   </body>
 </html>

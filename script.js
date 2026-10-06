@@ -231,20 +231,41 @@ function applyLanguage(lang) {
   return next;
 }
 
-if (language && languageBtn && languageMenu && window.DutamI18n) {
-  languageBtn.addEventListener("click", () => {
+if (window.DutamI18n) {
+  applyLanguage(window.DutamI18n.getLang());
+}
+
+document.addEventListener("dutam:langchange", (event) => {
+  const lang = event.detail && event.detail.lang;
+  if (quoteController && lang) quoteController.refreshQuotes(lang);
+});
+
+window.addEventListener("pageshow", () => {
+  if (window.DutamI18n) applyLanguage(window.DutamI18n.getLang());
+});
+
+if (language && languageBtn && languageMenu) {
+  languageBtn.addEventListener("click", (event) => {
+    event.stopPropagation();
     const open = languageMenu.hidden;
     languageMenu.hidden = !open;
     languageBtn.setAttribute("aria-expanded", String(open));
   });
 
-  languageMenu.addEventListener("click", (event) => {
-    const choice = event.target.closest("[data-lang]");
-    if (!choice) return;
-    applyLanguage(choice.dataset.lang);
-    languageMenu.hidden = true;
-    languageBtn.setAttribute("aria-expanded", "false");
-  });
+  // Capture so language changes always win over document click-to-close.
+  languageMenu.addEventListener(
+    "click",
+    (event) => {
+      const choice = event.target.closest("[data-lang]");
+      if (!choice) return;
+      event.preventDefault();
+      event.stopPropagation();
+      applyLanguage(choice.dataset.lang);
+      languageMenu.hidden = true;
+      languageBtn.setAttribute("aria-expanded", "false");
+    },
+    true
+  );
 
   document.addEventListener("click", (event) => {
     if (!language.contains(event.target)) {
@@ -259,8 +280,6 @@ if (language && languageBtn && languageMenu && window.DutamI18n) {
     languageBtn.setAttribute("aria-expanded", "false");
     languageBtn.focus();
   });
-
-  applyLanguage(window.DutamI18n.getLang());
 }
 
 const nav = document.querySelector(".nav");
@@ -268,23 +287,28 @@ const navToggle = document.querySelector(".nav-toggle");
 const navLinks = document.querySelector("#site-nav");
 let lastScrollY = window.scrollY;
 
-navToggle.addEventListener("click", () => {
-  const open = navLinks.classList.toggle("is-open");
-  navToggle.setAttribute("aria-expanded", String(open));
-  if (open) nav.classList.remove("is-hidden");
-});
+if (navToggle && navLinks) {
+  navToggle.addEventListener("click", () => {
+    const open = navLinks.classList.toggle("is-open");
+    navToggle.setAttribute("aria-expanded", String(open));
+    if (open && nav) nav.classList.remove("is-hidden");
+  });
 
-navLinks.addEventListener("click", (event) => {
-  if (!event.target.closest("a")) return;
-  navLinks.classList.remove("is-open");
-  navToggle.setAttribute("aria-expanded", "false");
-});
+  navLinks.addEventListener("click", (event) => {
+    if (!event.target.closest("a")) return;
+    navLinks.classList.remove("is-open");
+    navToggle.setAttribute("aria-expanded", "false");
+  });
+}
 
-nav.addEventListener("focusin", () => nav.classList.remove("is-hidden"));
+if (nav) {
+  nav.addEventListener("focusin", () => nav.classList.remove("is-hidden"));
+}
 
 window.addEventListener(
   "scroll",
   () => {
+    if (!nav || !navLinks) return;
     const y = window.scrollY;
     const delta = y - lastScrollY;
     if (Math.abs(delta) < 8 && y > 8) return;
@@ -311,8 +335,27 @@ function bindForm(form, invalidKey, successKey) {
     status.hidden = false;
     status.textContent = t(successKey, "Thanks.");
     form.reset();
+    form.querySelectorAll("[data-other-field]").forEach((select) => syncOtherField(select));
   });
 }
+
+function syncOtherField(select) {
+  const wrapId = select.getAttribute("data-other-field");
+  const wrap = wrapId && document.getElementById(wrapId);
+  if (!wrap) return;
+  const otherInput = wrap.querySelector("input");
+  const showOther = select.value === "other";
+  wrap.hidden = !showOther;
+  if (otherInput) {
+    otherInput.required = showOther;
+    if (!showOther) otherInput.value = "";
+  }
+}
+
+document.querySelectorAll("select[data-other-field]").forEach((select) => {
+  syncOtherField(select);
+  select.addEventListener("change", () => syncOtherField(select));
+});
 
 bindForm(document.querySelector("#project-form"), "form.invalid_privacy", "form.success_contact");
 bindForm(document.querySelector("#career-form"), "form.invalid_required", "form.success_career");

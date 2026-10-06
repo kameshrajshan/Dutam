@@ -1650,7 +1650,8 @@ textarea {
   color: var(--color-teal-50);
 }
 
-.field input {
+.field input,
+.field select {
   width: 100%;
   padding: 14px;
   border: var(--sds-size-stroke-border) solid var(--color-neutral-800);
@@ -1658,6 +1659,36 @@ textarea {
   background: var(--color-neutral-950);
   color: var(--white);
   font-size: var(--font-size-body-sm);
+}
+
+.field select {
+  appearance: none;
+  background-image: url("assets/icon-chevron.svg");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 16px;
+  padding-right: 40px;
+  cursor: pointer;
+}
+
+.field select:invalid {
+  color: var(--neutral-400);
+}
+
+.field select option {
+  color: var(--color-white);
+  background: var(--color-neutral-950);
+}
+
+.field-other {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+  margin-top: var(--space-8);
+}
+
+.field-other[hidden] {
+  display: none;
 }
 
 .apply .field input {
@@ -1668,7 +1699,8 @@ textarea {
   color: var(--neutral-400);
 }
 
-.field input:focus {
+.field input:focus,
+.field select:focus {
   outline: none;
   border-color: var(--teal-500);
 }
