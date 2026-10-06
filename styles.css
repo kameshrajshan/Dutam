@@ -1433,6 +1433,101 @@ textarea {
   gap: var(--space-8);
 }
 
+.detail-hero {
+  padding-bottom: var(--space-48);
+}
+
+.detail-back {
+  display: inline-block;
+  margin: 0 0 var(--space-24);
+  font-size: var(--font-size-body-sm);
+  color: var(--color-teal-500);
+  text-decoration: none;
+}
+
+.detail-back:hover {
+  color: var(--color-teal-400);
+}
+
+.detail-hero-line {
+  margin: 0 0 var(--space-16);
+  max-width: 737px;
+  font-size: var(--font-size-h5);
+  font-weight: var(--font-weight-medium);
+  line-height: normal;
+  color: var(--color-neutral-100);
+}
+
+.detail-body {
+  width: min(var(--size-content), calc(100% - (var(--margin) * 2)));
+  margin: 0 auto var(--space-96);
+  display: grid;
+  gap: var(--space-48);
+}
+
+.detail-block h2 {
+  margin: 0 0 var(--space-16);
+  font-size: var(--font-size-h5);
+  font-weight: var(--font-weight-medium);
+  line-height: normal;
+}
+
+.detail-block p,
+.detail-block li {
+  margin: 0;
+  font-size: var(--font-size-body-sm);
+  line-height: var(--font-line-height-body-sm);
+  color: var(--color-neutral-200);
+}
+
+.detail-block ul {
+  margin: 0;
+  padding-left: 1.25rem;
+  display: grid;
+  gap: var(--space-8);
+}
+
+.detail-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-48);
+}
+
+.detail-related {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-12);
+}
+
+.detail-related-link {
+  display: inline-flex;
+  align-items: center;
+  min-height: var(--size-tap);
+  padding: 0 var(--space-16);
+  border: 1px solid var(--color-border-subtle);
+  color: var(--color-text);
+  font-size: var(--font-size-body-sm);
+  text-decoration: none;
+  transition: border-color var(--motion-fast) var(--motion-ease-standard),
+    color var(--motion-fast) var(--motion-ease-standard);
+}
+
+.detail-related-link:hover {
+  border-color: var(--color-teal-500);
+  color: var(--color-teal-500);
+}
+
+@media (max-width: 760px) {
+  .detail-split {
+    grid-template-columns: 1fr;
+    gap: var(--space-32);
+  }
+
+  .detail-hero-line {
+    font-size: var(--font-size-h6);
+  }
+}
+
 .why {
   display: grid;
   grid-template-columns: minmax(0, 652fr) minmax(0, 628fr);
