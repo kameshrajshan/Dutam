@@ -16,7 +16,7 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css?v=8" />
+    <link rel="stylesheet" href="styles.css?v=12" />
   </head>
   <body class="contact-page">
     <header class="nav">
@@ -36,14 +36,14 @@
           <div class="language">
             <button class="language-btn" type="button" aria-expanded="false" aria-controls="language-menu">
               <img src="assets/icon-globe.svg" alt="" width="20" height="20" />
-              <span data-language-label>English</span>
+              <span data-language-label aria-hidden="true">🇬🇧</span>
               <img src="assets/icon-chevron.svg" alt="" width="20" height="20" />
             </button>
             <ul id="language-menu" class="language-menu" hidden>
-              <li><button type="button" data-lang="en">English</button></li>
-              <li><button type="button" data-lang="nl">Dutch</button></li>
-              <li><button type="button" data-lang="de">German</button></li>
-              <li><button type="button" data-lang="fr">French</button></li>
+              <li><button type="button" data-lang="en" aria-label="English">🇬🇧</button></li>
+              <li><button type="button" data-lang="nl" aria-label="Dutch">🇳🇱</button></li>
+              <li><button type="button" data-lang="de" aria-label="German">🇩🇪</button></li>
+              <li><button type="button" data-lang="fr" aria-label="French">🇫🇷</button></li>
             </ul>
           </div>
           <a class="btn btn-login" href="https://dpms.svtawny.com:85/home" data-i18n="nav.login">Login</a>
@@ -191,7 +191,7 @@
         </nav>
       </div>
     </footer>
-    <script src="i18n.js?v=8"></script>
+    <script src="i18n.js?v=9"></script>
     <script src="script.js?v=7"></script>
   </body>
 </html>
