@@ -455,9 +455,8 @@ textarea {
 }
 
 .services-intro {
-  width: min(628px, 100%);
+  width: min(var(--size-content), 100%);
   margin: 0 auto 56px;
-  margin-left: max(0px, calc((100% - 1280px) / 2));
 }
 
 .services h2 {
@@ -475,18 +474,21 @@ textarea {
 
 .service-panel {
   width: min(var(--size-content), 100%);
-  margin: 0 auto;
+  margin-inline: auto;
   display: grid;
-  grid-template-columns: 600px minmax(0, 1fr);
+  grid-template-columns: minmax(0, 720px) minmax(0, 1fr);
   gap: var(--space-64);
   align-items: center;
+  justify-content: center;
 }
 
 .service-visual {
   position: relative;
-  width: 600px;
-  max-width: 100%;
-  aspect-ratio: 600 / 700;
+  justify-self: center;
+  align-self: center;
+  width: min(720px, 100%);
+  margin-inline: auto;
+  aspect-ratio: 720 / 700;
   height: auto;
   border-radius: var(--radius-2xl);
   overflow: hidden;
@@ -499,8 +501,10 @@ textarea {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center center;
   opacity: 0;
   transform: scale(1.06);
+  transform-origin: center center;
   transition: opacity 0.6s ease, transform 0.9s ease;
 }
 
@@ -513,6 +517,8 @@ textarea {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  width: 100%;
+  justify-self: stretch;
 }
 
 .service-item {
@@ -977,8 +983,11 @@ textarea {
   }
 
   .service-visual {
-    width: 100%;
-    height: 420px;
+    justify-self: center;
+    width: min(720px, 100%);
+    margin-inline: auto;
+    height: auto;
+    aspect-ratio: 720 / 700;
   }
 
   .connect {
@@ -1058,6 +1067,13 @@ textarea {
     gap: var(--space-8);
   }
 
+  .language-menu {
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
+    z-index: 2;
+  }
+
   .btn-login {
     width: 100%;
     justify-content: center;
@@ -1131,7 +1147,10 @@ textarea {
   }
 
   .service-visual {
-    height: 240px;
+    width: min(720px, 100%);
+    margin-inline: auto;
+    height: auto;
+    aspect-ratio: 720 / 700;
     border-radius: var(--radius-xl);
   }
 
