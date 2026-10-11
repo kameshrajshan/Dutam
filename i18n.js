@@ -2409,6 +2409,12 @@
     STORAGE_KEY: "dutam-lang",
     supported: ["en", "nl", "de", "fr"],
     labels: {
+      en: "🇬🇧",
+      nl: "🇳🇱",
+      de: "🇩🇪",
+      fr: "🇫🇷",
+    },
+    names: {
       en: "English",
       nl: "Dutch",
       de: "German",
@@ -2538,6 +2544,8 @@
       var labelNodes = document.querySelectorAll("[data-language-label]");
       for (var lb = 0; lb < labelNodes.length; lb++) {
         labelNodes[lb].textContent = this.labels[l] || this.labels.en;
+        var langBtn = labelNodes[lb].closest(".language-btn");
+        if (langBtn) langBtn.setAttribute("aria-label", this.names[l] || this.names.en);
       }
 
       this.stampLinks(l);
