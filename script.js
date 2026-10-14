@@ -481,21 +481,15 @@ function bindMotionToggle(button, target, pauseKey, playKey) {
 }
 
 function syncMotionLabels() {
-  document.querySelectorAll("[data-motion-pause], [data-marquee-pause]").forEach((button) => {
+  document.querySelectorAll("[data-marquee-pause]").forEach((button) => {
     const paused = button.getAttribute("aria-pressed") === "true";
-    const gallery = button.hasAttribute("data-marquee-pause");
-    const pauseKey = gallery ? "home.marquee_pause" : "home.motion_pause";
-    const playKey = gallery ? "home.marquee_play" : "home.motion_play";
-    button.textContent = motionLabel(paused ? playKey : pauseKey, button.textContent);
+    button.textContent = motionLabel(
+      paused ? "home.marquee_play" : "home.marquee_pause",
+      button.textContent
+    );
   });
 }
 
-bindMotionToggle(
-  document.querySelector("[data-motion-pause]"),
-  document.querySelector(".connect"),
-  "home.motion_pause",
-  "home.motion_play"
-);
 bindMotionToggle(
   document.querySelector("[data-marquee-pause]"),
   document.querySelector(".industry-mosaic"),

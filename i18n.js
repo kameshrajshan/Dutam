@@ -105,8 +105,6 @@
     "home.ex_phone": "+91 427 455 2439…",
     "home.ex_project": "Steel detailing…",
     "home.ex_comments": "Scope, standard, timeline…",
-    "home.motion_pause": "Pause motion",
-    "home.motion_play": "Play motion",
     "home.marquee_pause": "Pause gallery",
     "home.marquee_play": "Play gallery",
     "home.privacy_prefix": "I have read and understood the ",
@@ -118,7 +116,7 @@
     "home.alt_svc3": "Steel framework of an industrial structure",
     "home.alt_svc4": "Engineer working at a dual-monitor workstation",
     "home.alt_svc5": "Person checking document checklists beside a laptop",
-    "home.alt_svc6": "Daylight view of industrial plant towers and piping",
+    "home.alt_svc6": "Blue wireframe model of an offshore production platform",
     "home.alt_eng": "Close view of an engine camshaft and valves",
     "home.alt_pipes": "Industrial piping and valves",
     "home.alt_gears": "Interlocking industrial gears",
@@ -707,8 +705,6 @@
     "home.privacy_prefix": "Ik heb het ",
     "home.privacy_link": "privacybeleid gelezen en begrepen",
     "home.submit": "Projectgegevens versturen",
-    "home.motion_pause": "Beweging pauzeren",
-    "home.motion_play": "Beweging afspelen",
     "home.marquee_pause": "Galerij pauzeren",
     "home.marquee_play": "Galerij afspelen",
     "home.alt_svc1":
@@ -719,7 +715,7 @@
     "home.alt_svc5":
       "Persoon die documentchecklists naast een laptop afvinkt",
     "home.alt_svc6":
-      "Daglichtzicht op industriële planttorens en leidingwerk",
+      "Blauw draadmodel van een offshore productieplatform",
     "home.alt_eng": "Close-up van een motor-nokkenas en kleppen",
     "home.alt_pipes": "Industrieel leidingwerk en afsluiters",
     "home.alt_gears": "In elkaar grijpende industriële tandwielen",
@@ -1311,8 +1307,6 @@
     "home.privacy_prefix": "Ich habe die ",
     "home.privacy_link": "Datenschutzerklärung gelesen und verstanden",
     "home.submit": "Projektdetails senden",
-    "home.motion_pause": "Bewegung pausieren",
-    "home.motion_play": "Bewegung abspielen",
     "home.marquee_pause": "Galerie pausieren",
     "home.marquee_play": "Galerie abspielen",
     "home.alt_svc1":
@@ -1323,7 +1317,7 @@
     "home.alt_svc5":
       "Person hakt Dokumenten-Checklisten neben einem Laptop ab",
     "home.alt_svc6":
-      "Tageslichtaufnahme industrieller Anlagentürme und Rohrleitungen",
+      "Blaues Drahtmodell einer Offshore-Produktionsplattform",
     "home.alt_eng": "Nahaufnahme einer Motornockenwelle und Ventile",
     "home.alt_pipes": "Industrielle Rohrleitungen und Ventile",
     "home.alt_gears": "Ineinandergreifende Industriezahnräder",
@@ -1920,8 +1914,6 @@
     "home.privacy_prefix": "J’ai lu et compris la ",
     "home.privacy_link": "politique de confidentialité",
     "home.submit": "Envoyer les détails du projet",
-    "home.motion_pause": "Pause du mouvement",
-    "home.motion_play": "Lecture du mouvement",
     "home.marquee_pause": "Pause de la galerie",
     "home.marquee_play": "Lecture de la galerie",
     "home.alt_svc1":
@@ -1932,7 +1924,7 @@
     "home.alt_svc5":
       "Personne qui coche des listes de documents à côté d’un ordinateur portable",
     "home.alt_svc6":
-      "Vue de jour de tours d’usine industrielle et de tuyauterie",
+      "Maquette filaire bleue d’une plateforme de production offshore",
     "home.alt_eng": "Vue rapprochée d’un arbre à cames et de soupapes",
     "home.alt_pipes": "Tuyauterie industrielle et vannes",
     "home.alt_gears": "Engrenages industriels engrenés",

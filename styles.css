@@ -834,9 +834,8 @@ textarea {
   line-height: var(--font-line-height-h5);
 }
 
-.motion-toggle,
 .marquee-pause {
-  display: inline-flex;
+  display: none;
   align-items: center;
   justify-content: center;
   min-height: var(--size-tap);
@@ -850,20 +849,10 @@ textarea {
   cursor: pointer;
 }
 
-.motion-toggle:hover,
-.motion-toggle:focus-visible,
 .marquee-pause:hover,
 .marquee-pause:focus-visible {
   border-color: var(--color-accent-hover);
   color: var(--color-accent-hover);
-}
-
-.marquee-pause {
-  display: none;
-}
-
-.motion .connect.is-paused::before {
-  animation-play-state: paused;
 }
 
 .form {
@@ -963,7 +952,8 @@ textarea {
 
 .form .btn {
   align-self: flex-end;
-  border-radius: var(--radius-lg);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--font-line-height-body);
 }
 
 .form-status {
@@ -1421,15 +1411,6 @@ textarea {
   }
 }
 
-@keyframes photo-drift {
-  from {
-    transform: scale(1.06);
-  }
-  to {
-    transform: scale(1.14) translate3d(-2%, -1%, 0);
-  }
-}
-
 .motion .hero-copy > * {
   animation: rise-in 0.85s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
@@ -1442,10 +1423,6 @@ textarea {
 
 .motion .track {
   animation: rise-in 0.95s 0.22s cubic-bezier(0.22, 1, 0.36, 1) both;
-}
-
-.motion .connect::before {
-  animation: photo-drift 22s ease-in-out infinite alternate;
 }
 
 .motion .hub-hero > *,
@@ -1481,8 +1458,7 @@ textarea {
   .motion .hero-copy > *,
   .motion .hub-hero > *,
   .motion .page-hero > *,
-  .motion .track,
-  .motion .connect::before {
+  .motion .track {
     animation: none;
   }
 
