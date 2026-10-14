@@ -7,19 +7,21 @@
     "nav.about": "About",
     "nav.services": "Services",
     "nav.careers": "Careers",
-    "nav.contact": "Contact us",
+    "nav.contact": "Contact Us",
     "nav.login": "Login",
+    "nav.skip": "Skip to content",
+    "nav.language": "Language, {lang}",
     "nav.privacy": "Privacy Policy",
 
     "footer.company": "Dutam Engineering",
     "footer.blurb":
-      "Every project we take on is held to the same standard: technically accurate work, delivered on time, and structured to meet your specification.",
+      "Every project meets the same standard: technically accurate work, delivered on time, and structured to your specification.",
     "footer.registered": "Registered Address",
     "footer.branch": "Branch Address",
     "footer.contact_heading": "Contact Us",
     "footer.copyright": "© 2026 DUTAM. All Rights Reserved.",
     "footer.email": "Email: info@dutamengineering.com",
-    "footer.phone": "Phone: +91 427 455 2439",
+    "footer.phone": "Phone: +91\u00a0427\u00a0455\u00a02439",
     "footer.social_linkedin": "LinkedIn",
     "footer.social_facebook": "Facebook",
     "footer.social_youtube": "YouTube",
@@ -40,11 +42,11 @@
     "home.eyebrow": "engineering partner",
     "home.h1": "Precision CAD Engineering for Global Industry.",
     "home.lede":
-      "We deliver 3D modeling, steel detailing, BIM consulting, and CAD automation for machine building, construction, and oil and energy projects. We deliver on time, to standard, and to spec.",
+      "Dutam delivers 3D modeling, steel detailing, BIM consulting, and CAD automation for machine building, construction, and oil and energy projects. You receive that work on time, on standard, and on spec.",
     "home.cta_primary": "Book a Discovery Call",
     "home.cta_secondary": "View Our Work",
     "home.assurance":
-      "No commitment required · Response within 24 hours · NDA available",
+      "No commitment required · Response within 24\u00a0hours · NDA available",
     "home.track_label": "DELIVERY TRACK RECORD",
     "home.track_aria": "Delivery track record",
     "home.stat1_dd": "Engineering Assignments Completed",
@@ -54,7 +56,7 @@
     "home.stat5_dd": "Standards Delivered To",
     "home.who_h2": "Who We Are",
     "home.who_p":
-      "Our team brings together engineers with over a decade of industry experience and younger engineers trained on current tools like AutoCAD, HiCAD, and Revit. The senior engineers understand how projects fail in the field. The junior engineers know the fastest way to build and deliver in the software. Working together, they cover both sides of what a good engineering project needs: sound judgment and current method. You get that combination on every project we take on.",
+      "Our team brings together engineers with over a decade of industry experience and younger engineers trained on current tools like <span translate='no'>AutoCAD</span>, <span translate='no'>HiCAD</span>, and <span translate='no'>Revit</span>. The senior engineers understand how projects fail in the field. The junior engineers know the fastest way to build and deliver in the software. Working together, they cover both sides of what a good engineering project needs: sound judgment and current method. You get that combination on every project we take on.",
     "home.services_h2": "Services",
     "home.services_p":
       "Dutam Engineering offers six core services that cover the full range of CAD and engineering design work.",
@@ -89,7 +91,7 @@
     "home.connect_h2": "Let’s Connect.",
     "home.connect_p1": "Starting a new project?",
     "home.connect_p2":
-      "Tell us your scope, standard, and timeline and we will come back to you within 24 hours.",
+      "Tell us your scope, standard, and timeline. You get a reply within 24\u00a0hours.",
     "home.form_h3": "Tell Us About Your Project",
     "home.ph_name": "Full name",
     "home.ph_email": "Email",
@@ -97,9 +99,19 @@
     "home.ph_phone": "Phone number",
     "home.ph_project": "Project Type",
     "home.ph_comments": "Comments",
+    "home.ex_name": "Jordan Lee…",
+    "home.ex_email": "ada@company.com…",
+    "home.ex_company": "Northwind…",
+    "home.ex_phone": "+91 427 455 2439…",
+    "home.ex_project": "Steel detailing…",
+    "home.ex_comments": "Scope, standard, timeline…",
+    "home.motion_pause": "Pause motion",
+    "home.motion_play": "Play motion",
+    "home.marquee_pause": "Pause gallery",
+    "home.marquee_play": "Play gallery",
     "home.privacy_prefix": "I have read and understood the ",
     "home.privacy_link": "privacy policy",
-    "home.submit": "Submit",
+    "home.submit": "Send Project Details",
     "home.alt_svc1":
       "Engineers collaborating on a structural 3D model across dual monitors",
     "home.alt_svc2": "Hands reviewing technical drawings on a desk",
@@ -122,13 +134,13 @@
     "about.h1": "The Engineering Team Behind Your Critical Projects",
     "about.lede":
       "Experienced engineers delivering CAD, detailing, and plant design for machine building, construction, and energy projects worldwide.",
-    "about.who_title": "Who we are",
+    "about.who_title": "Who We Are",
     "about.who_p":
       "Dutam is an engineering services company of experienced and energetic engineers. We apply detailed knowledge across every aspect of design and drafting, providing our clients with good quality solutions at competitive prices. That is how we earn lasting client trust.",
     "about.why_title": "Why Dutam",
     "about.why_p":
       "Our ambitions have no borders. We are determined to extend our impact and reach to provide advanced solutions worldwide. Our goal is to be a global influencer, bringing innovative engineering excellence to every corner of the globe for our clients.",
-    "about.what_title": "What we do",
+    "about.what_title": "What We Do",
     "about.what_p":
       "Dutam specializes in engineering services that meet and often exceed our customer expectations. We offer a wide range of CAD-related services in machine building and construction industries. Our vast experience helps customers achieve optimum solutions.",
     "about.mv_h2": "Vision & Mission",
@@ -143,7 +155,7 @@
       "Long-term partnerships. Deeper expertise. Less repetitive work.",
     "about.goal1_h3": "Client-Driven Value",
     "about.goal1_p":
-      "Every project revolves around your operational success. We don't just deliver deliverables; we build long-term, high-trust partnerships.",
+      "Every project revolves around your operational success. We don’t just deliver deliverables; we build long-term, high-trust partnerships.",
     "about.goal2_h3": "Engineered for Excellence",
     "about.goal2_p":
       "Rigorous standards, zero compromises. We approach every specification with meticulous precision and global compliance.",
@@ -166,8 +178,10 @@
     "about.quotes_expand": "Read full statement →",
     "about.quotes_collapse": "Show highlight ←",
     "about.quotes_index": "Testimonial {n} / {total}",
+    "about.quotes_pause": "Pause",
+    "about.quotes_play": "Play",
     "about.cta_p": "Ready to scope your next package?",
-    "about.cta_btn": "Discuss a project",
+    "about.cta_btn": "Discuss a Project",
 
     testimonials: [
       {
@@ -221,13 +235,13 @@
       "Choose your sector to solve industry-specific challenges, or dive into our 6 core engineering capabilities to find dedicated modelling, automation, and detailing support.",
     "services.industries_h2": "Industries",
     "services.caps_h2": "Capabilities",
-    "services.ind1_h3": "Machine building",
+    "services.ind1_h3": "Machine Building",
     "services.ind1_p":
       "Equipment and machinery packages that need clean 3D models.",
     "services.ind2_h3": "Construction",
     "services.ind2_p":
       "Structural support where steel, RCC, MEP must stay aligned.",
-    "services.ind3_h3": "Oil & energy",
+    "services.ind3_h3": "Oil & Energy",
     "services.ind3_p":
       "Energy facility documentation with multidisciplinary interface control.",
     "services.ind4_h3": "Plant & Processing",
@@ -252,6 +266,16 @@
     "services.cap6_p":
       "Multidisciplinary plant design with careful interface discipline.",
     "services.learn_more": "Learn more →",
+    "services.ind1_more": "View Machine Building",
+    "services.ind2_more": "View Construction",
+    "services.ind3_more": "View Oil & Energy",
+    "services.ind4_more": "View Plant & Processing",
+    "services.cap1_more": "View 3D Modelling",
+    "services.cap2_more": "View CAD Customization",
+    "services.cap3_more": "View Steel Detailing",
+    "services.cap4_more": "View BIM Consulting",
+    "services.cap5_more": "View Documentation",
+    "services.cap6_more": "View Plant Engineering",
 
     "careers.title": "Careers | Dutam Engineering",
     "careers.meta":
@@ -270,27 +294,27 @@
     "careers.why3_h3": "Culture of Autonomy & Balance",
     "careers.why3_p":
       "Thrive in a collaborative, cross-border environment that values precision over politics. We provide flexible work practices, open communication, and the support you need to excel professionally while safeguarding your personal time.",
-    "careers.apply_h2": "General application",
+    "careers.apply_h2": "General Application",
     "careers.apply_note":
       "We do not list open roles on the site. Tell us your strengths and we will match you when a fit opens.",
     "careers.label_name": "Full name",
-    "careers.ph_name": "Your name",
+    "careers.ph_name": "Jordan Lee…",
     "careers.label_email": "Email",
-    "careers.ph_email": "you@email.com",
+    "careers.ph_email": "ada@email.com…",
     "careers.label_phone": "Phone",
-    "careers.ph_phone": "+91 …",
+    "careers.ph_phone": "+91 427 455 2439…",
     "careers.label_address": "Address",
-    "careers.ph_address": "Your address",
+    "careers.ph_address": "12 Harbour Road…",
     "careers.label_interest": "Area of interest",
-    "careers.ph_interest": "e.g. modelling, steel detailing, BIM",
+    "careers.ph_interest": "Modelling, steel detailing, BIM…",
     "careers.label_experience": "Years of experience",
-    "careers.ph_experience": "e.g. 3",
+    "careers.ph_experience": "3…",
     "careers.label_portfolio": "Portfolio",
     "careers.ph_portfolio": "https://…",
     "careers.label_resume": "Resume",
     "careers.label_note": "Cover note (optional)",
-    "careers.ph_note": "A few lines about your background",
-    "careers.submit": "Apply now",
+    "careers.ph_note": "Background and tools…",
+    "careers.submit": "Apply Now",
 
     "contact.title": "Contact | Dutam Engineering",
     "contact.meta":
@@ -301,13 +325,13 @@
       "Share your models, timeline, and delivery requirements. We’ll review your scope and provide a clear turnaround plan.",
     "contact.form_sr": "Send a message",
     "contact.label_name": "Name",
-    "contact.ph_name": "Your name",
+    "contact.ph_name": "Jordan Lee…",
     "contact.label_company": "Company",
-    "contact.ph_company": "Company name",
+    "contact.ph_company": "Northwind…",
     "contact.label_email": "Email",
-    "contact.ph_email": "you@company.com",
+    "contact.ph_email": "ada@company.com…",
     "contact.label_phone": "Phone",
-    "contact.ph_phone": "+91 …",
+    "contact.ph_phone": "+91 427 455 2439…",
     "contact.label_industry": "Industry",
     "contact.ph_industry": "Select industry",
     "contact.label_services": "Services",
@@ -324,11 +348,11 @@
     "contact.opt_svc_plant": "Plant Engineering Design",
     "contact.opt_other": "Other",
     "contact.label_other": "Please specify",
-    "contact.ph_other_industry": "Your industry",
-    "contact.ph_other_services": "Your service need",
+    "contact.ph_other_industry": "Marine equipment…",
+    "contact.ph_other_services": "Piping isometrics…",
     "contact.label_scope": "Brief scope",
     "contact.ph_scope": "Standards, deliverables, timeline…",
-    "contact.submit": "Send message",
+    "contact.submit": "Send Message",
     "contact.office_h2": "Office details",
     "contact.office_email_label": "Email",
     "contact.office_phone_label": "Phone",
@@ -342,6 +366,7 @@
     "privacy.lede":
       "This policy explains how Dutam Engineering collects and uses personal information when you send an enquiry through our website forms.",
     "privacy.updated": "Last updated: October 2026",
+    "privacy.updated_label": "Last updated",
     "privacy.s1_h2": "Who we are",
     "privacy.s1_p":
       "Dutam Engineering (“Dutam”, “we”, “us”) provides CAD, detailing, BIM, and related engineering services. For privacy questions about website enquiries, contact us at info@dutamengineering.com or +91 427 455 2439.",
@@ -588,17 +613,19 @@
     "nav.careers": "Carrière",
     "nav.contact": "Contact",
     "nav.login": "Inloggen",
+    "nav.skip": "Ga naar inhoud",
+    "nav.language": "Taal, {lang}",
     "nav.privacy": "Privacybeleid",
 
     "footer.company": "Dutam Engineering",
     "footer.blurb":
-      "Elk project dat wij aannemen voldoet aan dezelfde standaard: technisch nauwkeurig werk, op tijd geleverd en gestructureerd volgens uw specificatie.",
+      "Elk project voldoet aan dezelfde standaard: technisch nauwkeurig werk, op tijd geleverd en gestructureerd volgens uw specificatie.",
     "footer.registered": "Statutair adres",
     "footer.branch": "Vestigingsadres",
     "footer.contact_heading": "Contact",
     "footer.copyright": "© 2026 DUTAM. Alle rechten voorbehouden.",
     "footer.email": "E-mail: info@dutamengineering.com",
-    "footer.phone": "Telefoon: +91 427 455 2439",
+    "footer.phone": "Telefoon: +91\u00a0427\u00a0455\u00a02439",
     "footer.social_linkedin": "LinkedIn",
     "footer.social_facebook": "Facebook",
     "footer.social_youtube": "YouTube",
@@ -619,11 +646,11 @@
     "home.eyebrow": "engineeringpartner",
     "home.h1": "Precisie CAD-engineering voor de wereldwijde industrie.",
     "home.lede":
-      "Wij leveren 3D-modelleren, staaldetailing, BIM-advies en CAD-automatisering voor machinebouw, bouw en olie- en energieprojecten. We leveren op tijd, volgens norm en volgens specificatie.",
+      "Dutam levert 3D-modelleren, staaldetailing, BIM-advies en CAD-automatisering voor machinebouw, bouw en olie- en energieprojecten. U ontvangt het werk op tijd, volgens norm en volgens specificatie.",
     "home.cta_primary": "Plan een kennismakingsgesprek",
     "home.cta_secondary": "Bekijk ons werk",
     "home.assurance":
-      "Geen verplichtingen · Reactie binnen 24 uur · NDA beschikbaar",
+      "Geen verplichtingen · Reactie binnen 24\u00a0uur · NDA beschikbaar",
     "home.track_label": "LEVERINGSRESULTATEN",
     "home.track_aria": "Leveringsresultaten",
     "home.stat1_dd": "Afgeronde engineeringopdrachten",
@@ -633,7 +660,7 @@
     "home.stat5_dd": "Geleverde normen",
     "home.who_h2": "Wie wij zijn",
     "home.who_p":
-      "Ons team combineert engineers met meer dan tien jaar branche-ervaring en jongere engineers die zijn opgeleid in actuele tools zoals AutoCAD, HiCAD en Revit. De senior engineers weten hoe projecten in het veld falen. De junior engineers kennen de snelste weg om te bouwen en te leveren in de software. Samen dekken zij beide kanten van een goed engineeringproject: gezond oordeel en een actuele werkwijze. Die combinatie krijgt u bij elk project dat wij aannemen.",
+      "Ons team combineert engineers met meer dan tien jaar branche-ervaring en jongere engineers die zijn opgeleid in actuele tools zoals <span translate='no'>AutoCAD</span>, <span translate='no'>HiCAD</span> en <span translate='no'>Revit</span>. De senior engineers weten hoe projecten in het veld falen. De junior engineers kennen de snelste weg om te bouwen en te leveren in de software. Samen dekken zij beide kanten van een goed engineeringproject: gezond oordeel en een actuele werkwijze. Die combinatie krijgt u bij elk project dat wij aannemen.",
     "home.services_h2": "Diensten",
     "home.services_p":
       "Dutam Engineering biedt zes kerndiensten die het volledige spectrum van CAD- en engineeringontwerpwerk bestrijken.",
@@ -669,7 +696,7 @@
     "home.connect_h2": "Laten we kennismaken.",
     "home.connect_p1": "Start u een nieuw project?",
     "home.connect_p2":
-      "Vertel ons uw scope, norm en planning; wij reageren binnen 24 uur.",
+      "Vertel ons uw scope, norm en planning. U krijgt antwoord binnen 24\u00a0uur.",
     "home.form_h3": "Vertel ons over uw project",
     "home.ph_name": "Volledige naam",
     "home.ph_email": "E-mail",
@@ -679,7 +706,11 @@
     "home.ph_comments": "Opmerkingen",
     "home.privacy_prefix": "Ik heb het ",
     "home.privacy_link": "privacybeleid gelezen en begrepen",
-    "home.submit": "Versturen",
+    "home.submit": "Projectgegevens versturen",
+    "home.motion_pause": "Beweging pauzeren",
+    "home.motion_play": "Beweging afspelen",
+    "home.marquee_pause": "Galerij pauzeren",
+    "home.marquee_play": "Galerij afspelen",
     "home.alt_svc1":
       "Engineers die samenwerken aan een constructief 3D-model op dubbele monitors",
     "home.alt_svc2": "Handen die technische tekeningen op een bureau bekijken",
@@ -748,6 +779,8 @@
     "about.quotes_expand": "Lees volledige verklaring →",
     "about.quotes_collapse": "Toon highlight ←",
     "about.quotes_index": "Getuigenis {n} / {total}",
+    "about.quotes_pause": "Pauzeren",
+    "about.quotes_play": "Afspelen",
     "about.cta_p": "Klaar om uw volgende pakket te scoppen?",
     "about.cta_btn": "Bespreek een project",
 
@@ -834,6 +867,16 @@
     "services.cap6_p":
       "Multidisciplinair plantontwerp met zorgvuldige interfacediscipline.",
     "services.learn_more": "Meer informatie →",
+    "services.ind1_more": "Bekijk machinebouw",
+    "services.ind2_more": "Bekijk bouw",
+    "services.ind3_more": "Bekijk olie en energie",
+    "services.ind4_more": "Bekijk plant en processing",
+    "services.cap1_more": "Bekijk 3D-modelleren",
+    "services.cap2_more": "Bekijk CAD-aanpassing",
+    "services.cap3_more": "Bekijk staaldetailing",
+    "services.cap4_more": "Bekijk BIM-advies",
+    "services.cap5_more": "Bekijk documentatie",
+    "services.cap6_more": "Bekijk plant engineering",
 
     "careers.title": "Carrière | Dutam Engineering",
     "careers.meta":
@@ -860,7 +903,7 @@
     "careers.label_email": "E-mail",
     "careers.ph_email": "u@email.com",
     "careers.label_phone": "Telefoon",
-    "careers.ph_phone": "+91 …",
+    "careers.ph_phone": "+91 427 455 2439…",
     "careers.label_address": "Adres",
     "careers.ph_address": "Uw adres",
     "careers.label_interest": "Interessegebied",
@@ -889,7 +932,7 @@
     "contact.label_email": "E-mail",
     "contact.ph_email": "u@bedrijf.com",
     "contact.label_phone": "Telefoon",
-    "contact.ph_phone": "+91 …",
+    "contact.ph_phone": "+91 427 455 2439…",
     "contact.label_industry": "Branche",
     "contact.ph_industry": "Selecteer branche",
     "contact.label_services": "Diensten",
@@ -924,6 +967,7 @@
     "privacy.lede":
       "Dit beleid legt uit hoe Dutam Engineering persoonsgegevens verzamelt en gebruikt wanneer u via onze websiteformulieren een aanvraag stuurt.",
     "privacy.updated": "Laatst bijgewerkt: oktober 2026",
+    "privacy.updated_label": "Laatst bijgewerkt",
     "privacy.s1_h2": "Wie wij zijn",
     "privacy.s1_p":
       "Dutam Engineering (“Dutam”, “wij”, “ons”) levert CAD-, detailing-, BIM- en gerelateerde engineeringsdiensten. Voor privacyvragen over websiteaanvragen kunt u ons bereiken via info@dutamengineering.com of +91 427 455 2439.",
@@ -1173,17 +1217,19 @@
     "nav.careers": "Karriere",
     "nav.contact": "Kontakt",
     "nav.login": "Anmelden",
+    "nav.skip": "Zum Inhalt springen",
+    "nav.language": "Sprache, {lang}",
     "nav.privacy": "Datenschutz",
 
     "footer.company": "Dutam Engineering",
     "footer.blurb":
-      "Jedes Projekt, das wir übernehmen, unterliegt demselben Maßstab: technisch präzise Arbeit, termingerecht geliefert und auf Ihre Spezifikation ausgerichtet.",
+      "Jedes Projekt unterliegt demselben Maßstab: technisch präzise Arbeit, termingerecht geliefert und auf Ihre Spezifikation ausgerichtet.",
     "footer.registered": "Firmensitz",
     "footer.branch": "Niederlassung",
     "footer.contact_heading": "Kontakt",
     "footer.copyright": "© 2026 DUTAM. Alle Rechte vorbehalten.",
     "footer.email": "E-Mail: info@dutamengineering.com",
-    "footer.phone": "Telefon: +91 427 455 2439",
+    "footer.phone": "Telefon: +91\u00a0427\u00a0455\u00a02439",
     "footer.social_linkedin": "LinkedIn",
     "footer.social_facebook": "Facebook",
     "footer.social_youtube": "YouTube",
@@ -1204,11 +1250,11 @@
     "home.eyebrow": "Engineering-Partner",
     "home.h1": "Präzises CAD-Engineering für die globale Industrie.",
     "home.lede":
-      "Wir liefern 3D-Modellierung, Stahlbauteildetaillierung, BIM-Beratung und CAD-Automatisierung für Maschinenbau, Bauwesen sowie Öl- und Energieprojekte. Wir liefern termingerecht, normgerecht und spezifikationskonform.",
+      "Dutam liefert 3D-Modellierung, Stahlbauteildetaillierung, BIM-Beratung und CAD-Automatisierung für Maschinenbau, Bauwesen sowie Öl- und Energieprojekte. Sie erhalten die Arbeit termingerecht, normgerecht und spezifikationskonform.",
     "home.cta_primary": "Entdeckungsgespräch buchen",
     "home.cta_secondary": "Unsere Arbeit ansehen",
     "home.assurance":
-      "Keine Verpflichtung · Antwort innerhalb von 24 Stunden · NDA verfügbar",
+      "Keine Verpflichtung · Antwort innerhalb von 24\u00a0Stunden · NDA verfügbar",
     "home.track_label": "LIEFERBILANZ",
     "home.track_aria": "Lieferbilanz",
     "home.stat1_dd": "Abgeschlossene Engineering-Aufträge",
@@ -1218,7 +1264,7 @@
     "home.stat5_dd": "Erfüllte Normen",
     "home.who_h2": "Wer wir sind",
     "home.who_p":
-      "Unser Team vereint Ingenieure mit über zehn Jahren Branchenerfahrung und jüngere Ingenieure, die auf aktuelle Tools wie AutoCAD, HiCAD und Revit geschult sind. Die Senior-Ingenieure wissen, wie Projekte vor Ort scheitern. Die Junior-Ingenieure kennen den schnellsten Weg, in der Software zu bauen und zu liefern. Gemeinsam decken sie beide Seiten eines guten Engineering-Projekts ab: fundiertes Urteil und aktuelle Methode. Diese Kombination erhalten Sie bei jedem Projekt, das wir übernehmen.",
+      "Unser Team vereint Ingenieure mit über zehn Jahren Branchenerfahrung und jüngere Ingenieure, die auf aktuelle Tools wie <span translate='no'>AutoCAD</span>, <span translate='no'>HiCAD</span> und <span translate='no'>Revit</span> geschult sind. Die Senior-Ingenieure wissen, wie Projekte vor Ort scheitern. Die Junior-Ingenieure kennen den schnellsten Weg, in der Software zu bauen und zu liefern. Gemeinsam decken sie beide Seiten eines guten Engineering-Projekts ab: fundiertes Urteil und aktuelle Methode. Diese Kombination erhalten Sie bei jedem Projekt, das wir übernehmen.",
     "home.services_h2": "Leistungen",
     "home.services_p":
       "Dutam Engineering bietet sechs Kernleistungen, die das gesamte Spektrum von CAD- und Engineering-Design abdecken.",
@@ -1254,7 +1300,7 @@
     "home.connect_h2": "Lassen Sie uns sprechen.",
     "home.connect_p1": "Starten Sie ein neues Projekt?",
     "home.connect_p2":
-      "Nennen Sie uns Scope, Norm und Zeitplan. Wir melden uns innerhalb von 24 Stunden.",
+      "Nennen Sie uns Scope, Norm und Zeitplan. Sie erhalten innerhalb von 24\u00a0Stunden eine Antwort.",
     "home.form_h3": "Erzählen Sie uns von Ihrem Projekt",
     "home.ph_name": "Vollständiger Name",
     "home.ph_email": "E-Mail",
@@ -1264,7 +1310,11 @@
     "home.ph_comments": "Kommentare",
     "home.privacy_prefix": "Ich habe die ",
     "home.privacy_link": "Datenschutzerklärung gelesen und verstanden",
-    "home.submit": "Absenden",
+    "home.submit": "Projektdetails senden",
+    "home.motion_pause": "Bewegung pausieren",
+    "home.motion_play": "Bewegung abspielen",
+    "home.marquee_pause": "Galerie pausieren",
+    "home.marquee_play": "Galerie abspielen",
     "home.alt_svc1":
       "Ingenieure bei der gemeinsamen Arbeit an einem strukturellen 3D-Modell auf Dual-Monitoren",
     "home.alt_svc2": "Hände prüfen technische Zeichnungen auf einem Schreibtisch",
@@ -1333,6 +1383,8 @@
     "about.quotes_expand": "Vollständige Aussage lesen →",
     "about.quotes_collapse": "Highlight anzeigen ←",
     "about.quotes_index": "Referenz {n} / {total}",
+    "about.quotes_pause": "Pause",
+    "about.quotes_play": "Wiedergabe",
     "about.cta_p": "Bereit, Ihr nächstes Paket zu scopen?",
     "about.cta_btn": "Projekt besprechen",
 
@@ -1419,6 +1471,16 @@
     "services.cap6_p":
       "Multidisziplinäre Anlagenplanung mit sorgfältiger Schnittstellendisziplin.",
     "services.learn_more": "Mehr erfahren →",
+    "services.ind1_more": "Maschinenbau ansehen",
+    "services.ind2_more": "Bauwesen ansehen",
+    "services.ind3_more": "Öl und Energie ansehen",
+    "services.ind4_more": "Anlage und Verarbeitung ansehen",
+    "services.cap1_more": "3D-Modellierung ansehen",
+    "services.cap2_more": "CAD-Anpassung ansehen",
+    "services.cap3_more": "Stahlbau ansehen",
+    "services.cap4_more": "BIM-Beratung ansehen",
+    "services.cap5_more": "Dokumentation ansehen",
+    "services.cap6_more": "Anlagenplanung ansehen",
 
     "careers.title": "Karriere | Dutam Engineering",
     "careers.meta":
@@ -1445,7 +1507,7 @@
     "careers.label_email": "E-Mail",
     "careers.ph_email": "sie@email.com",
     "careers.label_phone": "Telefon",
-    "careers.ph_phone": "+91 …",
+    "careers.ph_phone": "+91 427 455 2439…",
     "careers.label_address": "Adresse",
     "careers.ph_address": "Ihre Adresse",
     "careers.label_interest": "Interessensbereich",
@@ -1474,7 +1536,7 @@
     "contact.label_email": "E-Mail",
     "contact.ph_email": "sie@firma.com",
     "contact.label_phone": "Telefon",
-    "contact.ph_phone": "+91 …",
+    "contact.ph_phone": "+91 427 455 2439…",
     "contact.label_industry": "Branche",
     "contact.ph_industry": "Branche auswählen",
     "contact.label_services": "Leistungen",
@@ -1509,6 +1571,7 @@
     "privacy.lede":
       "Diese Erklärung beschreibt, wie Dutam Engineering personenbezogene Daten erhebt und verwendet, wenn Sie über unsere Website-Formulare eine Anfrage senden.",
     "privacy.updated": "Zuletzt aktualisiert: Oktober 2026",
+    "privacy.updated_label": "Zuletzt aktualisiert",
     "privacy.s1_h2": "Wer wir sind",
     "privacy.s1_p":
       "Dutam Engineering („Dutam“, „wir“, „uns“) bietet CAD-, Detailing-, BIM- und verwandte Engineering-Dienstleistungen. Bei Datenschutzfragen zu Website-Anfragen erreichen Sie uns unter info@dutamengineering.com oder +91 427 455 2439.",
@@ -1761,17 +1824,19 @@
     "nav.careers": "Carrières",
     "nav.contact": "Contact",
     "nav.login": "Connexion",
+    "nav.skip": "Aller au contenu",
+    "nav.language": "Langue, {lang}",
     "nav.privacy": "Politique de confidentialité",
 
     "footer.company": "Dutam Engineering",
     "footer.blurb":
-      "Chaque projet que nous prenons en charge répond au même standard : un travail techniquement précis, livré dans les délais et structuré selon votre spécification.",
+      "Chaque projet répond au même standard : un travail techniquement précis, livré dans les délais et structuré selon votre spécification.",
     "footer.registered": "Siège social",
     "footer.branch": "Adresse de succursale",
     "footer.contact_heading": "Contact",
     "footer.copyright": "© 2026 DUTAM. Tous droits réservés.",
     "footer.email": "E-mail : info@dutamengineering.com",
-    "footer.phone": "Téléphone : +91 427 455 2439",
+    "footer.phone": "Téléphone : +91\u00a0427\u00a0455\u00a02439",
     "footer.social_linkedin": "LinkedIn",
     "footer.social_facebook": "Facebook",
     "footer.social_youtube": "YouTube",
@@ -1792,11 +1857,11 @@
     "home.eyebrow": "partenaire d’ingénierie",
     "home.h1": "Ingénierie CAO de précision pour l’industrie mondiale.",
     "home.lede":
-      "Nous livrons la modélisation 3D, le detailing acier, le conseil BIM et l’automatisation CAO pour la construction de machines, le bâtiment et les projets pétrole et énergie. Nous livrons dans les délais, selon les normes et selon les spécifications.",
+      "Dutam livre la modélisation 3D, le detailing acier, le conseil BIM et l’automatisation CAO pour la construction de machines, le bâtiment et les projets pétrole et énergie. Vous recevez ce travail dans les délais, selon les normes et selon les spécifications.",
     "home.cta_primary": "Réserver un appel découverte",
     "home.cta_secondary": "Voir nos réalisations",
     "home.assurance":
-      "Sans engagement · Réponse sous 24 heures · NDA disponible",
+      "Sans engagement · Réponse sous 24\u00a0heures · NDA disponible",
     "home.track_label": "BILAN DE LIVRAISON",
     "home.track_aria": "Bilan de livraison",
     "home.stat1_dd": "Missions d’ingénierie réalisées",
@@ -1806,7 +1871,7 @@
     "home.stat5_dd": "Normes appliquées",
     "home.who_h2": "Qui nous sommes",
     "home.who_p":
-      "Notre équipe réunit des ingénieurs avec plus de dix ans d’expérience sectorielle et de plus jeunes ingénieurs formés aux outils actuels comme AutoCAD, HiCAD et Revit. Les ingénieurs seniors comprennent comment les projets échouent sur le terrain. Les ingénieurs juniors connaissent le chemin le plus rapide pour construire et livrer dans le logiciel. Ensemble, ils couvrent les deux faces d’un bon projet d’ingénierie : un jugement solide et une méthode à jour. Vous obtenez cette combinaison sur chaque projet que nous prenons en charge.",
+      "Notre équipe réunit des ingénieurs avec plus de dix ans d’expérience sectorielle et de plus jeunes ingénieurs formés aux outils actuels comme <span translate='no'>AutoCAD</span>, <span translate='no'>HiCAD</span> et <span translate='no'>Revit</span>. Les ingénieurs seniors comprennent comment les projets échouent sur le terrain. Les ingénieurs juniors connaissent le chemin le plus rapide pour construire et livrer dans le logiciel. Ensemble, ils couvrent les deux faces d’un bon projet d’ingénierie : un jugement solide et une méthode à jour. Vous obtenez cette combinaison sur chaque projet que nous prenons en charge.",
     "home.services_h2": "Services",
     "home.services_p":
       "Dutam Engineering propose six services essentiels qui couvrent l’ensemble du travail de conception CAO et d’ingénierie.",
@@ -1844,7 +1909,7 @@
     "home.connect_h2": "Restons en contact.",
     "home.connect_p1": "Vous démarrez un nouveau projet ?",
     "home.connect_p2":
-      "Indiquez-nous votre périmètre, votre norme et votre planning. Nous vous répondrons sous 24 heures.",
+      "Indiquez-nous votre périmètre, votre norme et votre planning. Vous recevez une réponse sous 24\u00a0heures.",
     "home.form_h3": "Parlez-nous de votre projet",
     "home.ph_name": "Nom complet",
     "home.ph_email": "E-mail",
@@ -1854,7 +1919,11 @@
     "home.ph_comments": "Commentaires",
     "home.privacy_prefix": "J’ai lu et compris la ",
     "home.privacy_link": "politique de confidentialité",
-    "home.submit": "Envoyer",
+    "home.submit": "Envoyer les détails du projet",
+    "home.motion_pause": "Pause du mouvement",
+    "home.motion_play": "Lecture du mouvement",
+    "home.marquee_pause": "Pause de la galerie",
+    "home.marquee_play": "Lecture de la galerie",
     "home.alt_svc1":
       "Ingénieurs collaborant sur un modèle 3D structurel sur deux écrans",
     "home.alt_svc2": "Mains examinant des plans techniques sur un bureau",
@@ -1923,6 +1992,8 @@
     "about.quotes_expand": "Lire la déclaration complète →",
     "about.quotes_collapse": "Afficher l’extrait ←",
     "about.quotes_index": "Témoignage {n} / {total}",
+    "about.quotes_pause": "Pause",
+    "about.quotes_play": "Lecture",
     "about.cta_p": "Prêt à définir le périmètre de votre prochain lot ?",
     "about.cta_btn": "Discuter d’un projet",
 
@@ -2009,6 +2080,16 @@
     "services.cap6_p":
       "Conception d’usine multidisciplinaire avec une discipline stricte des interfaces.",
     "services.learn_more": "En savoir plus →",
+    "services.ind1_more": "Voir la construction de machines",
+    "services.ind2_more": "Voir la construction",
+    "services.ind3_more": "Voir pétrole et énergie",
+    "services.ind4_more": "Voir usine et procédés",
+    "services.cap1_more": "Voir la modélisation 3D",
+    "services.cap2_more": "Voir la personnalisation CAO",
+    "services.cap3_more": "Voir le detailing acier",
+    "services.cap4_more": "Voir le conseil BIM",
+    "services.cap5_more": "Voir la documentation",
+    "services.cap6_more": "Voir l’ingénierie d’usine",
 
     "careers.title": "Carrières | Dutam Engineering",
     "careers.meta":
@@ -2035,7 +2116,7 @@
     "careers.label_email": "E-mail",
     "careers.ph_email": "vous@email.com",
     "careers.label_phone": "Téléphone",
-    "careers.ph_phone": "+91 …",
+    "careers.ph_phone": "+91 427 455 2439…",
     "careers.label_address": "Adresse",
     "careers.ph_address": "Votre adresse",
     "careers.label_interest": "Domaine d’intérêt",
@@ -2064,7 +2145,7 @@
     "contact.label_email": "E-mail",
     "contact.ph_email": "vous@entreprise.com",
     "contact.label_phone": "Téléphone",
-    "contact.ph_phone": "+91 …",
+    "contact.ph_phone": "+91 427 455 2439…",
     "contact.label_industry": "Secteur",
     "contact.ph_industry": "Sélectionner le secteur",
     "contact.label_services": "Services",
@@ -2099,6 +2180,7 @@
     "privacy.lede":
       "Cette politique explique comment Dutam Engineering collecte et utilise les informations personnelles lorsque vous envoyez une demande via les formulaires de notre site.",
     "privacy.updated": "Dernière mise à jour : octobre 2026",
+    "privacy.updated_label": "Dernière mise à jour",
     "privacy.s1_h2": "Qui nous sommes",
     "privacy.s1_p":
       "Dutam Engineering (« Dutam », « nous ») fournit des services de CAO, de detailing, de BIM et d’ingénierie associés. Pour toute question de confidentialité relative aux demandes du site, contactez-nous à info@dutamengineering.com ou au +91 427 455 2439.",
@@ -2371,6 +2453,20 @@
     } catch (e) {}
   }
 
+  function detectNavigatorLang() {
+    var list = [];
+    if (navigator.languages && navigator.languages.length) list = navigator.languages;
+    else if (navigator.language) list = [navigator.language];
+    for (var i = 0; i < list.length; i++) {
+      var code = String(list[i] || "")
+        .toLowerCase()
+        .split("-")[0];
+      var hit = normalizeLang(code);
+      if (hit) return hit;
+    }
+    return "";
+  }
+
   function readUrlLang() {
     try {
       return normalizeLang(new URL(location.href).searchParams.get("lang"));
@@ -2432,6 +2528,9 @@
         var stored = normalizeLang(localStorage.getItem(this.STORAGE_KEY));
         if (stored) return stored;
       } catch (e) {}
+
+      var fromBrowser = detectNavigatorLang();
+      if (fromBrowser) return fromBrowser;
 
       return "en";
     },
@@ -2545,7 +2644,14 @@
       for (var lb = 0; lb < labelNodes.length; lb++) {
         labelNodes[lb].textContent = this.labels[l] || this.labels.en;
         var langBtn = labelNodes[lb].closest(".language-btn");
-        if (langBtn) langBtn.setAttribute("aria-label", this.names[l] || this.names.en);
+        if (langBtn) {
+          var template = this.t("nav.language", l);
+          var name = this.names[l] || this.names.en;
+          langBtn.setAttribute(
+            "aria-label",
+            template.indexOf("{lang}") === -1 ? name : template.replace("{lang}", name)
+          );
+        }
       }
 
       this.stampLinks(l);

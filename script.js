@@ -1,7 +1,20 @@
 const serviceItems = [...document.querySelectorAll("[data-service]")];
 const serviceImages = [...document.querySelectorAll("[data-service-image]")];
 
-function openService(index) {
+function serviceIndexFromUrl() {
+  const index = Number(new URLSearchParams(location.search).get("service"));
+  if (!Number.isInteger(index) || index < 0 || index >= serviceItems.length) return 0;
+  return index;
+}
+
+function writeQueryParam(name, index) {
+  const url = new URL(location.href);
+  if (!index) url.searchParams.delete(name);
+  else url.searchParams.set(name, String(index));
+  history.replaceState(null, "", url.pathname + url.search + url.hash);
+}
+
+function openService(index, updateUrl) {
   serviceItems.forEach((item, i) => {
     const open = i === index;
     item.classList.toggle("is-open", open);
@@ -12,15 +25,16 @@ function openService(index) {
     image.classList.toggle("is-active", active);
     image.toggleAttribute("aria-hidden", !active);
   });
+  if (updateUrl) writeQueryParam("service", index);
 }
 
 if (serviceItems.length) {
-  openService(0);
+  openService(serviceIndexFromUrl(), false);
 
   serviceItems.forEach((item, index) => {
     item.querySelector("button").addEventListener("click", () => {
       if (item.classList.contains("is-open")) return;
-      openService(index);
+      openService(index, true);
     });
   });
 }
@@ -36,7 +50,8 @@ function countUp(el) {
   function frame(now) {
     const progress = Math.min(1, (now - start) / duration);
     const eased = 1 - (1 - progress) ** 3;
-    el.textContent = Math.round(target * eased).toLocaleString("en-US") + suffix;
+    const lang = document.documentElement.lang || "en";
+    el.textContent = new Intl.NumberFormat(lang).format(Math.round(target * eased)) + suffix;
     if (progress < 1) requestAnimationFrame(frame);
   }
 
@@ -66,21 +81,24 @@ if (!reduceMotion) {
     if (revealObserver) revealObserver.unobserve(el);
   }
 
-  function shouldReveal(el) {
-    const rect = el.getBoundingClientRect();
-    const viewH = window.innerHeight || document.documentElement.clientHeight;
-    // In view, near view, or already scrolled past (fast scroll / jump navigation).
-    return rect.top < viewH * 0.92 && rect.bottom > 0;
-  }
-
   function flushReveals() {
     if (!pendingReveals.length) return;
-    pendingReveals = pendingReveals.filter((el) => {
-      if (shouldReveal(el)) {
-        revealEl(el);
-        return false;
-      }
-      return true;
+    const viewH = window.innerHeight || document.documentElement.clientHeight;
+    const measured = pendingReveals.map((el) => ({ el, rect: el.getBoundingClientRect() }));
+    const stay = [];
+    measured.forEach(({ el, rect }) => {
+      if (rect.top < viewH * 0.92 && rect.bottom > 0) revealEl(el);
+      else stay.push(el);
+    });
+    pendingReveals = stay;
+  }
+
+  let revealFrame = 0;
+  function scheduleFlush() {
+    if (revealFrame) return;
+    revealFrame = requestAnimationFrame(() => {
+      revealFrame = 0;
+      flushReveals();
     });
   }
 
@@ -97,8 +115,8 @@ if (!reduceMotion) {
 
   pendingReveals.forEach((el) => revealObserver.observe(el));
   flushReveals();
-  window.addEventListener("scroll", flushReveals, { passive: true });
-  window.addEventListener("resize", flushReveals);
+  window.addEventListener("scroll", scheduleFlush, { passive: true });
+  window.addEventListener("resize", scheduleFlush);
 
   if (intro && introEls.length) {
     const revealIntro = () => {
@@ -139,8 +157,10 @@ if (quoteRoot) {
   const voicesEl = quoteRoot.querySelector("[data-quote-voices]");
   const prevBtn = quoteRoot.querySelector("[data-quote-prev]");
   const nextBtn = quoteRoot.querySelector("[data-quote-next]");
+  const pauseBtn = quoteRoot.querySelector("[data-quote-pause]");
   let quoteIndex = 0;
   let expanded = false;
+  let quotesPaused = false;
   let autoTimer;
   let testimonials = getTestimonials((window.DutamI18n && window.DutamI18n.getLang()) || "en");
   let voiceButtons = [];
@@ -186,13 +206,34 @@ if (quoteRoot) {
       button.classList.toggle("is-active", i === quoteIndex);
     });
     setExpanded(false);
-    if (userDriven) restartAuto();
+    if (userDriven) {
+      writeQueryParam("quote", quoteIndex);
+      if (!quotesPaused) restartAuto();
+    }
+  }
+
+  function quoteIndexFromUrl() {
+    const index = Number(new URLSearchParams(location.search).get("quote"));
+    if (!Number.isInteger(index) || index < 0 || index >= testimonials.length) return 0;
+    return index;
   }
 
   function restartAuto() {
-    if (reduceMotion) return;
+    if (reduceMotion || quotesPaused) return;
     if (autoTimer) window.clearInterval(autoTimer);
     autoTimer = window.setInterval(() => showQuote(quoteIndex + 1), 7000);
+  }
+
+  function setQuotesPaused(next) {
+    quotesPaused = next;
+    if (autoTimer) window.clearInterval(autoTimer);
+    autoTimer = 0;
+    if (pauseBtn) {
+      pauseBtn.setAttribute("aria-pressed", String(quotesPaused));
+      const key = quotesPaused ? "about.quotes_play" : "about.quotes_pause";
+      pauseBtn.textContent = window.DutamI18n ? window.DutamI18n.t(key) : pauseBtn.textContent;
+    }
+    if (!quotesPaused) restartAuto();
   }
 
   function refreshQuotes(lang) {
@@ -211,13 +252,22 @@ if (quoteRoot) {
   expandBtn.addEventListener("click", () => setExpanded(!expanded));
   prevBtn.addEventListener("click", () => showQuote(quoteIndex - 1, true));
   nextBtn.addEventListener("click", () => showQuote(quoteIndex + 1, true));
-
-  showQuote(0);
-  if (!reduceMotion) {
-    autoTimer = window.setInterval(() => showQuote(quoteIndex + 1), 7000);
+  if (pauseBtn) {
+    if (reduceMotion) pauseBtn.hidden = true;
+    else pauseBtn.addEventListener("click", () => setQuotesPaused(!quotesPaused));
   }
 
-  quoteController = { refreshQuotes };
+  showQuote(quoteIndexFromUrl());
+  if (!reduceMotion) restartAuto();
+
+  quoteController = {
+    refreshQuotes,
+    syncPauseLabel() {
+      if (!pauseBtn || reduceMotion) return;
+      const key = quotesPaused ? "about.quotes_play" : "about.quotes_pause";
+      pauseBtn.textContent = window.DutamI18n ? window.DutamI18n.t(key) : pauseBtn.textContent;
+    },
+  };
 }
 
 const language = document.querySelector(".language");
@@ -233,6 +283,9 @@ function applyLanguage(lang) {
 document.addEventListener("dutam:langchange", (event) => {
   const lang = event.detail && event.detail.lang;
   if (quoteController && lang) quoteController.refreshQuotes(lang);
+  if (quoteController) quoteController.syncPauseLabel();
+  syncMotionLabels();
+  formatPrivacyDate();
 });
 
 if (language && languageBtn && languageMenu) {
@@ -311,20 +364,59 @@ window.addEventListener(
   { passive: true }
 );
 
+const dirtyForms = new Set();
+window.addEventListener("beforeunload", (event) => {
+  if (!dirtyForms.size) return;
+  event.preventDefault();
+  event.returnValue = "";
+});
+
+function clearFieldErrors(form) {
+  form.querySelectorAll(".field-error").forEach((el) => el.remove());
+  form.querySelectorAll("[aria-invalid]").forEach((el) => el.removeAttribute("aria-invalid"));
+}
+
+function showFieldError(field, message) {
+  field.setAttribute("aria-invalid", "true");
+  const error = document.createElement("p");
+  error.className = "field-error";
+  error.textContent = message;
+  if (field.id) {
+    error.id = `${field.id}-error`;
+    field.setAttribute("aria-describedby", error.id);
+  }
+  field.insertAdjacentElement("afterend", error);
+}
+
 function bindForm(form, invalidKey, successKey) {
   if (!form) return;
   const status = form.querySelector(".form-status");
+  form.addEventListener("input", () => {
+    dirtyForms.add(form);
+  });
   form.addEventListener("submit", (event) => {
     event.preventDefault();
     const t = (key, fallback) => (window.DutamI18n ? window.DutamI18n.t(key) : fallback);
+    clearFieldErrors(form);
     if (!form.checkValidity()) {
-      status.hidden = false;
-      status.textContent = t(invalidKey, "Please complete the required fields.");
-      form.reportValidity();
+      const invalid = [...form.querySelectorAll(":invalid")].filter((el) => {
+        if (!el.willValidate) return false;
+        return !el.closest("[hidden]");
+      });
+      const summary = t(invalidKey, "Please complete the required fields.");
+      invalid.forEach((field) => showFieldError(field, field.validationMessage || summary));
+      if (status) {
+        status.hidden = false;
+        status.textContent = summary;
+      }
+      if (invalid[0]) invalid[0].focus();
       return;
     }
-    status.hidden = false;
-    status.textContent = t(successKey, "Thanks.");
+    dirtyForms.delete(form);
+    if (status) {
+      status.hidden = false;
+      status.textContent = t(successKey, "Thanks.");
+    }
     form.reset();
     form.querySelectorAll("[data-other-field]").forEach((select) => syncOtherField(select));
   });
@@ -374,3 +466,53 @@ function syncIndustryMarquee() {
 
 syncIndustryMarquee();
 industryMarqueeMq.addEventListener("change", syncIndustryMarquee);
+
+function motionLabel(key, fallback) {
+  return window.DutamI18n ? window.DutamI18n.t(key) : fallback;
+}
+
+function bindMotionToggle(button, target, pauseKey, playKey) {
+  if (!button || !target) return;
+  button.addEventListener("click", () => {
+    const paused = target.classList.toggle("is-paused");
+    button.setAttribute("aria-pressed", String(paused));
+    button.textContent = motionLabel(paused ? playKey : pauseKey, button.textContent);
+  });
+}
+
+function syncMotionLabels() {
+  document.querySelectorAll("[data-motion-pause], [data-marquee-pause]").forEach((button) => {
+    const paused = button.getAttribute("aria-pressed") === "true";
+    const gallery = button.hasAttribute("data-marquee-pause");
+    const pauseKey = gallery ? "home.marquee_pause" : "home.motion_pause";
+    const playKey = gallery ? "home.marquee_play" : "home.motion_play";
+    button.textContent = motionLabel(paused ? playKey : pauseKey, button.textContent);
+  });
+}
+
+bindMotionToggle(
+  document.querySelector("[data-motion-pause]"),
+  document.querySelector(".connect"),
+  "home.motion_pause",
+  "home.motion_play"
+);
+bindMotionToggle(
+  document.querySelector("[data-marquee-pause]"),
+  document.querySelector(".industry-mosaic"),
+  "home.marquee_pause",
+  "home.marquee_play"
+);
+
+function formatPrivacyDate() {
+  const el = document.querySelector("[data-privacy-updated]");
+  if (!el) return;
+  const date = new Date(`${el.getAttribute("data-privacy-updated")}T00:00:00`);
+  if (Number.isNaN(date.getTime())) return;
+  const lang = document.documentElement.lang || "en";
+  const formatted = new Intl.DateTimeFormat(lang, { month: "long", year: "numeric" }).format(date);
+  const label = window.DutamI18n ? window.DutamI18n.t("privacy.updated_label") : "Last updated";
+  el.textContent = `${label}: ${formatted}`;
+}
+
+syncMotionLabels();
+formatPrivacyDate();

@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#061314" />
     <title data-i18n-title="about.title">About | Dutam Engineering</title>
     <meta
       name="description"
@@ -16,12 +17,13 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css?v=12" />
+    <link rel="stylesheet" href="styles.css?v=13" />
   </head>
   <body class="about-page">
+    <a class="skip-link" href="#content" data-i18n="nav.skip">Skip to content</a>
     <header class="nav">
       <div class="nav-bar">
-        <a class="brand" href="index.html"><img src="assets/Logo.png" alt="Dutam" /></a>
+        <a class="brand" href="index.html"><img src="assets/Logo.png" alt="Dutam" width="556" height="200" fetchpriority="high" translate="no" /></a>
         <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-i18n="nav.menu">
           Menu
         </button>
@@ -30,11 +32,11 @@
           <a href="about.html" aria-current="page" data-i18n="nav.about">About</a>
           <a href="services.html" data-i18n="nav.services">Services</a>
           <a href="careers.html" data-i18n="nav.careers">Careers</a>
-          <a href="contact.html" data-i18n="nav.contact">Contact us</a>
+          <a href="contact.html" data-i18n="nav.contact">Contact Us</a>
         </nav>
         <div class="nav-utils">
           <div class="language">
-            <button class="language-btn" type="button" aria-expanded="false" aria-controls="language-menu">
+            <button class="language-btn" type="button" aria-expanded="false" aria-controls="language-menu" data-i18n-aria="nav.language" aria-label="Language, English">
               <img src="assets/icon-globe.svg" alt="" width="20" height="20" />
               <span data-language-label aria-hidden="true">🇬🇧</span>
               <img src="assets/icon-chevron.svg" alt="" width="20" height="20" />
@@ -51,7 +53,7 @@
       </div>
     </header>
 
-    <main>
+    <main id="content">
       <section class="page-hero">
         <p class="eyebrow" data-i18n="about.eyebrow">About us</p>
         <h1 data-i18n="about.h1">The Engineering Team Behind Your Critical Projects</h1>
@@ -65,7 +67,7 @@
       <p class="about-nums" data-reveal aria-hidden="true"><span>01</span><span>02</span><span>03</span></p>
       <section class="about-split">
         <article data-reveal>
-          <h2><span class="split-num">01</span> <span data-i18n="about.who_title">Who we are</span></h2>
+          <h2><span class="split-num">01</span> <span data-i18n="about.who_title">Who We Are</span></h2>
           <p data-i18n="about.who_p">
             Dutam is an engineering services company of experienced and energetic engineers. We apply
             detailed knowledge across every aspect of design and drafting, providing our clients with
@@ -81,7 +83,7 @@
           </p>
         </article>
         <article data-reveal>
-          <h2><span class="split-num">03</span> <span data-i18n="about.what_title">What we do</span></h2>
+          <h2><span class="split-num">03</span> <span data-i18n="about.what_title">What We Do</span></h2>
           <p data-i18n="about.what_p">
             Dutam specializes in engineering services that meet and often exceed our customer
             expectations. We offer a wide range of CAD-related services in machine building and
@@ -122,7 +124,7 @@
               <article class="goal-card" data-reveal>
                 <h3 data-i18n="about.goal1_h3">Client-Driven Value</h3>
                 <p data-i18n="about.goal1_p">
-                  Every project revolves around your operational success. We don't just deliver
+                  Every project revolves around your operational success. We don’t just deliver
                   deliverables; we build long-term, high-trust partnerships.
                 </p>
               </article>
@@ -154,6 +156,9 @@
               class="goals-image"
               src="assets/about-goals.png"
               alt="Technical drawing with a ruler, pens, and a plotted chart"
+              width="1046"
+              height="697"
+              loading="lazy"
               data-i18n-alt="about.goals_alt"
             />
           </div>
@@ -168,10 +173,10 @@
 
           <div class="quotes-grid">
             <article class="quotes-feature">
-              <div class="quotes-feature-top">
-                <p class="quotes-kicker" data-quote-index></p>
-                <p class="quotes-display" data-quote-display></p>
-                <p class="quotes-full" data-quote-full hidden></p>
+              <div class="quotes-feature-top" aria-live="polite">
+                <p class="quotes-kicker" data-quote-index>Testimonial 01 / 05</p>
+                <p class="quotes-display" data-quote-display>Our cooperation with Dutam is going well. We can find each other easily through digital channels.</p>
+                <p class="quotes-full" data-quote-full hidden>Our cooperation with Dutam is going well. We can find each other easily through digital channels. The English language is well mastered, so communication is smooth. Dutam follows our drawing rules but dares to ask questions about them so that we could improve them together. We notice that Dutam is gaining more experience with our machines, resulting in less questions and more feedback on possible errors in our designs. We feel that Dutam is committed to delivering good work and, if necessary, is willing to go the extra mile. We look forward to a longer cooperation.</p>
               </div>
               <div class="quotes-feature-meta">
                 <button class="quotes-expand" type="button" data-quote-expand aria-expanded="false" data-i18n="about.quotes_expand">
@@ -184,8 +189,9 @@
               <div class="quotes-client">
                 <div>
                   <p class="quotes-kicker" data-i18n="about.quotes_client">Client</p>
-                  <p class="quotes-name" data-quote-name></p>
-                  <p class="quotes-org" data-quote-org></p>
+                  <p class="quotes-name" data-quote-name>Anne Bouwman</p>
+                  <p class="quotes-org" data-quote-org>Viscon Fresh Produce
+The Netherlands</p>
                 </div>
                 <p class="quotes-active"><span class="quotes-dot" aria-hidden="true"></span> <span data-i18n="about.quotes_active">Active</span></p>
               </div>
@@ -201,6 +207,7 @@
               <p class="quotes-kicker" data-i18n="about.quotes_navigate">Navigate</p>
               <div class="quotes-nav-actions">
                 <button type="button" data-quote-prev data-i18n="about.quotes_prev">← Prev</button>
+                <button type="button" data-quote-pause data-i18n="about.quotes_pause" aria-pressed="false">Pause</button>
                 <button type="button" data-quote-next data-i18n="about.quotes_next">Next →</button>
               </div>
             </div>
@@ -211,7 +218,7 @@
       <section class="cta-band about-cta" data-reveal>
         <div class="cta-layout">
           <p data-i18n="about.cta_p">Ready to scope your next package?</p>
-          <a class="btn-apply" href="contact.html" data-i18n="about.cta_btn">Discuss a project</a>
+          <a class="btn-apply" href="contact.html" data-i18n="about.cta_btn">Discuss a Project</a>
         </div>
       </section>
     </main>
@@ -219,10 +226,10 @@
     <footer class="footer">
       <div class="footer-grid">
         <div data-reveal>
-          <h2 data-i18n="footer.company">Dutam Engineering</h2>
+          <h2 data-i18n="footer.company" translate="no">Dutam Engineering</h2>
           <p data-i18n="footer.blurb">
-            Every project we take on is held to the same standard: technically accurate work, delivered
-            on time, and structured to meet your specification.
+            Every project meets the same standard: technically accurate work, delivered
+            on time, and structured to your specification.
           </p>
         </div>
         <div data-reveal>
@@ -236,7 +243,7 @@
         <div data-reveal>
           <h2 data-i18n="footer.contact_heading">Contact Us</h2>
           <p data-i18n="footer.email">Email: info@dutamengineering.com</p>
-          <p data-i18n="footer.phone">Phone: +91 427 455 2439</p>
+          <p data-i18n="footer.phone">Phone: +91&nbsp;427&nbsp;455&nbsp;2439</p>
 
           <ul class="footer-social" data-i18n-aria="footer.social_label" aria-label="Social media">
             <li>
@@ -269,12 +276,12 @@
           <a href="about.html" aria-current="page" data-i18n="nav.about">About</a>
           <a href="services.html" data-i18n="nav.services">Services</a>
           <a href="careers.html" data-i18n="nav.careers">Careers</a>
-          <a href="contact.html" data-i18n="nav.contact">Contact us</a>
+          <a href="contact.html" data-i18n="nav.contact">Contact Us</a>
           <a href="privacy.html" data-i18n="nav.privacy">Privacy Policy</a>
         </nav>
       </div>
     </footer>
-    <script src="i18n.js?v=9"></script>
-    <script src="script.js?v=7"></script>
+    <script src="i18n.js?v=11"></script>
+    <script src="script.js?v=9"></script>
   </body>
 </html>

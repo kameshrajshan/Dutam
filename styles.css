@@ -108,9 +108,13 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: calc(var(--space-96) + env(safe-area-inset-top));
   -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
   overflow-x: clip;
+  color-scheme: dark;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: color-mix(in srgb, var(--color-teal-500) 35%, transparent);
 }
 
 body {
@@ -120,6 +124,32 @@ body {
   color: var(--color-text);
   background: linear-gradient(180deg, var(--color-bg) 0%, var(--color-bg-elevated) 100%);
   min-height: 100vh;
+  padding-left: env(safe-area-inset-left);
+  padding-right: env(safe-area-inset-right);
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+.skip-link {
+  position: absolute;
+  left: max(var(--space-16), env(safe-area-inset-left));
+  top: env(safe-area-inset-top);
+  z-index: 40;
+  padding: var(--space-12) var(--space-16);
+  background: var(--color-teal-500);
+  color: var(--color-teal-950);
+  font-weight: var(--font-weight-semibold);
+  transform: translateY(-150%);
+}
+
+.skip-link:focus-visible {
+  transform: none;
+}
+
+#content,
+#top,
+#services,
+#contact {
+  scroll-margin-top: calc(var(--space-96) + env(safe-area-inset-top));
 }
 
 img {
@@ -156,6 +186,7 @@ textarea {
   z-index: 20;
   display: flex;
   justify-content: center;
+  padding-top: env(safe-area-inset-top);
   background: color-mix(in srgb, var(--color-bg) 92%, transparent);
   transition: transform var(--motion-base) var(--motion-ease-standard);
 }
@@ -202,7 +233,9 @@ textarea {
 }
 
 .nav-links a:hover,
-.brand:hover {
+.nav-links a:focus-visible,
+.brand:hover,
+.brand:focus-visible {
   color: var(--teal-500);
 }
 
@@ -228,6 +261,12 @@ textarea {
   background: transparent;
   color: var(--color-text);
   cursor: pointer;
+}
+
+.language-btn:hover,
+.language-btn:focus-visible {
+  border-color: var(--color-accent-hover);
+  color: var(--color-accent-hover);
 }
 
 .language-btn span {
@@ -261,7 +300,8 @@ textarea {
   border-radius: var(--radius-md);
 }
 
-.language-menu button:hover {
+.language-menu button:hover,
+.language-menu button:focus-visible {
   background: var(--teal-800);
 }
 
@@ -278,6 +318,12 @@ textarea {
   padding: var(--space-8) var(--space-16);
 }
 
+.nav-toggle:hover,
+.nav-toggle:focus-visible {
+  border-color: var(--color-accent-hover);
+  color: var(--color-accent-hover);
+}
+
 .btn {
   display: inline-flex;
   align-items: center;
@@ -290,15 +336,18 @@ textarea {
   transition: transform var(--motion-fast) var(--motion-ease-standard), background-color var(--motion-fast) var(--motion-ease-standard), border-color var(--motion-fast) var(--motion-ease-standard), color var(--motion-fast) var(--motion-ease-standard);
 }
 
-.btn:hover:not(.btn-login) {
+.btn:hover:not(.btn-login),
+.btn:focus-visible:not(.btn-login) {
   transform: translateY(-2px);
 }
 
-.btn-primary:hover {
+.btn-primary:hover,
+.btn-primary:focus-visible {
   background: var(--color-accent-hover);
 }
 
-.btn-ghost:hover {
+.btn-ghost:hover,
+.btn-ghost:focus-visible {
   background: color-mix(in srgb, var(--color-teal-500) 14%, transparent);
 }
 
@@ -325,7 +374,8 @@ textarea {
   font-weight: var(--font-weight-regular);
 }
 
-.btn-login:hover {
+.btn-login:hover,
+.btn-login:focus-visible {
   background: var(--teal-500);
   color: var(--teal-950);
   transform: none;
@@ -364,6 +414,7 @@ textarea {
   font-weight: var(--font-weight-regular);
   line-height: 0.98;
   letter-spacing: var(--font-tracking-display);
+  text-wrap: balance;
 }
 
 .lede {
@@ -418,6 +469,7 @@ textarea {
   font-weight: var(--font-weight-medium);
   line-height: var(--font-line-height-h5);
   color: var(--black);
+  font-variant-numeric: tabular-nums;
 }
 
 .track dd {
@@ -508,6 +560,13 @@ textarea {
   transition: opacity 0.6s ease, transform 0.9s ease;
 }
 
+@media (prefers-reduced-motion: reduce) {
+  .service-visual img {
+    transition: none;
+    transform: none;
+  }
+}
+
 .service-visual img.is-active {
   opacity: 1;
   transform: scale(1);
@@ -596,7 +655,6 @@ textarea {
 .service-copy {
   display: grid;
   grid-template-rows: 0fr;
-  transition: grid-template-rows 0.4s ease;
 }
 
 .service-item.is-open .service-copy {
@@ -686,7 +744,7 @@ textarea {
   padding: 20px 0;
   margin-bottom: var(--space-32);
   border-bottom: 1px solid var(--teal-500);
-  transition: padding-left var(--motion-base) var(--motion-ease-standard);
+  transition: transform var(--motion-base) var(--motion-ease-standard);
 }
 
 .industries li:last-child a {
@@ -695,7 +753,7 @@ textarea {
 
 .industries a:hover,
 .industries a:focus-visible {
-  padding-left: 10px;
+  transform: translateX(10px);
 }
 
 .num,
@@ -776,6 +834,38 @@ textarea {
   line-height: var(--font-line-height-h5);
 }
 
+.motion-toggle,
+.marquee-pause {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: var(--size-tap);
+  margin-top: var(--space-16);
+  margin-left: var(--space-16);
+  padding: 0 var(--space-16);
+  border: var(--sds-size-stroke-border) solid var(--color-border);
+  border-radius: var(--radius-pill);
+  background: color-mix(in srgb, var(--color-bg) 72%, transparent);
+  color: var(--color-text);
+  cursor: pointer;
+}
+
+.motion-toggle:hover,
+.motion-toggle:focus-visible,
+.marquee-pause:hover,
+.marquee-pause:focus-visible {
+  border-color: var(--color-accent-hover);
+  color: var(--color-accent-hover);
+}
+
+.marquee-pause {
+  display: none;
+}
+
+.motion .connect.is-paused::before {
+  animation-play-state: paused;
+}
+
 .form {
   width: min(519px, 100%);
   background: var(--teal-950);
@@ -810,13 +900,13 @@ textarea {
   font-size: var(--font-size-body);
   font-weight: 300;
   line-height: normal;
-  transition: box-shadow var(--motion-fast) var(--motion-ease-standard);
+  transition: outline-color var(--motion-fast) var(--motion-ease-standard);
 }
 
-.form input:not([type="checkbox"]):focus,
-.form textarea:focus {
-  outline: none;
-  box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-teal-500) 55%, transparent);
+.form input:not([type="checkbox"]):focus-visible,
+.form textarea:focus-visible {
+  outline: 3px solid var(--color-teal-800);
+  outline-offset: 2px;
 }
 
 .form input::placeholder,
@@ -831,11 +921,19 @@ textarea {
 
 .check {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
   gap: var(--sds-size-space-300);
   margin: 4px 0 0;
   font-size: var(--font-size-body);
   line-height: var(--font-line-height-body);
+}
+
+.check label {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--sds-size-space-300);
+  cursor: pointer;
 }
 
 .check input {
@@ -850,8 +948,11 @@ textarea {
   margin: 0;
 }
 
-.check label {
-  cursor: pointer;
+.field-error {
+  margin: 0;
+  color: #ffc9c9;
+  font-size: var(--font-size-caption);
+  line-height: var(--font-line-height-caption);
 }
 
 .check a {
@@ -1193,8 +1294,18 @@ textarea {
   }
 
   .industry-mosaic:hover .industry-track,
-  .industry-mosaic:focus-within .industry-track {
+  .industry-mosaic:focus-within .industry-track,
+  .industry-mosaic.is-paused .industry-track {
     animation-play-state: paused;
+  }
+
+  .marquee-pause {
+    display: inline-flex;
+    position: absolute;
+    z-index: 2;
+    right: var(--space-12);
+    bottom: var(--space-12);
+    margin: 0;
   }
 
   .industry-mosaic img,
@@ -1363,6 +1474,10 @@ textarea {
 }
 
 @media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
   .motion .hero-copy > *,
   .motion .hub-hero > *,
   .motion .page-hero > *,
@@ -1408,6 +1523,7 @@ textarea {
   font-size: var(--font-size-h1);
   font-weight: var(--font-weight-regular);
   line-height: normal;
+  text-wrap: balance;
 }
 
 .page-hero .lede {
@@ -1489,7 +1605,8 @@ textarea {
   text-decoration: none;
 }
 
-.detail-back:hover {
+.detail-back:hover,
+.detail-back:focus-visible {
   color: var(--color-teal-400);
 }
 
@@ -1556,7 +1673,8 @@ textarea {
     color var(--motion-fast) var(--motion-ease-standard);
 }
 
-.detail-related-link:hover {
+.detail-related-link:hover,
+.detail-related-link:focus-visible {
   border-color: var(--color-teal-500);
   color: var(--color-teal-500);
 }
@@ -1743,9 +1861,10 @@ textarea {
   color: var(--neutral-400);
 }
 
-.field input:focus,
-.field select:focus {
-  outline: none;
+.field input:focus-visible,
+.field select:focus-visible {
+  outline: 2px solid var(--teal-500);
+  outline-offset: 2px;
   border-color: var(--teal-500);
 }
 
@@ -1781,7 +1900,8 @@ textarea {
   line-height: var(--font-line-height-body);
 }
 
-.btn-apply:hover {
+.btn-apply:hover,
+.btn-apply:focus-visible {
   background: var(--color-accent-hover);
 }
 
@@ -1899,6 +2019,7 @@ textarea {
   font-size: var(--font-size-h1);
   font-weight: var(--font-weight-regular);
   line-height: normal;
+  text-wrap: balance;
 }
 
 .hub-hero .lede {
@@ -1950,14 +2071,15 @@ textarea {
 }
 
 .motion .info-card.is-in {
-  transition: opacity 0.8s ease, transform 0.8s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.25s ease, background-color 0.25s ease, border-color 0.25s ease;
+  transition: opacity 0.8s ease, transform 0.8s cubic-bezier(0.22, 1, 0.36, 1), background-color 0.25s ease, border-color 0.25s ease;
 }
 
 .info-card:hover,
-.motion .info-card.is-in:hover {
+.info-card:focus-visible,
+.motion .info-card.is-in:hover,
+.motion .info-card.is-in:focus-visible {
   background: color-mix(in srgb, var(--color-teal-500) 12%, transparent);
   border-color: var(--color-teal-500);
-  box-shadow: 0 16px 32px color-mix(in srgb, var(--color-ink) 28%, transparent);
   transform: translateY(-2px);
 }
 
@@ -1966,7 +2088,8 @@ textarea {
   transition: transform var(--motion-fast) var(--motion-ease-standard);
 }
 
-.info-card:hover .more {
+.info-card:hover .more,
+.info-card:focus-visible .more {
   transform: translateX(6px);
 }
 
@@ -2594,7 +2717,8 @@ textarea {
   transition: transform var(--motion-fast) var(--motion-ease-standard), background-color var(--motion-fast) var(--motion-ease-standard);
 }
 
-.btn-apply:hover {
+.btn-apply:hover,
+.btn-apply:focus-visible {
   transform: translateY(-2px);
 }
 

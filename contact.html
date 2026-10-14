@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#061314" />
     <title data-i18n-title="contact.title">Contact | Dutam Engineering</title>
     <meta
       name="description"
@@ -16,12 +17,13 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css?v=12" />
+    <link rel="stylesheet" href="styles.css?v=13" />
   </head>
   <body class="contact-page">
+    <a class="skip-link" href="#content" data-i18n="nav.skip">Skip to content</a>
     <header class="nav">
       <div class="nav-bar">
-        <a class="brand" href="index.html"><img src="assets/Logo.png" alt="Dutam" /></a>
+        <a class="brand" href="index.html"><img src="assets/Logo.png" alt="Dutam" width="556" height="200" fetchpriority="high" translate="no" /></a>
         <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-i18n="nav.menu">
           Menu
         </button>
@@ -30,11 +32,11 @@
           <a href="about.html" data-i18n="nav.about">About</a>
           <a href="services.html" data-i18n="nav.services">Services</a>
           <a href="careers.html" data-i18n="nav.careers">Careers</a>
-          <a href="contact.html" aria-current="page" data-i18n="nav.contact">Contact us</a>
+          <a href="contact.html" aria-current="page" data-i18n="nav.contact">Contact Us</a>
         </nav>
         <div class="nav-utils">
           <div class="language">
-            <button class="language-btn" type="button" aria-expanded="false" aria-controls="language-menu">
+            <button class="language-btn" type="button" aria-expanded="false" aria-controls="language-menu" data-i18n-aria="nav.language" aria-label="Language, English">
               <img src="assets/icon-globe.svg" alt="" width="20" height="20" />
               <span data-language-label aria-hidden="true">🇬🇧</span>
               <img src="assets/icon-chevron.svg" alt="" width="20" height="20" />
@@ -51,7 +53,7 @@
       </div>
     </header>
 
-    <main>
+    <main id="content">
       <section class="page-hero">
         <p class="eyebrow" data-i18n="contact.eyebrow">Contact</p>
         <h1 data-i18n="contact.h1">Let’s Discuss Your Engineering Scope</h1>
@@ -66,21 +68,21 @@
           <div class="field-grid">
             <div class="field">
               <label for="name" data-i18n="contact.label_name">Name</label>
-              <input id="name" name="name" type="text" placeholder="Your name" data-i18n-placeholder="contact.ph_name" autocomplete="name" required />
+              <input id="name" name="name" type="text" placeholder="Jordan Lee…" data-i18n-placeholder="contact.ph_name" autocomplete="name" required />
             </div>
             <div class="field">
               <label for="company" data-i18n="contact.label_company">Company</label>
-              <input id="company" name="company" type="text" placeholder="Company name" data-i18n-placeholder="contact.ph_company" autocomplete="organization" required />
+              <input id="company" name="company" type="text" placeholder="Northwind…" data-i18n-placeholder="contact.ph_company" autocomplete="organization" required />
             </div>
           </div>
           <div class="field-grid">
             <div class="field">
               <label for="email" data-i18n="contact.label_email">Email</label>
-              <input id="email" name="email" type="email" placeholder="you@company.com" data-i18n-placeholder="contact.ph_email" autocomplete="email" required />
+              <input id="email" name="email" type="email" placeholder="ada@company.com…" data-i18n-placeholder="contact.ph_email" autocomplete="email" spellcheck="false" required />
             </div>
             <div class="field">
               <label for="phone" data-i18n="contact.label_phone">Phone</label>
-              <input id="phone" name="phone" type="tel" placeholder="+91 …" data-i18n-placeholder="contact.ph_phone" autocomplete="tel" required />
+              <input id="phone" name="phone" type="tel" placeholder="+91 427 455 2439…" data-i18n-placeholder="contact.ph_phone" autocomplete="tel" inputmode="tel" required />
             </div>
           </div>
           <div class="field-grid">
@@ -96,7 +98,7 @@
               </select>
               <div class="field-other" id="industry-other-wrap" hidden>
                 <label for="industry-other" data-i18n="contact.label_other">Please specify</label>
-                <input id="industry-other" name="industry_other" type="text" placeholder="Your industry" data-i18n-placeholder="contact.ph_other_industry" autocomplete="off" />
+                <input id="industry-other" name="industry_other" type="text" placeholder="Marine equipment…" data-i18n-placeholder="contact.ph_other_industry" autocomplete="off" />
               </div>
             </div>
             <div class="field">
@@ -113,15 +115,15 @@
               </select>
               <div class="field-other" id="services-other-wrap" hidden>
                 <label for="services-other" data-i18n="contact.label_other">Please specify</label>
-                <input id="services-other" name="services_other" type="text" placeholder="Your service need" data-i18n-placeholder="contact.ph_other_services" autocomplete="off" />
+                <input id="services-other" name="services_other" type="text" placeholder="Piping isometrics…" data-i18n-placeholder="contact.ph_other_services" autocomplete="off" />
               </div>
             </div>
           </div>
           <div class="field">
             <label for="scope" data-i18n="contact.label_scope">Brief scope</label>
-            <input id="scope" name="scope" type="text" placeholder="Standards, deliverables, timeline…" data-i18n-placeholder="contact.ph_scope" required />
+            <input id="scope" name="scope" type="text" placeholder="Standards, deliverables, timeline…" data-i18n-placeholder="contact.ph_scope" autocomplete="off" required />
           </div>
-          <button class="btn btn-apply" type="submit" data-i18n="contact.submit">Send message</button>
+          <button class="btn btn-apply" type="submit" data-i18n="contact.submit">Send Message</button>
           <p class="form-status" role="status" hidden></p>
         </form>
         <aside class="office" data-reveal>
@@ -136,10 +138,10 @@
     <footer class="footer">
       <div class="footer-grid">
         <div data-reveal>
-          <h2 data-i18n="footer.company">Dutam Engineering</h2>
+          <h2 data-i18n="footer.company" translate="no">Dutam Engineering</h2>
           <p data-i18n="footer.blurb">
-            Every project we take on is held to the same standard: technically accurate work, delivered
-            on time, and structured to meet your specification.
+            Every project meets the same standard: technically accurate work, delivered
+            on time, and structured to your specification.
           </p>
         </div>
         <div data-reveal>
@@ -153,7 +155,7 @@
         <div data-reveal>
           <h2 data-i18n="footer.contact_heading">Contact Us</h2>
           <p data-i18n="footer.email">Email: info@dutamengineering.com</p>
-          <p data-i18n="footer.phone">Phone: +91 427 455 2439</p>
+          <p data-i18n="footer.phone">Phone: +91&nbsp;427&nbsp;455&nbsp;2439</p>
 
           <ul class="footer-social" data-i18n-aria="footer.social_label" aria-label="Social media">
             <li>
@@ -186,12 +188,12 @@
           <a href="about.html" data-i18n="nav.about">About</a>
           <a href="services.html" data-i18n="nav.services">Services</a>
           <a href="careers.html" data-i18n="nav.careers">Careers</a>
-          <a href="contact.html" aria-current="page" data-i18n="nav.contact">Contact us</a>
+          <a href="contact.html" aria-current="page" data-i18n="nav.contact">Contact Us</a>
           <a href="privacy.html" data-i18n="nav.privacy">Privacy Policy</a>
         </nav>
       </div>
     </footer>
-    <script src="i18n.js?v=9"></script>
-    <script src="script.js?v=7"></script>
+    <script src="i18n.js?v=11"></script>
+    <script src="script.js?v=9"></script>
   </body>
 </html>

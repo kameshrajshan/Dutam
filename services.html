@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#061314" />
     <title data-i18n-title="services.title">Services | Dutam Engineering</title>
     <meta
       name="description"
@@ -16,12 +17,13 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css?v=12" />
+    <link rel="stylesheet" href="styles.css?v=13" />
   </head>
   <body class="services-page">
+    <a class="skip-link" href="#content" data-i18n="nav.skip">Skip to content</a>
     <header class="nav">
       <div class="nav-bar">
-        <a class="brand" href="index.html"><img src="assets/Logo.png" alt="Dutam" /></a>
+        <a class="brand" href="index.html"><img src="assets/Logo.png" alt="Dutam" width="556" height="200" fetchpriority="high" translate="no" /></a>
         <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-i18n="nav.menu">
           Menu
         </button>
@@ -30,11 +32,11 @@
           <a href="about.html" data-i18n="nav.about">About</a>
           <a href="services.html" aria-current="page" data-i18n="nav.services">Services</a>
           <a href="careers.html" data-i18n="nav.careers">Careers</a>
-          <a href="contact.html" data-i18n="nav.contact">Contact us</a>
+          <a href="contact.html" data-i18n="nav.contact">Contact Us</a>
         </nav>
         <div class="nav-utils">
           <div class="language">
-            <button class="language-btn" type="button" aria-expanded="false" aria-controls="language-menu">
+            <button class="language-btn" type="button" aria-expanded="false" aria-controls="language-menu" data-i18n-aria="nav.language" aria-label="Language, English">
               <img src="assets/icon-globe.svg" alt="" width="20" height="20" />
               <span data-language-label aria-hidden="true">🇬🇧</span>
               <img src="assets/icon-chevron.svg" alt="" width="20" height="20" />
@@ -51,7 +53,7 @@
       </div>
     </header>
 
-    <main>
+    <main id="content">
       <section class="page-hero hub-hero">
         <p class="eyebrow" data-i18n="services.eyebrow">Services</p>
         <h1 data-i18n="services.h1">Multidisciplinary Engineering. Uncompromised Detail.</h1>
@@ -65,24 +67,24 @@
         <h2 data-reveal data-i18n="services.industries_h2">Industries</h2>
         <div class="card-row">
           <a class="info-card" data-reveal href="industries/machine-building.html">
-            <h3 data-i18n="services.ind1_h3">Machine building</h3>
+            <h3 data-i18n="services.ind1_h3">Machine Building</h3>
             <p data-i18n="services.ind1_p">Equipment and machinery packages that need clean 3D models.</p>
-            <span class="more" data-i18n="services.learn_more">Learn more →</span>
+            <span class="more" data-i18n="services.ind1_more">View Machine Building</span>
           </a>
           <a class="info-card" data-reveal href="industries/construction.html">
             <h3 data-i18n="services.ind2_h3">Construction</h3>
             <p data-i18n="services.ind2_p">Structural support where steel, RCC, MEP must stay aligned.</p>
-            <span class="more" data-i18n="services.learn_more">Learn more →</span>
+            <span class="more" data-i18n="services.ind2_more">View Construction</span>
           </a>
           <a class="info-card" data-reveal href="industries/oil-energy.html">
-            <h3 data-i18n="services.ind3_h3">Oil &amp; energy</h3>
+            <h3 data-i18n="services.ind3_h3">Oil &amp; Energy</h3>
             <p data-i18n="services.ind3_p">Energy facility documentation with multidisciplinary interface control.</p>
-            <span class="more" data-i18n="services.learn_more">Learn more →</span>
+            <span class="more" data-i18n="services.ind3_more">View Oil &amp; Energy</span>
           </a>
           <a class="info-card" data-reveal href="industries/plant-processing.html">
             <h3 data-i18n="services.ind4_h3">Plant &amp; Processing</h3>
             <p class="sm" data-i18n="services.ind4_p">Plant layouts, piping and equipment arrangements, industrial platform and tank design.</p>
-            <span class="more" data-i18n="services.learn_more">Learn more →</span>
+            <span class="more" data-i18n="services.ind4_more">View Plant &amp; Processing</span>
           </a>
         </div>
       </section>
@@ -93,34 +95,34 @@
           <a class="info-card" data-reveal href="capabilities/3d-modelling-drafting.html">
             <h3 data-i18n="services.cap1_h3">3D Modelling &amp; Drafting</h3>
             <p data-i18n="services.cap1_p">Models and drawing sets fabrication and assembly can follow without guesswork.</p>
-            <span class="more" data-i18n="services.learn_more">Learn more →</span>
+            <span class="more" data-i18n="services.cap1_more">View 3D Modelling</span>
           </a>
           <a class="info-card" data-reveal href="capabilities/cad-customization.html">
             <h3 data-i18n="services.cap2_h3">CAD Customization</h3>
             <p data-i18n="services.cap2_p">Automation, APIs, and interfaces so engineers spend time on decisions, not clicks.</p>
-            <span class="more" data-i18n="services.learn_more">Learn more →</span>
+            <span class="more" data-i18n="services.cap2_more">View CAD Customization</span>
           </a>
           <a class="info-card" data-reveal href="capabilities/steel-detailing.html">
             <h3 data-i18n="services.cap3_h3">Steel Detailing</h3>
             <p data-i18n="services.cap3_p">Structural detailing and connection-aware packages to major standards.</p>
-            <span class="more" data-i18n="services.learn_more">Learn more →</span>
+            <span class="more" data-i18n="services.cap3_more">View Steel Detailing</span>
           </a>
         </div>
         <div class="card-row caps">
           <a class="info-card" data-reveal href="capabilities/bim-consulting.html">
             <h3 data-i18n="services.cap4_h3">BIM Consulting</h3>
             <p data-i18n="services.cap4_p">Coordination support across RCC, HVAC, MEP, and structure.</p>
-            <span class="more" data-i18n="services.learn_more">Learn more →</span>
+            <span class="more" data-i18n="services.cap4_more">View BIM Consulting</span>
           </a>
           <a class="info-card" data-reveal href="capabilities/documentation-standardization.html">
             <h3 data-i18n="services.cap5_h3">Documentation &amp; Standardization</h3>
             <p data-i18n="services.cap5_p">Templates and PDM/PLM-minded workflows that survive the next revision.</p>
-            <span class="more" data-i18n="services.learn_more">Learn more →</span>
+            <span class="more" data-i18n="services.cap5_more">View Documentation</span>
           </a>
           <a class="info-card" data-reveal href="capabilities/plant-engineering-design.html">
             <h3 data-i18n="services.cap6_h3">Plant Engineering Design</h3>
             <p data-i18n="services.cap6_p">Multidisciplinary plant design with careful interface discipline.</p>
-            <span class="more" data-i18n="services.learn_more">Learn more →</span>
+            <span class="more" data-i18n="services.cap6_more">View Plant Engineering</span>
           </a>
         </div>
       </section>
@@ -130,10 +132,10 @@
     <footer class="footer">
       <div class="footer-grid">
         <div data-reveal>
-          <h2 data-i18n="footer.company">Dutam Engineering</h2>
+          <h2 data-i18n="footer.company" translate="no">Dutam Engineering</h2>
           <p data-i18n="footer.blurb">
-            Every project we take on is held to the same standard: technically accurate work, delivered
-            on time, and structured to meet your specification.
+            Every project meets the same standard: technically accurate work, delivered
+            on time, and structured to your specification.
           </p>
         </div>
         <div data-reveal>
@@ -147,7 +149,7 @@
         <div data-reveal>
           <h2 data-i18n="footer.contact_heading">Contact Us</h2>
           <p data-i18n="footer.email">Email: info@dutamengineering.com</p>
-          <p data-i18n="footer.phone">Phone: +91 427 455 2439</p>
+          <p data-i18n="footer.phone">Phone: +91&nbsp;427&nbsp;455&nbsp;2439</p>
 
           <ul class="footer-social" data-i18n-aria="footer.social_label" aria-label="Social media">
             <li>
@@ -180,12 +182,12 @@
           <a href="about.html" data-i18n="nav.about">About</a>
           <a href="services.html" aria-current="page" data-i18n="nav.services">Services</a>
           <a href="careers.html" data-i18n="nav.careers">Careers</a>
-          <a href="contact.html" data-i18n="nav.contact">Contact us</a>
+          <a href="contact.html" data-i18n="nav.contact">Contact Us</a>
           <a href="privacy.html" data-i18n="nav.privacy">Privacy Policy</a>
         </nav>
       </div>
     </footer>
-    <script src="i18n.js?v=9"></script>
-    <script src="script.js?v=7"></script>
+    <script src="i18n.js?v=11"></script>
+    <script src="script.js?v=9"></script>
   </body>
 </html>
