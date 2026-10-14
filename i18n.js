@@ -117,7 +117,7 @@
     "home.alt_svc2": "Hands reviewing technical drawings on a desk",
     "home.alt_svc3": "Steel framework of an industrial structure",
     "home.alt_svc4": "Engineer working at a dual-monitor workstation",
-    "home.alt_svc5": "Architect scale and drafting tools on technical drawings",
+    "home.alt_svc5": "Person checking document checklists beside a laptop",
     "home.alt_svc6": "Daylight view of industrial plant towers and piping",
     "home.alt_eng": "Close view of an engine camshaft and valves",
     "home.alt_pipes": "Industrial piping and valves",
@@ -717,7 +717,7 @@
     "home.alt_svc3": "Staalskelet van een industriële constructie",
     "home.alt_svc4": "Engineer aan een werkplek met dubbele monitors",
     "home.alt_svc5":
-      "Architectenschaal en tekengereedschap op technische tekeningen",
+      "Persoon die documentchecklists naast een laptop afvinkt",
     "home.alt_svc6":
       "Daglichtzicht op industriële planttorens en leidingwerk",
     "home.alt_eng": "Close-up van een motor-nokkenas en kleppen",
@@ -1321,7 +1321,7 @@
     "home.alt_svc3": "Stahlgerüst einer Industrieanlage",
     "home.alt_svc4": "Ingenieur an einem Dual-Monitor-Arbeitsplatz",
     "home.alt_svc5":
-      "Architektmaßstab und Zeichengeräte auf technischen Zeichnungen",
+      "Person hakt Dokumenten-Checklisten neben einem Laptop ab",
     "home.alt_svc6":
       "Tageslichtaufnahme industrieller Anlagentürme und Rohrleitungen",
     "home.alt_eng": "Nahaufnahme einer Motornockenwelle und Ventile",
@@ -1930,7 +1930,7 @@
     "home.alt_svc3": "Charpente en acier d’une structure industrielle",
     "home.alt_svc4": "Ingénieur à un poste de travail double écran",
     "home.alt_svc5":
-      "Échelle d’architecte et outils de dessin sur des plans techniques",
+      "Personne qui coche des listes de documents à côté d’un ordinateur portable",
     "home.alt_svc6":
       "Vue de jour de tours d’usine industrielle et de tuyauterie",
     "home.alt_eng": "Vue rapprochée d’un arbre à cames et de soupapes",
