@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#061314" />
     <title data-i18n-title="detail.ind_construction.title">Construction | Dutam Engineering</title>
     <meta
       name="description"
@@ -16,12 +17,13 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="../styles.css?v=12" />
+    <link rel="stylesheet" href="../styles.css?v=13" />
   </head>
   <body class="detail-page">
+    <a class="skip-link" href="#content" data-i18n="nav.skip">Skip to content</a>
     <header class="nav">
       <div class="nav-bar">
-        <a class="brand" href="../index.html"><img src="../assets/Logo.png" alt="Dutam" /></a>
+        <a class="brand" href="../index.html"><img src="../assets/Logo.png" alt="Dutam" width="556" height="200" fetchpriority="high" translate="no" /></a>
         <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-i18n="nav.menu">
           Menu
         </button>
@@ -30,11 +32,11 @@
           <a href="../about.html" data-i18n="nav.about">About</a>
           <a href="../services.html" aria-current="page" data-i18n="nav.services">Services</a>
           <a href="../careers.html" data-i18n="nav.careers">Careers</a>
-          <a href="../contact.html" data-i18n="nav.contact">Contact us</a>
+          <a href="../contact.html" data-i18n="nav.contact">Contact Us</a>
         </nav>
         <div class="nav-utils">
           <div class="language">
-            <button class="language-btn" type="button" aria-expanded="false" aria-controls="language-menu">
+            <button class="language-btn" type="button" aria-expanded="false" aria-controls="language-menu" data-i18n-aria="nav.language" aria-label="Language, English">
               <img src="../assets/icon-globe.svg" alt="" width="20" height="20" />
               <span data-language-label aria-hidden="true">🇬🇧</span>
               <img src="../assets/icon-chevron.svg" alt="" width="20" height="20" />
@@ -51,7 +53,7 @@
       </div>
     </header>
 
-    <main>
+    <main id="content">
       <section class="page-hero detail-hero">
         <a class="detail-back" href="../services.html" data-i18n="detail.shared.back">← All services</a>
         <p class="eyebrow" data-i18n="detail.ind_construction.eyebrow">Industry</p>
@@ -99,7 +101,7 @@
       <section class="cta-band about-cta" data-reveal>
         <div class="cta-layout">
           <p data-i18n="detail.ind_construction.cta">Scope a construction engineering package</p>
-          <a class="btn-apply" href="../contact.html" data-i18n="about.cta_btn">Discuss a project</a>
+          <a class="btn-apply" href="../contact.html" data-i18n="about.cta_btn">Discuss a Project</a>
         </div>
       </section>
     </main>
@@ -107,10 +109,10 @@
     <footer class="footer">
       <div class="footer-grid">
         <div data-reveal>
-          <h2 data-i18n="footer.company">Dutam Engineering</h2>
+          <h2 data-i18n="footer.company" translate="no">Dutam Engineering</h2>
           <p data-i18n="footer.blurb">
-            Every project we take on is held to the same standard: technically accurate work, delivered
-            on time, and structured to meet your specification.
+            Every project meets the same standard: technically accurate work, delivered
+            on time, and structured to your specification.
           </p>
         </div>
         <div data-reveal>
@@ -124,7 +126,7 @@
         <div data-reveal>
           <h2 data-i18n="footer.contact_heading">Contact Us</h2>
           <p data-i18n="footer.email">Email: info@dutamengineering.com</p>
-          <p data-i18n="footer.phone">Phone: +91 427 455 2439</p>
+          <p data-i18n="footer.phone">Phone: +91&nbsp;427&nbsp;455&nbsp;2439</p>
 
           <ul class="footer-social" data-i18n-aria="footer.social_label" aria-label="Social media">
             <li>
@@ -157,12 +159,12 @@
           <a href="../about.html" data-i18n="nav.about">About</a>
           <a href="../services.html" aria-current="page" data-i18n="nav.services">Services</a>
           <a href="../careers.html" data-i18n="nav.careers">Careers</a>
-          <a href="../contact.html" data-i18n="nav.contact">Contact us</a>
+          <a href="../contact.html" data-i18n="nav.contact">Contact Us</a>
           <a href="../privacy.html" data-i18n="nav.privacy">Privacy Policy</a>
         </nav>
       </div>
     </footer>
-    <script src="../i18n.js?v=9"></script>
-    <script src="../script.js?v=7"></script>
+    <script src="../i18n.js?v=11"></script>
+    <script src="../script.js?v=9"></script>
   </body>
 </html>
