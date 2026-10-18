@@ -277,7 +277,9 @@ textarea {
 .language-menu {
   position: absolute;
   top: calc(100% + 8px);
-  right: 0;
+  left: 50%;
+  z-index: 2;
+  transform: translateX(-50%);
   margin: 0;
   padding: var(--space-8);
   list-style: none;
@@ -1156,13 +1158,6 @@ textarea {
     justify-content: center;
     padding: 12px 16px;
     gap: var(--space-8);
-  }
-
-  .language-menu {
-    left: 50%;
-    right: auto;
-    transform: translateX(-50%);
-    z-index: 2;
   }
 
   .btn-login {
