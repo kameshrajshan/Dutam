@@ -1,0 +1,37 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "flat-type-hierarchy",
+        "value": "*",
+        "files": [
+          "careers.html",
+          "contact.html",
+          "index.html"
+        ],
+        "createdAt": "2026-10-24T06:39:40.095Z",
+        "reason": "Agent: incumbent type scale; user asked to preserve identity. Harden is not typeset."
+      },
+      {
+        "rule": "flat-type-hierarchy",
+        "value": "*",
+        "files": [
+          "*.html"
+        ],
+        "createdAt": "2026-10-24T06:40:33.312Z",
+        "reason": "Agent: incumbent type scale on every page; user asked to preserve identity. Harden is not typeset."
+      },
+      {
+        "rule": "marketing-buzzword",
+        "value": "*",
+        "files": [
+          "careers.html"
+        ],
+        "createdAt": "2026-10-24T06:41:10.784Z",
+        "reason": "Agent: incumbent careers copy uses cutting-edge; user asked to preserve identity. Harden is not a copy rewrite."
+      }
+    ]
+  }
+}
