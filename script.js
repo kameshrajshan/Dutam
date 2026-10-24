@@ -19,6 +19,11 @@ function openService(index, updateUrl) {
     const open = i === index;
     item.classList.toggle("is-open", open);
     item.querySelector("button").setAttribute("aria-expanded", String(open));
+    const copy = item.querySelector(".service-copy");
+    if (copy) {
+      copy.setAttribute("aria-hidden", String(!open));
+      copy.inert = !open;
+    }
   });
   serviceImages.forEach((image, i) => {
     const active = i === index;
@@ -203,7 +208,10 @@ if (quoteRoot) {
     nameEl.textContent = item.name;
     orgEl.textContent = item.org;
     voiceButtons.forEach((button, i) => {
-      button.classList.toggle("is-active", i === quoteIndex);
+      const active = i === quoteIndex;
+      button.classList.toggle("is-active", active);
+      if (active) button.setAttribute("aria-current", "true");
+      else button.removeAttribute("aria-current");
     });
     setExpanded(false);
     if (userDriven) {
@@ -521,11 +529,13 @@ bindForm(document.querySelector("#contact-form"), "form.invalid_required");
 
 const industryTrack = document.querySelector(".industry-track");
 const industryMarqueeMq = window.matchMedia("(max-width: 760px)");
+const industryHoverMq = window.matchMedia("(hover: hover)");
 
 function syncIndustryMarquee() {
   if (!industryTrack) return;
   const clones = industryTrack.querySelectorAll("[data-marquee-clone]");
-  if (industryMarqueeMq.matches) {
+  const loop = industryMarqueeMq.matches && industryHoverMq.matches && !reduceMotion;
+  if (loop) {
     if (clones.length) return;
     [...industryTrack.querySelectorAll("img")].forEach((img) => {
       const clone = img.cloneNode(true);
@@ -541,6 +551,7 @@ function syncIndustryMarquee() {
 
 syncIndustryMarquee();
 industryMarqueeMq.addEventListener("change", syncIndustryMarquee);
+industryHoverMq.addEventListener("change", syncIndustryMarquee);
 
 function formatPrivacyDate() {
   const el = document.querySelector("[data-privacy-updated]");

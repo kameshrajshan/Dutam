@@ -186,6 +186,8 @@ dd {
 
 .skip-link:focus-visible {
   transform: none;
+  outline: 2px solid var(--color-text-on-accent);
+  outline-offset: 3px;
 }
 
 #content,
@@ -270,6 +272,12 @@ textarea {
   font-size: var(--font-size-body);
 }
 
+.nav-links a {
+  display: inline-flex;
+  align-items: center;
+  min-height: var(--size-tap);
+}
+
 .nav-links a,
 .brand {
   transition: color var(--motion-fast) var(--motion-ease-standard);
@@ -280,6 +288,16 @@ textarea {
 .brand:hover,
 .brand:focus-visible {
   color: var(--color-action);
+}
+
+.nav-links a[aria-current="page"] {
+  color: var(--color-action);
+}
+
+.nav-links a:focus-visible,
+.brand:focus-visible {
+  outline: 2px solid var(--color-focus);
+  outline-offset: 4px;
 }
 
 .nav-utils {
@@ -334,11 +352,13 @@ textarea {
 
 .language-menu button {
   width: 100%;
+  min-height: var(--size-tap);
+  min-width: var(--size-tap);
   text-align: center;
   background: none;
   border: 0;
   color: var(--white);
-  padding: 6px 8px;
+  padding: var(--space-8);
   font-size: 22px;
   line-height: 1;
   cursor: pointer;
@@ -389,6 +409,12 @@ textarea {
 .btn-primary:hover,
 .btn-primary:focus-visible {
   background: var(--color-accent-hover);
+}
+
+.btn-primary:active,
+.btn-apply:active {
+  transform: none;
+  background: var(--color-teal-400);
 }
 
 .btn-ghost:hover,
@@ -475,11 +501,6 @@ textarea {
   display: flex;
   gap: var(--space-24);
   margin-top: 48px;
-}
-
-.hero .btn {
-  font-weight: var(--font-weight-regular);
-  line-height: var(--font-line-height-body);
 }
 
 .assurance {
@@ -666,6 +687,11 @@ textarea {
   color: var(--color-accent-on-band);
 }
 
+.service-item button:focus-visible {
+  outline: 2px solid var(--color-focus);
+  outline-offset: 4px;
+}
+
 .service-mark {
   position: relative;
   width: 16px;
@@ -830,7 +856,7 @@ textarea {
   font-style: normal;
   font-size: var(--font-size-body-sm);
   line-height: var(--font-line-height-body-sm);
-  opacity: 0.6;
+  color: var(--color-text-muted);
 }
 
 .arrow {
@@ -975,6 +1001,11 @@ textarea {
   border-radius: var(--radius-md);
 }
 
+.form input[type="checkbox"]:focus-visible {
+  outline: 2px solid var(--color-focus);
+  outline-offset: 2px;
+}
+
 .check label {
   display: flex;
   align-items: flex-start;
@@ -1027,15 +1058,12 @@ textarea {
   align-self: flex-end;
 }
 
-.form .btn {
-  font-weight: var(--font-weight-regular);
-  line-height: var(--font-line-height-body);
-}
-
 .form-status {
   margin: 0;
   max-width: 100%;
   color: var(--color-text-muted);
+  font-size: var(--font-size-caption);
+  line-height: var(--font-line-height-caption);
   overflow-wrap: anywhere;
   text-wrap: pretty;
 }
@@ -1119,9 +1147,27 @@ form[data-status-kind="invalid"] .form-status {
   color: var(--color-text-muted);
 }
 
+.legal a {
+  display: inline-flex;
+  align-items: center;
+  min-height: var(--size-tap);
+  color: inherit;
+}
+
+.legal a:hover,
+.legal a:focus-visible {
+  color: var(--color-action);
+}
+
+.legal a:focus-visible {
+  outline: 2px solid var(--color-focus);
+  outline-offset: 3px;
+}
+
 .legal nav {
   display: flex;
-  gap: var(--space-24);
+  flex-wrap: wrap;
+  gap: var(--space-8) var(--space-24);
 }
 
 @media (max-width: 1100px) {
@@ -1337,7 +1383,7 @@ form[data-status-kind="invalid"] .form-status {
     aspect-ratio: auto;
     height: 160px;
     overflow: hidden;
-    mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+    mask-image: linear-gradient(90deg, transparent, var(--color-black) 8%, var(--color-black) 92%, transparent);
   }
 
   .industry-track {
@@ -1377,7 +1423,7 @@ form[data-status-kind="invalid"] .form-status {
     to { transform: translateX(-50%); }
   }
 
-  @media (prefers-reduced-motion: reduce) {
+  @media (prefers-reduced-motion: reduce), (hover: none) {
     .industry-track {
       animation: none;
       overflow-x: auto;
@@ -1929,7 +1975,7 @@ form[data-status-kind="invalid"] .form-status {
   background: var(--color-action);
   color: var(--color-text-on-accent);
   font-size: var(--font-size-body);
-  font-weight: var(--font-weight-regular);
+  font-weight: var(--font-weight-semibold);
   line-height: var(--font-line-height-body);
 }
 
@@ -2564,6 +2610,11 @@ form[data-status-kind="invalid"] .form-status {
   color: var(--color-action);
 }
 
+.quotes-voices button:focus-visible {
+  outline: 2px solid var(--color-focus);
+  outline-offset: 3px;
+}
+
 .quotes-strip {
   display: flex;
   align-items: center;
@@ -2733,6 +2784,7 @@ form[data-status-kind="invalid"] .form-status {
 }
 
 .btn-apply {
+  font-weight: var(--font-weight-semibold);
   transition: transform var(--motion-fast) var(--motion-ease-standard), background-color var(--motion-fast) var(--motion-ease-standard);
 }
 
