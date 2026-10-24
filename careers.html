@@ -17,7 +17,7 @@
       href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400..700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css?v=22" />
+    <link rel="stylesheet" href="styles.css?v=23" />
   </head>
   <body class="careers-page">
     <a class="skip-link" href="#content" data-i18n="nav.skip">Skip to content</a>
@@ -154,8 +154,10 @@
               <label for="note" data-i18n="careers.label_note">Cover note (optional)</label>
               <input id="note" name="note" type="text" maxlength="500" placeholder="Background and tools…" data-i18n-placeholder="careers.ph_note" autocomplete="off" />
             </div>
-            <button class="btn btn-apply" type="submit" data-i18n="careers.submit">Submit application</button>
-            <p class="form-status" role="status" hidden></p>
+            <div class="form-actions">
+              <p class="form-status" role="status" hidden></p>
+              <button class="btn btn-apply" type="submit" data-i18n="careers.submit">Submit application</button>
+            </div>
           </form>
         </div>
       </section>
@@ -220,6 +222,6 @@
       </div>
     </footer>
     <script src="i18n.js?v=21"></script>
-    <script src="script.js?v=16"></script>
+    <script src="script.js?v=17"></script>
   </body>
 </html>

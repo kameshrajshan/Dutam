@@ -905,10 +905,18 @@ textarea {
   line-height: var(--font-line-height-h4);
 }
 
+.form-unit {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+  min-width: 0;
+}
+
 .form-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: var(--space-16);
+  align-items: start;
   min-width: 0;
 }
 
@@ -955,11 +963,16 @@ textarea {
 .check {
   display: flex;
   align-items: flex-start;
-  flex-wrap: wrap;
   gap: var(--sds-size-space-300);
   margin: 4px 0 0;
   font-size: var(--font-size-body);
   line-height: var(--font-line-height-body);
+}
+
+.check:has([aria-invalid="true"]) {
+  outline: 2px solid var(--color-error);
+  outline-offset: 4px;
+  border-radius: var(--radius-md);
 }
 
 .check label {
@@ -1003,16 +1016,28 @@ textarea {
   text-underline-offset: 3px;
 }
 
-.form .btn {
+.form-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: var(--space-8);
+}
+
+.form .form-actions .btn {
   align-self: flex-end;
+}
+
+.form .btn {
   font-weight: var(--font-weight-regular);
   line-height: var(--font-line-height-body);
 }
 
 .form-status {
   margin: 0;
+  max-width: 100%;
   color: var(--color-text-muted);
   overflow-wrap: anywhere;
+  text-wrap: pretty;
 }
 
 form[data-status-kind="invalid"] .form-status {
@@ -1792,6 +1817,7 @@ form[data-status-kind="invalid"] .form-status {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: var(--space-16);
+  align-items: start;
 }
 
 .field {
@@ -1894,6 +1920,7 @@ form[data-status-kind="invalid"] .form-status {
   cursor: pointer;
 }
 
+.sheet .form-actions .btn-apply,
 .btn-apply {
   align-self: flex-start;
   border: 0;

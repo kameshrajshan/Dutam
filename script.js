@@ -371,35 +371,59 @@ window.addEventListener("beforeunload", (event) => {
   event.returnValue = "";
 });
 
+function dropDescribedBy(field, id) {
+  if (!id) return;
+  const existing = field.getAttribute("aria-describedby");
+  if (!existing) return;
+  const next = existing
+    .split(/\s+/)
+    .filter((token) => token && token !== id)
+    .join(" ");
+  if (next) field.setAttribute("aria-describedby", next);
+  else field.removeAttribute("aria-describedby");
+}
+
+function addDescribedBy(field, id) {
+  if (!id) return;
+  const existing = field.getAttribute("aria-describedby");
+  const ids = existing ? existing.split(/\s+/).filter(Boolean) : [];
+  if (!ids.includes(id)) ids.push(id);
+  field.setAttribute("aria-describedby", ids.join(" "));
+}
+
 function clearFieldErrors(form) {
+  const status = form.querySelector(".form-status");
   form.querySelectorAll(".field-error").forEach((el) => {
     const described = el.id ? form.querySelector(`[aria-describedby~="${el.id}"]`) : null;
-    if (described) {
-      const next = described
-        .getAttribute("aria-describedby")
-        .split(/\s+/)
-        .filter((id) => id && id !== el.id)
-        .join(" ");
-      if (next) described.setAttribute("aria-describedby", next);
-      else described.removeAttribute("aria-describedby");
-    }
+    if (described) dropDescribedBy(described, el.id);
     el.remove();
   });
-  form.querySelectorAll("[aria-invalid]").forEach((el) => el.removeAttribute("aria-invalid"));
+  form.querySelectorAll("[aria-invalid]").forEach((el) => {
+    el.removeAttribute("aria-invalid");
+    if (status && status.id) dropDescribedBy(el, status.id);
+  });
+}
+
+function markFieldInvalid(field, status) {
+  field.setAttribute("aria-invalid", "true");
+  if (status) {
+    if (!status.id && field.form && field.form.id) status.id = `${field.form.id}-status`;
+    addDescribedBy(field, status.id);
+  }
 }
 
 function showFieldError(field, message) {
-  field.setAttribute("aria-invalid", "true");
+  markFieldInvalid(field, field.form && field.form.querySelector(".form-status"));
+  const unit = field.closest(".form-unit, .field") || field.parentElement;
   const error = document.createElement("p");
   error.className = "field-error";
   error.textContent = message;
   if (field.id) {
     error.id = `${field.id}-error`;
-    const existing = field.getAttribute("aria-describedby");
-    field.setAttribute("aria-describedby", existing ? `${existing} ${error.id}` : error.id);
+    addDescribedBy(field, error.id);
   }
-  const host = field.closest(".check") || field;
-  host.insertAdjacentElement("afterend", error);
+  if (unit && unit !== field) unit.appendChild(error);
+  else field.insertAdjacentElement("afterend", error);
 }
 
 const MAX_RESUME_BYTES = 5 * 1024 * 1024;
@@ -452,7 +476,7 @@ function bindForm(form, invalidKey) {
         return !el.closest("[hidden]");
       });
       const summary = tForm(invalidKey, "Fill in the highlighted fields.");
-      invalid.forEach((field) => showFieldError(field, summary));
+      invalid.forEach((field) => markFieldInvalid(field, status));
       form.setAttribute("data-status-kind", "invalid");
       form.setAttribute("data-status-key", invalidKey);
       renderFormStatus(status, summary);
