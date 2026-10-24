@@ -14,10 +14,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400..700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css?v=17" />
+    <link rel="stylesheet" href="styles.css?v=22" />
   </head>
   <body class="contact-page">
     <a class="skip-link" href="#content" data-i18n="nav.skip">Skip to content</a>
@@ -48,7 +48,7 @@
               <li><button type="button" data-lang="fr" aria-label="French">🇫🇷</button></li>
             </ul>
           </div>
-          <a class="btn btn-login" href="https://dpms.svtawny.com:85/home" data-i18n="nav.login">Login</a>
+          <a class="btn btn-login" href="https://dpms.svtawny.com:85/home" data-i18n="nav.login">Client Login</a>
         </div>
       </div>
     </header>
@@ -63,33 +63,33 @@
       </section>
 
       <section class="contact-body" aria-labelledby="contact-heading">
-        <h2 id="contact-heading" class="sr-only" data-i18n="contact.form_sr">Send a message</h2>
+        <h2 id="contact-heading" class="sr-only" data-i18n="contact.form_sr">Send project details</h2>
         <form class="sheet" id="contact-form" data-reveal novalidate>
           <div class="field-grid">
             <div class="field">
-              <label for="name" data-i18n="contact.label_name">Name</label>
-              <input id="name" name="name" type="text" placeholder="Jordan Lee…" data-i18n-placeholder="contact.ph_name" autocomplete="name" required />
+              <label for="name" data-i18n="contact.label_name">Full name</label>
+              <input id="name" name="name" type="text" maxlength="100" placeholder="Jordan Lee…" data-i18n-placeholder="contact.ph_name" autocomplete="name" required />
             </div>
             <div class="field">
               <label for="company" data-i18n="contact.label_company">Company</label>
-              <input id="company" name="company" type="text" placeholder="Northwind…" data-i18n-placeholder="contact.ph_company" autocomplete="organization" required />
+              <input id="company" name="company" type="text" maxlength="120" placeholder="Northwind…" data-i18n-placeholder="contact.ph_company" autocomplete="organization" required />
             </div>
           </div>
           <div class="field-grid">
             <div class="field">
               <label for="email" data-i18n="contact.label_email">Email</label>
-              <input id="email" name="email" type="email" placeholder="ada@company.com…" data-i18n-placeholder="contact.ph_email" autocomplete="email" spellcheck="false" required />
+              <input id="email" name="email" type="email" maxlength="254" placeholder="ada@company.com…" data-i18n-placeholder="contact.ph_email" autocomplete="email" spellcheck="false" required />
             </div>
             <div class="field">
               <label for="phone" data-i18n="contact.label_phone">Phone</label>
-              <input id="phone" name="phone" type="tel" placeholder="+91 427 455 2439…" data-i18n-placeholder="contact.ph_phone" autocomplete="tel" inputmode="tel" required />
+              <input id="phone" name="phone" type="tel" maxlength="40" placeholder="+91 427 455 2439…" data-i18n-placeholder="contact.ph_phone" autocomplete="tel" inputmode="tel" required />
             </div>
           </div>
           <div class="field-grid">
             <div class="field">
               <label for="industry" data-i18n="contact.label_industry">Industry</label>
-              <select id="industry" name="industry" required data-other-field="industry-other-wrap">
-                <option value="" disabled selected data-i18n="contact.ph_industry">Select industry</option>
+              <select id="industry" name="industry" required autocomplete="off" data-other-field="industry-other-wrap">
+                <option value="" disabled selected data-i18n="contact.ph_industry">Select an industry</option>
                 <option value="machine-building" data-i18n="contact.opt_ind_machine">Machine building</option>
                 <option value="construction" data-i18n="contact.opt_ind_construction">Construction</option>
                 <option value="oil-energy" data-i18n="contact.opt_ind_oil">Oil &amp; energy</option>
@@ -98,13 +98,13 @@
               </select>
               <div class="field-other" id="industry-other-wrap" hidden>
                 <label for="industry-other" data-i18n="contact.label_other">Please specify</label>
-                <input id="industry-other" name="industry_other" type="text" placeholder="Marine equipment…" data-i18n-placeholder="contact.ph_other_industry" autocomplete="off" />
+                <input id="industry-other" name="industry_other" type="text" maxlength="120" placeholder="Marine equipment…" data-i18n-placeholder="contact.ph_other_industry" autocomplete="off" />
               </div>
             </div>
             <div class="field">
-              <label for="services" data-i18n="contact.label_services">Services</label>
-              <select id="services" name="services" required data-other-field="services-other-wrap">
-                <option value="" disabled selected data-i18n="contact.ph_services">Select service</option>
+              <label for="services" data-i18n="contact.label_services">Service</label>
+              <select id="services" name="services" required autocomplete="off" data-other-field="services-other-wrap">
+                <option value="" disabled selected data-i18n="contact.ph_services">Select a service</option>
                 <option value="3d-modelling" data-i18n="contact.opt_svc_3d">3D Modelling &amp; Drafting</option>
                 <option value="cad-customization" data-i18n="contact.opt_svc_cad">CAD Customization</option>
                 <option value="steel-detailing" data-i18n="contact.opt_svc_steel">Steel Detailing</option>
@@ -115,22 +115,28 @@
               </select>
               <div class="field-other" id="services-other-wrap" hidden>
                 <label for="services-other" data-i18n="contact.label_other">Please specify</label>
-                <input id="services-other" name="services_other" type="text" placeholder="Piping isometrics…" data-i18n-placeholder="contact.ph_other_services" autocomplete="off" />
+                <input id="services-other" name="services_other" type="text" maxlength="120" placeholder="Piping isometrics…" data-i18n-placeholder="contact.ph_other_services" autocomplete="off" />
               </div>
             </div>
           </div>
           <div class="field">
             <label for="scope" data-i18n="contact.label_scope">Brief scope</label>
-            <input id="scope" name="scope" type="text" placeholder="Standards, deliverables, timeline…" data-i18n-placeholder="contact.ph_scope" autocomplete="off" required />
+            <input id="scope" name="scope" type="text" maxlength="500" placeholder="Standards, deliverables, timeline…" data-i18n-placeholder="contact.ph_scope" autocomplete="off" required />
           </div>
-          <button class="btn btn-apply" type="submit" data-i18n="contact.submit">Send Message</button>
+          <button class="btn btn-apply" type="submit" data-i18n="contact.submit">Send Project Details</button>
           <p class="form-status" role="status" hidden></p>
         </form>
         <aside class="office" data-reveal>
-          <h2 data-i18n="contact.office_h2">Office details</h2>
-          <p><span data-i18n="contact.office_email_label">Email</span><br />info@dutamengineering.com</p>
-          <p><span data-i18n="contact.office_phone_label">Phone</span><br />+91 427 455 2439</p>
-          <p><span data-i18n="contact.office_address_label">Address</span><br />B1, Mahalakshmi Flats, Sivagami Street, Srinivasa Nagar, New Perungalathur, Chennai – 600 063.</p>
+          <h2 class="sr-only" data-i18n="contact.map_h2">Location</h2>
+          <iframe
+            title="Dutam Engineering Services on Google Maps"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3907.3197722948403!2d78.1418944!3d11.6717348!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3babf10074058151%3A0xe4ef955c953a795c!2sDutam%20Engineering%20Services!5e0!3m2!1sen!2sin!4v1792824769072!5m2!1sen!2sin"
+            width="600"
+            height="450"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="strict-origin-when-cross-origin"
+          ></iframe>
         </aside>
       </section>
     </main>
@@ -193,7 +199,7 @@
         </nav>
       </div>
     </footer>
-    <script src="i18n.js?v=15"></script>
-    <script src="script.js?v=11"></script>
+    <script src="i18n.js?v=20"></script>
+    <script src="script.js?v=16"></script>
   </body>
 </html>

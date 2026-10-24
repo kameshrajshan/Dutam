@@ -8,7 +8,7 @@
     "nav.services": "Services",
     "nav.careers": "Careers",
     "nav.contact": "Contact Us",
-    "nav.login": "Login",
+    "nav.login": "Client Login",
     "nav.skip": "Skip to content",
     "nav.language": "Language, {lang}",
     "nav.privacy": "Privacy Policy",
@@ -28,13 +28,11 @@
     "footer.social_instagram": "Instagram",
     "footer.social_label": "Social media",
 
-    "form.invalid_required": "Please complete the required fields.",
+    "form.invalid_required": "Fill in the highlighted fields.",
     "form.invalid_privacy":
-      "Please complete the required fields and accept the privacy policy.",
-    "form.success_contact":
-      "Thanks. A Dutam engineer will reply within one business day.",
-    "form.success_career":
-      "Thanks. We'll keep your application and write when a role fits.",
+      "Fill in the highlighted fields and accept the privacy policy.",
+    "form.file_too_large": "Choose a resume of 5 MB or less.",
+    "form.file_hint": "PDF, DOC, or DOCX. 5 MB or smaller.",
 
     "home.title": "Dutam Engineering | Precision CAD Engineering",
     "home.meta":
@@ -43,8 +41,8 @@
     "home.h1": "Precision CAD Engineering for Global Industry.",
     "home.lede":
       "Dutam delivers 3D modeling, steel detailing, BIM consulting, and CAD automation for machine building, construction, and oil and energy projects. You receive that work on time, on standard, and on spec.",
-    "home.cta_primary": "Book a Discovery Call",
-    "home.cta_secondary": "View Our Work",
+    "home.cta_primary": "Send Project Details",
+    "home.cta_secondary": "See Our Services",
     "home.assurance":
       "No commitment required · Response within 24\u00a0hours · NDA available",
     "home.track_label": "DELIVERY TRACK RECORD",
@@ -95,18 +93,18 @@
     "home.form_h3": "Tell Us About Your Project",
     "home.ph_name": "Full name",
     "home.ph_email": "Email",
-    "home.ph_company": "Company Name",
-    "home.ph_phone": "Phone number",
+    "home.ph_company": "Company",
+    "home.ph_phone": "Phone",
     "home.ph_project": "Project Type",
-    "home.ph_comments": "Comments",
+    "home.ph_comments": "Brief scope",
     "home.ex_name": "Jordan Lee…",
     "home.ex_email": "ada@company.com…",
     "home.ex_company": "Northwind…",
     "home.ex_phone": "+91 427 455 2439…",
     "home.ex_project": "Steel detailing…",
     "home.ex_comments": "Scope, standard, timeline…",
-    "home.privacy_prefix": "I have read and understood the ",
-    "home.privacy_link": "privacy policy",
+    "home.privacy_html":
+      "I have read and understood the <a href=\"privacy.html\">privacy policy</a>.",
     "home.submit": "Send Project Details",
     "home.alt_svc1":
       "Engineers collaborating on a structural 3D model across dual monitors",
@@ -174,8 +172,8 @@
     "about.quotes_expand": "Read full statement →",
     "about.quotes_collapse": "Show highlight ←",
     "about.quotes_index": "Testimonial {n} / {total}",
-    "about.quotes_pause": "Pause",
-    "about.quotes_play": "Play",
+    "about.quotes_pause": "Pause quotes",
+    "about.quotes_play": "Play quotes",
     "about.cta_p": "Ready to scope your next package?",
     "about.cta_btn": "Discuss a Project",
 
@@ -305,12 +303,12 @@
     "careers.ph_interest": "Modelling, steel detailing, BIM…",
     "careers.label_experience": "Years of experience",
     "careers.ph_experience": "3…",
-    "careers.label_portfolio": "Portfolio",
+    "careers.label_portfolio": "Portfolio (optional)",
     "careers.ph_portfolio": "https://…",
     "careers.label_resume": "Resume",
     "careers.label_note": "Cover note (optional)",
     "careers.ph_note": "Background and tools…",
-    "careers.submit": "Apply Now",
+    "careers.submit": "Submit application",
 
     "contact.title": "Contact | Dutam Engineering",
     "contact.meta":
@@ -319,8 +317,8 @@
     "contact.h1": "Let’s Discuss Your Engineering Scope",
     "contact.lede":
       "Share your models, timeline, and delivery requirements. We’ll review your scope and provide a clear turnaround plan.",
-    "contact.form_sr": "Send a message",
-    "contact.label_name": "Name",
+    "contact.form_sr": "Send project details",
+    "contact.label_name": "Full name",
     "contact.ph_name": "Jordan Lee…",
     "contact.label_company": "Company",
     "contact.ph_company": "Northwind…",
@@ -329,9 +327,9 @@
     "contact.label_phone": "Phone",
     "contact.ph_phone": "+91 427 455 2439…",
     "contact.label_industry": "Industry",
-    "contact.ph_industry": "Select industry",
-    "contact.label_services": "Services",
-    "contact.ph_services": "Select service",
+    "contact.ph_industry": "Select an industry",
+    "contact.label_services": "Service",
+    "contact.ph_services": "Select a service",
     "contact.opt_ind_machine": "Machine building",
     "contact.opt_ind_construction": "Construction",
     "contact.opt_ind_oil": "Oil & energy",
@@ -348,7 +346,8 @@
     "contact.ph_other_services": "Piping isometrics…",
     "contact.label_scope": "Brief scope",
     "contact.ph_scope": "Standards, deliverables, timeline…",
-    "contact.submit": "Send Message",
+    "contact.submit": "Send Project Details",
+    "contact.map_h2": "Location",
     "contact.office_h2": "Office details",
     "contact.office_email_label": "Email",
     "contact.office_phone_label": "Phone",
@@ -608,7 +607,7 @@
     "nav.services": "Diensten",
     "nav.careers": "Carrière",
     "nav.contact": "Contact",
-    "nav.login": "Inloggen",
+    "nav.login": "Klantenlogin",
     "nav.skip": "Ga naar inhoud",
     "nav.language": "Taal, {lang}",
     "nav.privacy": "Privacybeleid",
@@ -628,13 +627,11 @@
     "footer.social_instagram": "Instagram",
     "footer.social_label": "Sociale media",
 
-    "form.invalid_required": "Vul alle verplichte velden in.",
+    "form.invalid_required": "Vul de gemarkeerde velden in.",
     "form.invalid_privacy":
-      "Vul alle verplichte velden in en accepteer het privacybeleid.",
-    "form.success_contact":
-      "Bedankt. Een Dutam-engineer neemt binnen één werkdag contact met u op.",
-    "form.success_career":
-      "Bedankt. Wij bewaren uw sollicitatie en nemen contact op wanneer er een passende functie is.",
+      "Vul de gemarkeerde velden in en accepteer het privacybeleid.",
+    "form.file_too_large": "Kies een cv van maximaal 5 MB.",
+    "form.file_hint": "PDF, DOC of DOCX. Maximaal 5 MB.",
 
     "home.title": "Dutam Engineering | Precisie CAD-engineering",
     "home.meta":
@@ -643,8 +640,8 @@
     "home.h1": "Precisie CAD-engineering voor de wereldwijde industrie.",
     "home.lede":
       "Dutam levert 3D-modelleren, staaldetailing, BIM-advies en CAD-automatisering voor machinebouw, bouw en olie- en energieprojecten. U ontvangt het werk op tijd, volgens norm en volgens specificatie.",
-    "home.cta_primary": "Plan een kennismakingsgesprek",
-    "home.cta_secondary": "Bekijk ons werk",
+    "home.cta_primary": "Projectgegevens versturen",
+    "home.cta_secondary": "Bekijk onze diensten",
     "home.assurance":
       "Geen verplichtingen · Reactie binnen 24\u00a0uur · NDA beschikbaar",
     "home.track_label": "LEVERINGSRESULTATEN",
@@ -696,12 +693,12 @@
     "home.form_h3": "Vertel ons over uw project",
     "home.ph_name": "Volledige naam",
     "home.ph_email": "E-mail",
-    "home.ph_company": "Bedrijfsnaam",
-    "home.ph_phone": "Telefoonnummer",
+    "home.ph_company": "Bedrijf",
+    "home.ph_phone": "Telefoon",
     "home.ph_project": "Projecttype",
-    "home.ph_comments": "Opmerkingen",
-    "home.privacy_prefix": "Ik heb het ",
-    "home.privacy_link": "privacybeleid gelezen en begrepen",
+    "home.ph_comments": "Korte scope",
+    "home.privacy_html":
+      "Ik heb het <a href=\"privacy.html\">privacybeleid</a> gelezen en begrepen.",
     "home.submit": "Projectgegevens versturen",
     "home.alt_svc1":
       "Engineers die samenwerken aan een constructief 3D-model op dubbele monitors",
@@ -771,8 +768,8 @@
     "about.quotes_expand": "Lees volledige verklaring →",
     "about.quotes_collapse": "Toon highlight ←",
     "about.quotes_index": "Getuigenis {n} / {total}",
-    "about.quotes_pause": "Pauzeren",
-    "about.quotes_play": "Afspelen",
+    "about.quotes_pause": "Citaten pauzeren",
+    "about.quotes_play": "Citaten afspelen",
     "about.cta_p": "Klaar om uw volgende pakket te scoppen?",
     "about.cta_btn": "Bespreek een project",
 
@@ -902,12 +899,12 @@
     "careers.ph_interest": "bijv. modelleren, staaldetailing, BIM",
     "careers.label_experience": "Jaren ervaring",
     "careers.ph_experience": "bijv. 3",
-    "careers.label_portfolio": "Portfolio",
+    "careers.label_portfolio": "Portfolio (optioneel)",
     "careers.ph_portfolio": "https://…",
     "careers.label_resume": "CV",
     "careers.label_note": "Motivatie (optioneel)",
     "careers.ph_note": "Enkele regels over uw achtergrond",
-    "careers.submit": "Nu solliciteren",
+    "careers.submit": "Sollicitatie versturen",
 
     "contact.title": "Contact | Dutam Engineering",
     "contact.meta":
@@ -916,8 +913,8 @@
     "contact.h1": "Laten we uw engineeringscope bespreken",
     "contact.lede":
       "Deel uw modellen, planning en leveringseisen. Wij beoordelen uw scope en geven een helder doorlooptijdplan.",
-    "contact.form_sr": "Stuur een bericht",
-    "contact.label_name": "Naam",
+    "contact.form_sr": "Projectgegevens versturen",
+    "contact.label_name": "Volledige naam",
     "contact.ph_name": "Uw naam",
     "contact.label_company": "Bedrijf",
     "contact.ph_company": "Bedrijfsnaam",
@@ -926,9 +923,9 @@
     "contact.label_phone": "Telefoon",
     "contact.ph_phone": "+91 427 455 2439…",
     "contact.label_industry": "Branche",
-    "contact.ph_industry": "Selecteer branche",
-    "contact.label_services": "Diensten",
-    "contact.ph_services": "Selecteer dienst",
+    "contact.ph_industry": "Selecteer een branche",
+    "contact.label_services": "Dienst",
+    "contact.ph_services": "Selecteer een dienst",
     "contact.opt_ind_machine": "Machinebouw",
     "contact.opt_ind_construction": "Bouw",
     "contact.opt_ind_oil": "Olie & energie",
@@ -945,7 +942,8 @@
     "contact.ph_other_services": "Uw dienstenbehoefte",
     "contact.label_scope": "Korte scope",
     "contact.ph_scope": "Normen, deliverables, planning…",
-    "contact.submit": "Bericht versturen",
+    "contact.submit": "Projectgegevens versturen",
+    "contact.map_h2": "Locatie",
     "contact.office_h2": "Kantoorgegevens",
     "contact.office_email_label": "E-mail",
     "contact.office_phone_label": "Telefoon",
@@ -1208,7 +1206,7 @@
     "nav.services": "Leistungen",
     "nav.careers": "Karriere",
     "nav.contact": "Kontakt",
-    "nav.login": "Anmelden",
+    "nav.login": "Kundenlogin",
     "nav.skip": "Zum Inhalt springen",
     "nav.language": "Sprache, {lang}",
     "nav.privacy": "Datenschutz",
@@ -1228,13 +1226,11 @@
     "footer.social_instagram": "Instagram",
     "footer.social_label": "Soziale Medien",
 
-    "form.invalid_required": "Bitte füllen Sie alle Pflichtfelder aus.",
+    "form.invalid_required": "Füllen Sie die markierten Felder aus.",
     "form.invalid_privacy":
-      "Bitte füllen Sie alle Pflichtfelder aus und akzeptieren Sie die Datenschutzerklärung.",
-    "form.success_contact":
-      "Vielen Dank. Ein Dutam-Ingenieur meldet sich innerhalb eines Werktags.",
-    "form.success_career":
-      "Vielen Dank. Wir behalten Ihre Bewerbung und melden uns, wenn eine passende Stelle frei wird.",
+      "Füllen Sie die markierten Felder aus und akzeptieren Sie die Datenschutzerklärung.",
+    "form.file_too_large": "Wählen Sie einen Lebenslauf von höchstens 5 MB.",
+    "form.file_hint": "PDF, DOC oder DOCX. Höchstens 5 MB.",
 
     "home.title": "Dutam Engineering | Präzises CAD-Engineering",
     "home.meta":
@@ -1243,8 +1239,8 @@
     "home.h1": "Präzises CAD-Engineering für die globale Industrie.",
     "home.lede":
       "Dutam liefert 3D-Modellierung, Stahlbauteildetaillierung, BIM-Beratung und CAD-Automatisierung für Maschinenbau, Bauwesen sowie Öl- und Energieprojekte. Sie erhalten die Arbeit termingerecht, normgerecht und spezifikationskonform.",
-    "home.cta_primary": "Entdeckungsgespräch buchen",
-    "home.cta_secondary": "Unsere Arbeit ansehen",
+    "home.cta_primary": "Projektdetails senden",
+    "home.cta_secondary": "Unsere Leistungen ansehen",
     "home.assurance":
       "Keine Verpflichtung · Antwort innerhalb von 24\u00a0Stunden · NDA verfügbar",
     "home.track_label": "LIEFERBILANZ",
@@ -1296,12 +1292,12 @@
     "home.form_h3": "Erzählen Sie uns von Ihrem Projekt",
     "home.ph_name": "Vollständiger Name",
     "home.ph_email": "E-Mail",
-    "home.ph_company": "Firmenname",
-    "home.ph_phone": "Telefonnummer",
+    "home.ph_company": "Unternehmen",
+    "home.ph_phone": "Telefon",
     "home.ph_project": "Projekttyp",
-    "home.ph_comments": "Kommentare",
-    "home.privacy_prefix": "Ich habe die ",
-    "home.privacy_link": "Datenschutzerklärung gelesen und verstanden",
+    "home.ph_comments": "Kurzer Scope",
+    "home.privacy_html":
+      "Ich habe die <a href=\"privacy.html\">Datenschutzerklärung</a> gelesen und verstanden.",
     "home.submit": "Projektdetails senden",
     "home.alt_svc1":
       "Ingenieure bei der gemeinsamen Arbeit an einem strukturellen 3D-Modell auf Dual-Monitoren",
@@ -1371,8 +1367,8 @@
     "about.quotes_expand": "Vollständige Aussage lesen →",
     "about.quotes_collapse": "Highlight anzeigen ←",
     "about.quotes_index": "Referenz {n} / {total}",
-    "about.quotes_pause": "Pause",
-    "about.quotes_play": "Wiedergabe",
+    "about.quotes_pause": "Zitate anhalten",
+    "about.quotes_play": "Zitate abspielen",
     "about.cta_p": "Bereit, Ihr nächstes Paket zu scopen?",
     "about.cta_btn": "Projekt besprechen",
 
@@ -1502,12 +1498,12 @@
     "careers.ph_interest": "z. B. Modellierung, Stahlbauteildetaillierung, BIM",
     "careers.label_experience": "Berufserfahrung (Jahre)",
     "careers.ph_experience": "z. B. 3",
-    "careers.label_portfolio": "Portfolio",
+    "careers.label_portfolio": "Portfolio (optional)",
     "careers.ph_portfolio": "https://…",
     "careers.label_resume": "Lebenslauf",
     "careers.label_note": "Anschreiben (optional)",
     "careers.ph_note": "Einige Zeilen zu Ihrem Hintergrund",
-    "careers.submit": "Jetzt bewerben",
+    "careers.submit": "Bewerbung senden",
 
     "contact.title": "Kontakt | Dutam Engineering",
     "contact.meta":
@@ -1516,8 +1512,8 @@
     "contact.h1": "Lassen Sie uns Ihren Engineering-Scope besprechen",
     "contact.lede":
       "Teilen Sie Modelle, Zeitplan und Lieferanforderungen. Wir prüfen Ihren Scope und liefern einen klaren Durchlaufplan.",
-    "contact.form_sr": "Nachricht senden",
-    "contact.label_name": "Name",
+    "contact.form_sr": "Projektdetails senden",
+    "contact.label_name": "Vollständiger Name",
     "contact.ph_name": "Ihr Name",
     "contact.label_company": "Unternehmen",
     "contact.ph_company": "Firmenname",
@@ -1527,7 +1523,7 @@
     "contact.ph_phone": "+91 427 455 2439…",
     "contact.label_industry": "Branche",
     "contact.ph_industry": "Branche auswählen",
-    "contact.label_services": "Leistungen",
+    "contact.label_services": "Leistung",
     "contact.ph_services": "Leistung auswählen",
     "contact.opt_ind_machine": "Maschinenbau",
     "contact.opt_ind_construction": "Bauwesen",
@@ -1545,7 +1541,8 @@
     "contact.ph_other_services": "Ihr Leistungsbedarf",
     "contact.label_scope": "Kurzer Scope",
     "contact.ph_scope": "Normen, Liefergegenstände, Zeitplan…",
-    "contact.submit": "Nachricht senden",
+    "contact.submit": "Projektdetails senden",
+    "contact.map_h2": "Standort",
     "contact.office_h2": "Büroadressen",
     "contact.office_email_label": "E-Mail",
     "contact.office_phone_label": "Telefon",
@@ -1811,7 +1808,7 @@
     "nav.services": "Services",
     "nav.careers": "Carrières",
     "nav.contact": "Contact",
-    "nav.login": "Connexion",
+    "nav.login": "Espace client",
     "nav.skip": "Aller au contenu",
     "nav.language": "Langue, {lang}",
     "nav.privacy": "Politique de confidentialité",
@@ -1831,13 +1828,11 @@
     "footer.social_instagram": "Instagram",
     "footer.social_label": "Réseaux sociaux",
 
-    "form.invalid_required": "Veuillez remplir les champs obligatoires.",
+    "form.invalid_required": "Remplissez les champs surlignés.",
     "form.invalid_privacy":
-      "Veuillez remplir les champs obligatoires et accepter la politique de confidentialité.",
-    "form.success_contact":
-      "Merci. Un ingénieur Dutam vous répondra sous un jour ouvrable.",
-    "form.success_career":
-      "Merci. Nous conservons votre candidature et vous écrirons lorsqu’un poste correspondra.",
+      "Remplissez les champs surlignés et acceptez la politique de confidentialité.",
+    "form.file_too_large": "Choisissez un CV de 5 Mo ou moins.",
+    "form.file_hint": "PDF, DOC ou DOCX. 5 Mo maximum.",
 
     "home.title": "Dutam Engineering | Ingénierie CAO de précision",
     "home.meta":
@@ -1846,8 +1841,8 @@
     "home.h1": "Ingénierie CAO de précision pour l’industrie mondiale.",
     "home.lede":
       "Dutam livre la modélisation 3D, le detailing acier, le conseil BIM et l’automatisation CAO pour la construction de machines, le bâtiment et les projets pétrole et énergie. Vous recevez ce travail dans les délais, selon les normes et selon les spécifications.",
-    "home.cta_primary": "Réserver un appel découverte",
-    "home.cta_secondary": "Voir nos réalisations",
+    "home.cta_primary": "Envoyer les détails du projet",
+    "home.cta_secondary": "Voir nos services",
     "home.assurance":
       "Sans engagement · Réponse sous 24\u00a0heures · NDA disponible",
     "home.track_label": "BILAN DE LIVRAISON",
@@ -1901,12 +1896,12 @@
     "home.form_h3": "Parlez-nous de votre projet",
     "home.ph_name": "Nom complet",
     "home.ph_email": "E-mail",
-    "home.ph_company": "Nom de l’entreprise",
-    "home.ph_phone": "Numéro de téléphone",
+    "home.ph_company": "Entreprise",
+    "home.ph_phone": "Téléphone",
     "home.ph_project": "Type de projet",
-    "home.ph_comments": "Commentaires",
-    "home.privacy_prefix": "J’ai lu et compris la ",
-    "home.privacy_link": "politique de confidentialité",
+    "home.ph_comments": "Périmètre",
+    "home.privacy_html":
+      "J’ai lu et compris la <a href=\"privacy.html\">politique de confidentialité</a>.",
     "home.submit": "Envoyer les détails du projet",
     "home.alt_svc1":
       "Ingénieurs collaborant sur un modèle 3D structurel sur deux écrans",
@@ -1976,8 +1971,8 @@
     "about.quotes_expand": "Lire la déclaration complète →",
     "about.quotes_collapse": "Afficher l’extrait ←",
     "about.quotes_index": "Témoignage {n} / {total}",
-    "about.quotes_pause": "Pause",
-    "about.quotes_play": "Lecture",
+    "about.quotes_pause": "Mettre les citations en pause",
+    "about.quotes_play": "Lire les citations",
     "about.cta_p": "Prêt à définir le périmètre de votre prochain lot ?",
     "about.cta_btn": "Discuter d’un projet",
 
@@ -2107,12 +2102,12 @@
     "careers.ph_interest": "ex. modélisation, detailing acier, BIM",
     "careers.label_experience": "Années d’expérience",
     "careers.ph_experience": "ex. 3",
-    "careers.label_portfolio": "Portfolio",
+    "careers.label_portfolio": "Portfolio (facultatif)",
     "careers.ph_portfolio": "https://…",
     "careers.label_resume": "CV",
     "careers.label_note": "Note de motivation (optionnel)",
     "careers.ph_note": "Quelques lignes sur votre parcours",
-    "careers.submit": "Postuler maintenant",
+    "careers.submit": "Envoyer la candidature",
 
     "contact.title": "Contact | Dutam Engineering",
     "contact.meta":
@@ -2121,8 +2116,8 @@
     "contact.h1": "Discutons de votre périmètre d’ingénierie",
     "contact.lede":
       "Partagez vos modèles, votre planning et vos exigences de livraison. Nous examinerons votre périmètre et fournirons un plan de délai clair.",
-    "contact.form_sr": "Envoyer un message",
-    "contact.label_name": "Nom",
+    "contact.form_sr": "Envoyer les détails du projet",
+    "contact.label_name": "Nom complet",
     "contact.ph_name": "Votre nom",
     "contact.label_company": "Entreprise",
     "contact.ph_company": "Nom de l’entreprise",
@@ -2132,8 +2127,8 @@
     "contact.ph_phone": "+91 427 455 2439…",
     "contact.label_industry": "Secteur",
     "contact.ph_industry": "Sélectionner le secteur",
-    "contact.label_services": "Services",
-    "contact.ph_services": "Sélectionner le service",
+    "contact.label_services": "Service",
+    "contact.ph_services": "Sélectionner un service",
     "contact.opt_ind_machine": "Construction de machines",
     "contact.opt_ind_construction": "Construction",
     "contact.opt_ind_oil": "Pétrole & énergie",
@@ -2150,7 +2145,8 @@
     "contact.ph_other_services": "Votre besoin de service",
     "contact.label_scope": "Périmètre succinct",
     "contact.ph_scope": "Normes, livrables, planning…",
-    "contact.submit": "Envoyer le message",
+    "contact.submit": "Envoyer les détails du projet",
+    "contact.map_h2": "Emplacement",
     "contact.office_h2": "Coordonnées du bureau",
     "contact.office_email_label": "E-mail",
     "contact.office_phone_label": "Téléphone",

@@ -285,6 +285,7 @@ document.addEventListener("dutam:langchange", (event) => {
   if (quoteController && lang) quoteController.refreshQuotes(lang);
   if (quoteController) quoteController.syncPauseLabel();
   formatPrivacyDate();
+  refreshFormStatuses();
 });
 
 if (language && languageBtn && languageMenu) {
@@ -371,7 +372,19 @@ window.addEventListener("beforeunload", (event) => {
 });
 
 function clearFieldErrors(form) {
-  form.querySelectorAll(".field-error").forEach((el) => el.remove());
+  form.querySelectorAll(".field-error").forEach((el) => {
+    const described = el.id ? form.querySelector(`[aria-describedby~="${el.id}"]`) : null;
+    if (described) {
+      const next = described
+        .getAttribute("aria-describedby")
+        .split(/\s+/)
+        .filter((id) => id && id !== el.id)
+        .join(" ");
+      if (next) described.setAttribute("aria-describedby", next);
+      else described.removeAttribute("aria-describedby");
+    }
+    el.remove();
+  });
   form.querySelectorAll("[aria-invalid]").forEach((el) => el.removeAttribute("aria-invalid"));
 }
 
@@ -382,42 +395,81 @@ function showFieldError(field, message) {
   error.textContent = message;
   if (field.id) {
     error.id = `${field.id}-error`;
-    field.setAttribute("aria-describedby", error.id);
+    const existing = field.getAttribute("aria-describedby");
+    field.setAttribute("aria-describedby", existing ? `${existing} ${error.id}` : error.id);
   }
-  field.insertAdjacentElement("afterend", error);
+  const host = field.closest(".check") || field;
+  host.insertAdjacentElement("afterend", error);
 }
 
-function bindForm(form, invalidKey, successKey) {
+const MAX_RESUME_BYTES = 5 * 1024 * 1024;
+
+function tForm(key, fallback) {
+  return window.DutamI18n ? window.DutamI18n.t(key) : fallback;
+}
+
+function renderFormStatus(status, message) {
+  if (!status) return;
+  status.hidden = false;
+  status.textContent = message;
+}
+
+function hideFormStatus(form, status) {
+  form.removeAttribute("data-status-kind");
+  form.removeAttribute("data-status-key");
+  if (!status) return;
+  status.hidden = true;
+  status.textContent = "";
+}
+
+function refreshFormStatuses() {
+  document.querySelectorAll("form[data-status-key]").forEach((form) => {
+    const key = form.getAttribute("data-status-key");
+    if (!key) return;
+    const status = form.querySelector(".form-status");
+    if (status && !status.hidden) status.textContent = tForm(key, status.textContent);
+    if (key === "form.file_too_large") {
+      const file = form.querySelector('input[type="file"]');
+      const fileError = file && document.getElementById(`${file.id}-error`);
+      if (fileError) fileError.textContent = tForm(key, fileError.textContent);
+    }
+  });
+}
+
+function bindForm(form, invalidKey) {
   if (!form) return;
   const status = form.querySelector(".form-status");
+  form.setAttribute("data-invalid-key", invalidKey);
   form.addEventListener("input", () => {
     dirtyForms.add(form);
   });
   form.addEventListener("submit", (event) => {
     event.preventDefault();
-    const t = (key, fallback) => (window.DutamI18n ? window.DutamI18n.t(key) : fallback);
     clearFieldErrors(form);
     if (!form.checkValidity()) {
       const invalid = [...form.querySelectorAll(":invalid")].filter((el) => {
         if (!el.willValidate) return false;
         return !el.closest("[hidden]");
       });
-      const summary = t(invalidKey, "Please complete the required fields.");
-      invalid.forEach((field) => showFieldError(field, field.validationMessage || summary));
-      if (status) {
-        status.hidden = false;
-        status.textContent = summary;
-      }
+      const summary = tForm(invalidKey, "Fill in the highlighted fields.");
+      invalid.forEach((field) => showFieldError(field, summary));
+      form.setAttribute("data-status-kind", "invalid");
+      form.setAttribute("data-status-key", invalidKey);
+      renderFormStatus(status, summary);
       if (invalid[0]) invalid[0].focus();
       return;
     }
-    dirtyForms.delete(form);
-    if (status) {
-      status.hidden = false;
-      status.textContent = t(successKey, "Thanks.");
+    const file = form.querySelector('input[type="file"]');
+    if (file && file.files[0] && file.files[0].size > MAX_RESUME_BYTES) {
+      const tooLarge = tForm("form.file_too_large", "Choose a resume of 5 MB or less.");
+      showFieldError(file, tooLarge);
+      form.setAttribute("data-status-kind", "invalid");
+      form.setAttribute("data-status-key", "form.file_too_large");
+      renderFormStatus(status, tooLarge);
+      file.focus();
+      return;
     }
-    form.reset();
-    form.querySelectorAll("[data-other-field]").forEach((select) => syncOtherField(select));
+    hideFormStatus(form, status);
   });
 }
 
@@ -439,9 +491,9 @@ document.querySelectorAll("select[data-other-field]").forEach((select) => {
   select.addEventListener("change", () => syncOtherField(select));
 });
 
-bindForm(document.querySelector("#project-form"), "form.invalid_privacy", "form.success_contact");
-bindForm(document.querySelector("#career-form"), "form.invalid_required", "form.success_career");
-bindForm(document.querySelector("#contact-form"), "form.invalid_required", "form.success_contact");
+bindForm(document.querySelector("#project-form"), "form.invalid_privacy");
+bindForm(document.querySelector("#career-form"), "form.invalid_required");
+bindForm(document.querySelector("#contact-form"), "form.invalid_required");
 
 const industryTrack = document.querySelector(".industry-track");
 const industryMarqueeMq = window.matchMedia("(max-width: 760px)");

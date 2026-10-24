@@ -14,10 +14,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400..700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css?v=17" />
+    <link rel="stylesheet" href="styles.css?v=22" />
   </head>
   <body class="careers-page">
     <a class="skip-link" href="#content" data-i18n="nav.skip">Skip to content</a>
@@ -48,7 +48,7 @@
               <li><button type="button" data-lang="fr" aria-label="French">🇫🇷</button></li>
             </ul>
           </div>
-          <a class="btn btn-login" href="https://dpms.svtawny.com:85/home" data-i18n="nav.login">Login</a>
+          <a class="btn btn-login" href="https://dpms.svtawny.com:85/home" data-i18n="nav.login">Client Login</a>
         </div>
       </div>
     </header>
@@ -112,48 +112,49 @@
             <div class="field-grid">
               <div class="field">
                 <label for="full-name" data-i18n="careers.label_name">Full name</label>
-                <input id="full-name" name="name" type="text" placeholder="Jordan Lee…" data-i18n-placeholder="careers.ph_name" autocomplete="name" required />
+                <input id="full-name" name="name" type="text" maxlength="100" placeholder="Jordan Lee…" data-i18n-placeholder="careers.ph_name" autocomplete="name" required />
               </div>
               <div class="field">
                 <label for="email" data-i18n="careers.label_email">Email</label>
-                <input id="email" name="email" type="email" placeholder="ada@email.com…" data-i18n-placeholder="careers.ph_email" autocomplete="email" spellcheck="false" required />
+                <input id="email" name="email" type="email" maxlength="254" placeholder="ada@email.com…" data-i18n-placeholder="careers.ph_email" autocomplete="email" spellcheck="false" required />
               </div>
             </div>
             <div class="field-grid">
               <div class="field">
                 <label for="phone" data-i18n="careers.label_phone">Phone</label>
-                <input id="phone" name="phone" type="tel" placeholder="+91 427 455 2439…" data-i18n-placeholder="careers.ph_phone" autocomplete="tel" inputmode="tel" required />
+                <input id="phone" name="phone" type="tel" maxlength="40" placeholder="+91 427 455 2439…" data-i18n-placeholder="careers.ph_phone" autocomplete="tel" inputmode="tel" required />
               </div>
               <div class="field">
                 <label for="address" data-i18n="careers.label_address">Address</label>
-                <input id="address" name="address" type="text" placeholder="12 Harbour Road…" data-i18n-placeholder="careers.ph_address" autocomplete="street-address" required />
+                <input id="address" name="address" type="text" maxlength="200" placeholder="12 Harbour Road…" data-i18n-placeholder="careers.ph_address" autocomplete="street-address" required />
               </div>
             </div>
             <div class="field-grid">
               <div class="field">
                 <label for="interest" data-i18n="careers.label_interest">Area of interest</label>
-                <input id="interest" name="interest" type="text" placeholder="Modelling, steel detailing, BIM…" data-i18n-placeholder="careers.ph_interest" autocomplete="off" required />
+                <input id="interest" name="interest" type="text" maxlength="120" placeholder="Modelling, steel detailing, BIM…" data-i18n-placeholder="careers.ph_interest" autocomplete="off" required />
               </div>
               <div class="field">
                 <label for="experience" data-i18n="careers.label_experience">Years of experience</label>
-                <input id="experience" name="experience" type="text" inputmode="numeric" placeholder="3…" data-i18n-placeholder="careers.ph_experience" autocomplete="off" required />
+                <input id="experience" name="experience" type="text" maxlength="8" inputmode="numeric" placeholder="3…" data-i18n-placeholder="careers.ph_experience" autocomplete="off" required />
               </div>
             </div>
             <div class="field-grid">
               <div class="field">
-                <label for="portfolio" data-i18n="careers.label_portfolio">Portfolio</label>
-                <input id="portfolio" name="portfolio" type="url" inputmode="url" placeholder="https://…" data-i18n-placeholder="careers.ph_portfolio" autocomplete="url" spellcheck="false" />
+                <label for="portfolio" data-i18n="careers.label_portfolio">Portfolio (optional)</label>
+                <input id="portfolio" name="portfolio" type="url" maxlength="2048" inputmode="url" placeholder="https://…" data-i18n-placeholder="careers.ph_portfolio" autocomplete="url" spellcheck="false" />
               </div>
               <div class="field">
                 <label for="resume" data-i18n="careers.label_resume">Resume</label>
-                <input id="resume" name="resume" type="file" accept=".pdf,.doc,.docx,application/pdf" required />
+                <input id="resume" name="resume" type="file" accept=".pdf,.doc,.docx,application/pdf" aria-describedby="resume-hint" required />
+                <p id="resume-hint" class="field-hint" data-i18n="form.file_hint">PDF, DOC, or DOCX. 5 MB or smaller.</p>
               </div>
             </div>
             <div class="field">
               <label for="note" data-i18n="careers.label_note">Cover note (optional)</label>
-              <input id="note" name="note" type="text" placeholder="Background and tools…" data-i18n-placeholder="careers.ph_note" autocomplete="off" />
+              <input id="note" name="note" type="text" maxlength="500" placeholder="Background and tools…" data-i18n-placeholder="careers.ph_note" autocomplete="off" />
             </div>
-            <button class="btn btn-apply" type="submit" data-i18n="careers.submit">Apply Now</button>
+            <button class="btn btn-apply" type="submit" data-i18n="careers.submit">Submit application</button>
             <p class="form-status" role="status" hidden></p>
           </form>
         </div>
@@ -218,7 +219,7 @@
         </nav>
       </div>
     </footer>
-    <script src="i18n.js?v=15"></script>
-    <script src="script.js?v=11"></script>
+    <script src="i18n.js?v=20"></script>
+    <script src="script.js?v=16"></script>
   </body>
 </html>

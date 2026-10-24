@@ -14,10 +14,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400..700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css?v=17" />
+    <link rel="stylesheet" href="styles.css?v=22" />
   </head>
   <body class="about-page">
     <a class="skip-link" href="#content" data-i18n="nav.skip">Skip to content</a>
@@ -48,7 +48,7 @@
               <li><button type="button" data-lang="fr" aria-label="French">🇫🇷</button></li>
             </ul>
           </div>
-          <a class="btn btn-login" href="https://dpms.svtawny.com:85/home" data-i18n="nav.login">Login</a>
+          <a class="btn btn-login" href="https://dpms.svtawny.com:85/home" data-i18n="nav.login">Client Login</a>
         </div>
       </div>
     </header>
@@ -154,11 +154,12 @@
           <div class="goals-visual" data-reveal>
             <img
               class="goals-image"
-              src="assets/about-goals.png"
+              src="assets/about-goals.webp"
               alt="Technical drawing with a ruler, pens, and a plotted chart"
               width="1046"
               height="697"
               loading="lazy"
+              decoding="async"
               data-i18n-alt="about.goals_alt"
             />
           </div>
@@ -207,7 +208,7 @@ The Netherlands</p>
               <p class="quotes-kicker" data-i18n="about.quotes_navigate">Navigate</p>
               <div class="quotes-nav-actions">
                 <button type="button" data-quote-prev data-i18n="about.quotes_prev">← Prev</button>
-                <button type="button" data-quote-pause data-i18n="about.quotes_pause" aria-pressed="false">Pause</button>
+                <button type="button" data-quote-pause data-i18n="about.quotes_pause" aria-pressed="false">Pause quotes</button>
                 <button type="button" data-quote-next data-i18n="about.quotes_next">Next →</button>
               </div>
             </div>
@@ -281,7 +282,7 @@ The Netherlands</p>
         </nav>
       </div>
     </footer>
-    <script src="i18n.js?v=15"></script>
-    <script src="script.js?v=11"></script>
+    <script src="i18n.js?v=20"></script>
+    <script src="script.js?v=16"></script>
   </body>
 </html>

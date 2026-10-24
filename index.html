@@ -14,10 +14,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400..700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css?v=17" />
+    <link rel="stylesheet" href="styles.css?v=22" />
   </head>
   <body>
     <a class="skip-link" href="#content" data-i18n="nav.skip">Skip to content</a>
@@ -48,7 +48,7 @@
               <li><button type="button" data-lang="fr" aria-label="French">🇫🇷</button></li>
             </ul>
           </div>
-          <a class="btn btn-login" href="https://dpms.svtawny.com:85/home" data-i18n="nav.login">Login</a>
+          <a class="btn btn-login" href="https://dpms.svtawny.com:85/home" data-i18n="nav.login">Client Login</a>
         </div>
       </div>
     </header>
@@ -63,8 +63,8 @@
             building, construction, and oil &amp; energy projects. You receive that work on time, on standard, and on spec.
           </p>
           <div class="hero-actions">
-            <a class="btn btn-primary" href="#contact" data-i18n="home.cta_primary">Book a Discovery Call</a>
-            <a class="btn btn-ghost" href="#services" data-i18n="home.cta_secondary">View Our Work</a>
+            <a class="btn btn-primary" href="#contact" data-i18n="home.cta_primary">Send Project Details</a>
+            <a class="btn btn-ghost" href="#services" data-i18n="home.cta_secondary">See Our Services</a>
           </div>
           <p class="assurance" data-i18n="home.assurance">No commitment required · Response within 24&nbsp;hours · NDA available</p>
         </div>
@@ -114,12 +114,12 @@
         </div>
         <div class="service-panel">
           <div class="service-visual" data-reveal>
-            <img class="is-active" src="assets/service-3d.png" alt="Engineers collaborating on a structural 3D model across dual monitors" width="1600" height="1067" loading="lazy" data-service-image data-i18n-alt="home.alt_svc1" />
-            <img src="assets/service-cad.jpg" alt="Hands reviewing technical drawings on a desk" width="2752" height="1536" loading="lazy" data-service-image data-i18n-alt="home.alt_svc2" aria-hidden="true" />
-            <img src="assets/service-steel.png" alt="Steel framework of an industrial structure" width="3588" height="3588" loading="lazy" data-service-image data-i18n-alt="home.alt_svc3" aria-hidden="true" />
-            <img src="assets/service-bim.png" alt="Engineer working at a dual-monitor workstation" width="1920" height="1033" loading="lazy" data-service-image data-i18n-alt="home.alt_svc4" aria-hidden="true" />
-            <img src="assets/service-docs.jpg" alt="Person checking document checklists beside a laptop" width="2528" height="1684" loading="lazy" data-service-image data-i18n-alt="home.alt_svc5" aria-hidden="true" />
-            <img src="assets/service-plant.jpg?v=2" alt="Blue wireframe model of an offshore production platform" width="5120" height="2880" loading="lazy" data-service-image data-i18n-alt="home.alt_svc6" aria-hidden="true" />
+            <img class="is-active" src="assets/service-3d.webp" alt="Engineers collaborating on a structural 3D model across dual monitors" width="2099" height="1400" loading="lazy" decoding="async" data-service-image data-i18n-alt="home.alt_svc1" />
+            <img src="assets/service-cad.webp" alt="Hands reviewing technical drawings on a desk" width="2508" height="1400" loading="lazy" decoding="async" data-service-image data-i18n-alt="home.alt_svc2" aria-hidden="true" />
+            <img src="assets/service-steel.webp" alt="Steel framework of an industrial structure" width="1440" height="1440" loading="lazy" decoding="async" data-service-image data-i18n-alt="home.alt_svc3" aria-hidden="true" />
+            <img src="assets/service-bim.webp" alt="Engineer working at a dual-monitor workstation" width="2602" height="1400" loading="lazy" decoding="async" data-service-image data-i18n-alt="home.alt_svc4" aria-hidden="true" />
+            <img src="assets/service-docs.webp" alt="Person checking document checklists beside a laptop" width="2102" height="1400" loading="lazy" decoding="async" data-service-image data-i18n-alt="home.alt_svc5" aria-hidden="true" />
+            <img src="assets/service-plant.webp" alt="Blue wireframe model of an offshore production platform" width="2489" height="1400" loading="lazy" decoding="async" data-service-image data-i18n-alt="home.alt_svc6" aria-hidden="true" />
           </div>
           <div class="service-list" data-reveal>
             <article class="service-item is-open" data-service>
@@ -285,6 +285,7 @@
       </section>
 
       <section id="contact" class="connect">
+        <img class="connect-photo" src="assets/connect.webp" alt="" width="1920" height="1282" loading="lazy" decoding="async" />
         <div class="connect-copy" data-reveal>
           <h2 data-i18n="home.connect_h2">Let’s Connect.</h2>
           <p data-i18n="home.connect_p1">Starting a new project?</p>
@@ -293,27 +294,26 @@
         <form class="form" id="project-form" data-reveal novalidate>
           <h3 data-i18n="home.form_h3">Tell Us About Your Project</h3>
           <label class="sr-only" for="full-name" data-i18n="home.ph_name">Full name</label>
-          <input id="full-name" name="name" type="text" placeholder="Jordan Lee…" data-i18n-placeholder="home.ex_name" autocomplete="name" required />
+          <input id="full-name" name="name" type="text" maxlength="100" placeholder="Jordan Lee…" data-i18n-placeholder="home.ex_name" autocomplete="name" required />
           <div class="form-row">
             <label class="sr-only" for="email" data-i18n="home.ph_email">Email</label>
-            <input id="email" name="email" type="email" placeholder="ada@company.com…" data-i18n-placeholder="home.ex_email" autocomplete="email" spellcheck="false" required />
-            <label class="sr-only" for="company" data-i18n="home.ph_company">Company Name</label>
-            <input id="company" name="company" type="text" placeholder="Northwind…" data-i18n-placeholder="home.ex_company" autocomplete="organization" required />
+            <input id="email" name="email" type="email" maxlength="254" placeholder="ada@company.com…" data-i18n-placeholder="home.ex_email" autocomplete="email" spellcheck="false" required />
+            <label class="sr-only" for="company" data-i18n="home.ph_company">Company</label>
+            <input id="company" name="company" type="text" maxlength="120" placeholder="Northwind…" data-i18n-placeholder="home.ex_company" autocomplete="organization" required />
           </div>
           <div class="form-row">
-            <label class="sr-only" for="phone" data-i18n="home.ph_phone">Phone number</label>
-            <input id="phone" name="phone" type="tel" placeholder="+91 427 455 2439…" data-i18n-placeholder="home.ex_phone" autocomplete="tel" inputmode="tel" required />
+            <label class="sr-only" for="phone" data-i18n="home.ph_phone">Phone</label>
+            <input id="phone" name="phone" type="tel" maxlength="40" placeholder="+91 427 455 2439…" data-i18n-placeholder="home.ex_phone" autocomplete="tel" inputmode="tel" required />
             <label class="sr-only" for="project" data-i18n="home.ph_project">Project Type</label>
-            <input id="project" name="project" type="text" placeholder="Steel detailing…" data-i18n-placeholder="home.ex_project" autocomplete="off" required />
+            <input id="project" name="project" type="text" maxlength="120" placeholder="Steel detailing…" data-i18n-placeholder="home.ex_project" autocomplete="off" required />
           </div>
-          <label class="sr-only" for="comments" data-i18n="home.ph_comments">Comments</label>
-          <textarea id="comments" name="comments" placeholder="Scope, standard, timeline…" data-i18n-placeholder="home.ex_comments" autocomplete="off" rows="5"></textarea>
+          <label class="sr-only" for="comments" data-i18n="home.ph_comments">Brief scope</label>
+          <textarea id="comments" name="comments" maxlength="2000" placeholder="Scope, standard, timeline…" data-i18n-placeholder="home.ex_comments" autocomplete="off" rows="5"></textarea>
           <div class="check">
             <label for="privacy">
               <input id="privacy" type="checkbox" name="privacy" required />
-              <span data-i18n="home.privacy_prefix">I have read and understood the </span>
+              <span data-i18n-html="home.privacy_html">I have read and understood the <a href="privacy.html">privacy policy</a>.</span>
             </label>
-            <a href="privacy.html" data-i18n="home.privacy_link">privacy policy</a>
           </div>
           <button class="btn btn-primary" type="submit" data-i18n="home.submit">Send Project Details</button>
           <p class="form-status" role="status" hidden></p>
@@ -379,7 +379,7 @@
         </nav>
       </div>
     </footer>
-    <script src="i18n.js?v=15"></script>
-    <script src="script.js?v=11"></script>
+    <script src="i18n.js?v=20"></script>
+    <script src="script.js?v=16"></script>
   </body>
 </html>
