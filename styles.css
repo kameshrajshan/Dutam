@@ -836,27 +836,6 @@ textarea {
   line-height: var(--font-line-height-h5);
 }
 
-.marquee-pause {
-  display: none;
-  align-items: center;
-  justify-content: center;
-  min-height: var(--size-tap);
-  margin-top: var(--space-16);
-  margin-left: var(--space-16);
-  padding: 0 var(--space-16);
-  border: var(--sds-size-stroke-border) solid var(--color-border);
-  border-radius: var(--radius-pill);
-  background: color-mix(in srgb, var(--color-bg) 72%, transparent);
-  color: var(--color-text);
-  cursor: pointer;
-}
-
-.marquee-pause:hover,
-.marquee-pause:focus-visible {
-  border-color: var(--color-accent-hover);
-  color: var(--color-accent-hover);
-}
-
 .form {
   width: min(519px, 100%);
   background: var(--teal-950);
@@ -1279,18 +1258,8 @@ textarea {
   }
 
   .industry-mosaic:hover .industry-track,
-  .industry-mosaic:focus-within .industry-track,
-  .industry-mosaic.is-paused .industry-track {
+  .industry-mosaic:focus-within .industry-track {
     animation-play-state: paused;
-  }
-
-  .marquee-pause {
-    display: inline-flex;
-    position: absolute;
-    z-index: 2;
-    right: var(--space-12);
-    bottom: var(--space-12);
-    margin: 0;
   }
 
   .industry-mosaic img,

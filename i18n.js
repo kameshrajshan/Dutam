@@ -105,8 +105,6 @@
     "home.ex_phone": "+91 427 455 2439…",
     "home.ex_project": "Steel detailing…",
     "home.ex_comments": "Scope, standard, timeline…",
-    "home.marquee_pause": "Pause gallery",
-    "home.marquee_play": "Play gallery",
     "home.privacy_prefix": "I have read and understood the ",
     "home.privacy_link": "privacy policy",
     "home.submit": "Send Project Details",
@@ -705,8 +703,6 @@
     "home.privacy_prefix": "Ik heb het ",
     "home.privacy_link": "privacybeleid gelezen en begrepen",
     "home.submit": "Projectgegevens versturen",
-    "home.marquee_pause": "Galerij pauzeren",
-    "home.marquee_play": "Galerij afspelen",
     "home.alt_svc1":
       "Engineers die samenwerken aan een constructief 3D-model op dubbele monitors",
     "home.alt_svc2": "Handen die technische tekeningen op een bureau bekijken",
@@ -1307,8 +1303,6 @@
     "home.privacy_prefix": "Ich habe die ",
     "home.privacy_link": "Datenschutzerklärung gelesen und verstanden",
     "home.submit": "Projektdetails senden",
-    "home.marquee_pause": "Galerie pausieren",
-    "home.marquee_play": "Galerie abspielen",
     "home.alt_svc1":
       "Ingenieure bei der gemeinsamen Arbeit an einem strukturellen 3D-Modell auf Dual-Monitoren",
     "home.alt_svc2": "Hände prüfen technische Zeichnungen auf einem Schreibtisch",
@@ -1914,8 +1908,6 @@
     "home.privacy_prefix": "J’ai lu et compris la ",
     "home.privacy_link": "politique de confidentialité",
     "home.submit": "Envoyer les détails du projet",
-    "home.marquee_pause": "Pause de la galerie",
-    "home.marquee_play": "Lecture de la galerie",
     "home.alt_svc1":
       "Ingénieurs collaborant sur un modèle 3D structurel sur deux écrans",
     "home.alt_svc2": "Mains examinant des plans techniques sur un bureau",

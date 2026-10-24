@@ -284,7 +284,6 @@ document.addEventListener("dutam:langchange", (event) => {
   const lang = event.detail && event.detail.lang;
   if (quoteController && lang) quoteController.refreshQuotes(lang);
   if (quoteController) quoteController.syncPauseLabel();
-  syncMotionLabels();
   formatPrivacyDate();
 });
 
@@ -467,36 +466,6 @@ function syncIndustryMarquee() {
 syncIndustryMarquee();
 industryMarqueeMq.addEventListener("change", syncIndustryMarquee);
 
-function motionLabel(key, fallback) {
-  return window.DutamI18n ? window.DutamI18n.t(key) : fallback;
-}
-
-function bindMotionToggle(button, target, pauseKey, playKey) {
-  if (!button || !target) return;
-  button.addEventListener("click", () => {
-    const paused = target.classList.toggle("is-paused");
-    button.setAttribute("aria-pressed", String(paused));
-    button.textContent = motionLabel(paused ? playKey : pauseKey, button.textContent);
-  });
-}
-
-function syncMotionLabels() {
-  document.querySelectorAll("[data-marquee-pause]").forEach((button) => {
-    const paused = button.getAttribute("aria-pressed") === "true";
-    button.textContent = motionLabel(
-      paused ? "home.marquee_play" : "home.marquee_pause",
-      button.textContent
-    );
-  });
-}
-
-bindMotionToggle(
-  document.querySelector("[data-marquee-pause]"),
-  document.querySelector(".industry-mosaic"),
-  "home.marquee_pause",
-  "home.marquee_play"
-);
-
 function formatPrivacyDate() {
   const el = document.querySelector("[data-privacy-updated]");
   if (!el) return;
@@ -508,5 +477,4 @@ function formatPrivacyDate() {
   el.textContent = `${label}: ${formatted}`;
 }
 
-syncMotionLabels();
 formatPrivacyDate();
