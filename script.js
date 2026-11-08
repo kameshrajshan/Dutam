@@ -568,23 +568,27 @@ formatPrivacyDate();
 
 (function themeToggle() {
   const root = document.documentElement;
-  const button = document.querySelector(".theme-toggle");
-  if (!button) return;
+  const buttons = [...document.querySelectorAll(".theme-toggle")];
+  if (!buttons.length) return;
   const sync = () => {
     const light = root.dataset.theme === "light";
-    button.setAttribute("aria-pressed", String(light));
-    button.setAttribute("aria-label", light ? "Switch to dark mode" : "Switch to light mode");
+    buttons.forEach((button) => {
+      button.setAttribute("aria-pressed", String(light));
+      button.setAttribute("aria-label", light ? "Switch to dark mode" : "Switch to light mode");
+    });
     const meta = document.querySelector('meta[name="theme-color"]');
     if (meta) meta.setAttribute("content", light ? "#ffffff" : "#061314");
   };
-  button.addEventListener("click", () => {
-    const light = root.dataset.theme !== "light";
-    if (light) root.dataset.theme = "light";
-    else delete root.dataset.theme;
-    try {
-      localStorage.setItem("dutam-theme", light ? "light" : "dark");
-    } catch (e) {}
-    sync();
-  });
+  buttons.forEach((button) =>
+    button.addEventListener("click", () => {
+      const light = root.dataset.theme !== "light";
+      if (light) root.dataset.theme = "light";
+      else delete root.dataset.theme;
+      try {
+        localStorage.setItem("dutam-theme", light ? "light" : "dark");
+      } catch (e) {}
+      sync();
+    })
+  );
   sync();
 })();
