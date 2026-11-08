@@ -115,6 +115,50 @@
   --font: var(--font-family-sans);
 }
 
+:root {
+  --color-dark-blue-50: #e1e2ea;
+  --color-dark-blue-100: #cdcedf;
+  --color-dark-blue-200: #a5a7c9;
+  --color-dark-blue-300: #7c7fb2;
+  --color-dark-blue-400: #54589c;
+  --color-dark-blue-500: #2c3186;
+  --color-dark-blue-600: #23276b;
+  --color-dark-blue-700: #1a1d50;
+  --color-dark-blue-800: #121436;
+  --color-dark-blue-900: #090a1b;
+  --color-dark-blue-950: #04050d;
+}
+
+/* Light theme: the dark scale is inverted onto the dark-blue brand scale, so every
+   component that reads a primitive (teal-950 = page, white = text) flips with it. */
+:root[data-theme="light"] {
+  color-scheme: light;
+  --color-teal-950: #ffffff;
+  --color-teal-900: var(--color-dark-blue-50);
+  --color-teal-800: var(--color-dark-blue-100);
+  --color-teal-500: var(--color-dark-blue-500);
+  --color-teal-400: var(--color-dark-blue-400);
+  --color-teal-300: var(--color-dark-blue-400);
+  --color-teal-200: var(--color-dark-blue-400);
+  --color-teal-50: var(--color-dark-blue-800);
+  --color-white: var(--color-dark-blue-950);
+  --color-ink: var(--color-dark-blue-950);
+  --color-rose-200: #b3261e;
+  --color-text-on-accent: #ffffff;
+  --color-text-on-accent-muted: var(--color-dark-blue-100);
+  --color-accent-on-band: var(--color-dark-blue-500);
+  --color-border-strong: color-mix(in srgb, var(--color-dark-blue-500) 70%, #ffffff);
+  --color-selection-fg: #ffffff;
+}
+
+:root[data-theme="light"] .brand img {
+  content: url("assets/Logo-light.png");
+}
+
+:root[data-theme="light"] .language-btn img {
+  filter: brightness(0);
+}
+
 *,
 *::before,
 *::after {
@@ -3065,4 +3109,57 @@ form[data-status-kind="invalid"] .form-status {
     overflow: visible;
     text-overflow: clip;
   }
+}
+
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--size-tap);
+  height: var(--size-tap);
+  padding: 0;
+  border: var(--sds-size-stroke-border) solid var(--color-border);
+  border-radius: var(--radius-pill);
+  background: transparent;
+  color: var(--color-text);
+  cursor: pointer;
+  transition: border-color var(--motion-fast) var(--motion-ease-standard),
+    color var(--motion-fast) var(--motion-ease-standard);
+}
+
+.theme-toggle:hover,
+.theme-toggle:focus-visible {
+  border-color: var(--color-accent-hover);
+  color: var(--color-accent-hover);
+}
+
+.theme-toggle .icon-moon,
+:root[data-theme="light"] .theme-toggle .icon-sun {
+  display: none;
+}
+
+:root[data-theme="light"] .theme-toggle .icon-moon {
+  display: block;
+}
+
+:root[data-theme="light"] .connect-copy {
+  color: #ffffff;
+}
+
+:root[data-theme="light"] .form input:not([type="checkbox"]),
+:root[data-theme="light"] .form textarea {
+  border: var(--sds-size-stroke-border) solid var(--color-dark-blue-200);
+  background: var(--color-dark-blue-50);
+  color: var(--color-dark-blue-950);
+  caret-color: var(--color-dark-blue-500);
+}
+
+:root[data-theme="light"] .form input:not([type="checkbox"]):focus-visible,
+:root[data-theme="light"] .form textarea:focus-visible {
+  outline-color: var(--color-dark-blue-500);
+}
+
+:root[data-theme="light"] .form input::placeholder,
+:root[data-theme="light"] .form textarea::placeholder {
+  color: var(--color-dark-blue-400);
 }
